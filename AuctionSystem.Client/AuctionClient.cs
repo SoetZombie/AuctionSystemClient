@@ -53,7 +53,7 @@ namespace AuctionSystem.Client
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void biddingBtn_Click(object sender, EventArgs e)
@@ -76,7 +76,9 @@ namespace AuctionSystem.Client
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            Login l = new Login();
+            l.Show();
         }
     }
 }
