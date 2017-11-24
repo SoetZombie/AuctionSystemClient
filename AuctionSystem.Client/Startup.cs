@@ -7,6 +7,7 @@
 
     public static class Startup
     {
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,8 +17,11 @@
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+           
             Login l = new Login();
             l.Show();
+            //RegistrationForm r = new RegistrationForm();
+            //r.ShowDialog();
             ///
             ///
             Application.Run();

@@ -7,19 +7,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AutoMapper;
+
+
 
 namespace AuctionSystem.Client
 {
+    
     public partial class AuctionClient : Form
     {
+        UserServiceReference.UserDto currentUser;
+        UserServiceReference.User currentUser2;
+        UserServiceReference.UserServiceClient client;
+        string username;
+        
         public AuctionClient()
         {
+           
+            client = new UserServiceReference.UserServiceClient();
+            currentUser2 = new UserServiceReference.User();
             InitializeComponent();
+           
+        }
+        public void CreateUserObject()
+        {
+            currentUser = client.GetUserById(1);
+            currentUser2.Name = currentUser.Name;
+
         }
 
+        public void UpdateUser()
+        {
+            CreateUserObject();
+            client.UpdateUser(currentUser2, "name", "alois");
+        }
+       public void SetUsername(string usernamelog)
+        {
+            loggedasLbl.Text = "Logged as:  " + usernamelog;
+            username = usernamelog;
+        }
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
         private void button2_Click_1(object sender, EventArgs e)
         {
@@ -49,15 +78,19 @@ namespace AuctionSystem.Client
         {
             selectionPanel.Height = newsBtn.Height;
             selectionPanel.Top = newsBtn.Top;
+            //label1.Text = client.GetUserById(1).Name;
+           // label1.Text = username;
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            
         }
 
         private void biddingBtn_Click(object sender, EventArgs e)
         {
+            UpdateUser();
             selectionPanel.Height = biddingBtn.Height;
             selectionPanel.Top = biddingBtn.Top;
         }
@@ -79,6 +112,11 @@ namespace AuctionSystem.Client
             this.Close();
             Login l = new Login();
             l.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

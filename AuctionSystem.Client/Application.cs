@@ -5,9 +5,10 @@ namespace AuctionSystem.Client
 {
     public partial class MainPanel : Form
     {
+        UserServiceReference.UserServiceClient client;
         public MainPanel()
         {
-            
+            client = new UserServiceReference.UserServiceClient();
             InitializeComponent();
            
             
@@ -98,7 +99,8 @@ namespace AuctionSystem.Client
 
         private void newsBtn_Click_1(object sender, EventArgs e)
         {
-
+             
+                label1.Text = client.GetUserById(1).Name;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

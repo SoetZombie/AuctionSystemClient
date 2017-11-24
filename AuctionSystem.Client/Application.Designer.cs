@@ -33,6 +33,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.maximizeBtn = new System.Windows.Forms.Button();
+            this.exitBtn = new System.Windows.Forms.Button();
             this.ebidBtn = new System.Windows.Forms.Button();
             this.leftMenuPanel = new System.Windows.Forms.Panel();
             this.selectionPanel = new System.Windows.Forms.Panel();
@@ -41,8 +43,7 @@
             this.myaccountbtn = new System.Windows.Forms.Button();
             this.catalogueBtn = new System.Windows.Forms.Button();
             this.biddingBtn = new System.Windows.Forms.Button();
-            this.maximizeBtn = new System.Windows.Forms.Button();
-            this.exitBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -97,6 +98,36 @@
             this.topPanel.Size = new System.Drawing.Size(1600, 103);
             this.topPanel.TabIndex = 2;
             this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // maximizeBtn
+            // 
+            this.maximizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.maximizeBtn.BackgroundImage = global::AuctionSystem.Client.Properties.Resources.expand;
+            this.maximizeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.maximizeBtn.FlatAppearance.BorderSize = 0;
+            this.maximizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.maximizeBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.maximizeBtn.Location = new System.Drawing.Point(1524, 0);
+            this.maximizeBtn.Name = "maximizeBtn";
+            this.maximizeBtn.Size = new System.Drawing.Size(35, 35);
+            this.maximizeBtn.TabIndex = 7;
+            this.maximizeBtn.UseVisualStyleBackColor = true;
+            this.maximizeBtn.Click += new System.EventHandler(this.maximizeBtn_Click);
+            // 
+            // exitBtn
+            // 
+            this.exitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitBtn.BackColor = System.Drawing.Color.DimGray;
+            this.exitBtn.BackgroundImage = global::AuctionSystem.Client.Properties.Resources.error__2_;
+            this.exitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.exitBtn.FlatAppearance.BorderSize = 0;
+            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitBtn.Location = new System.Drawing.Point(1565, 0);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(35, 35);
+            this.exitBtn.TabIndex = 6;
+            this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // ebidBtn
             // 
@@ -221,35 +252,14 @@
             this.biddingBtn.UseVisualStyleBackColor = true;
             this.biddingBtn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // maximizeBtn
+            // label1
             // 
-            this.maximizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maximizeBtn.BackgroundImage = global::AuctionSystem.Client.Properties.Resources.expand;
-            this.maximizeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.maximizeBtn.FlatAppearance.BorderSize = 0;
-            this.maximizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.maximizeBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.maximizeBtn.Location = new System.Drawing.Point(1524, 0);
-            this.maximizeBtn.Name = "maximizeBtn";
-            this.maximizeBtn.Size = new System.Drawing.Size(35, 35);
-            this.maximizeBtn.TabIndex = 7;
-            this.maximizeBtn.UseVisualStyleBackColor = true;
-            this.maximizeBtn.Click += new System.EventHandler(this.maximizeBtn_Click);
-            // 
-            // exitBtn
-            // 
-            this.exitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.exitBtn.BackColor = System.Drawing.Color.DimGray;
-            this.exitBtn.BackgroundImage = global::AuctionSystem.Client.Properties.Resources.error__2_;
-            this.exitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.exitBtn.FlatAppearance.BorderSize = 0;
-            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtn.Location = new System.Drawing.Point(1565, 0);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(35, 35);
-            this.exitBtn.TabIndex = 6;
-            this.exitBtn.UseVisualStyleBackColor = false;
-            this.exitBtn.Click += new System.EventHandler(this.button2_Click_1);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(486, 217);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "label1";
             // 
             // MainPanel
             // 
@@ -257,6 +267,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1600, 900);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.leftMenuPanel);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -271,6 +282,7 @@
             this.topPanel.ResumeLayout(false);
             this.leftMenuPanel.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -291,6 +303,7 @@
         private System.Windows.Forms.Panel selectionPanel;
         private System.Windows.Forms.Button maximizeBtn;
         private System.Windows.Forms.Button exitBtn;
+        private System.Windows.Forms.Label label1;
     }
 }
 
