@@ -38,6 +38,7 @@
             this.usernameTxtBox = new System.Windows.Forms.TextBox();
             this.passwordTxtBox = new System.Windows.Forms.TextBox();
             this.loginBtn = new System.Windows.Forms.Button();
+            this.registerBtn = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,12 +47,11 @@
             this.loginLbl.AutoSize = true;
             this.loginLbl.Font = new System.Drawing.Font("Century Gothic", 34F);
             this.loginLbl.ForeColor = System.Drawing.Color.White;
-            this.loginLbl.Location = new System.Drawing.Point(637, 158);
+            this.loginLbl.Location = new System.Drawing.Point(566, 126);
             this.loginLbl.Name = "loginLbl";
-            this.loginLbl.Size = new System.Drawing.Size(214, 83);
+            this.loginLbl.Size = new System.Drawing.Size(177, 70);
             this.loginLbl.TabIndex = 0;
             this.loginLbl.Text = "Login";
-            this.loginLbl.Click += new System.EventHandler(this.label1_Click);
             // 
             // topPanel
             // 
@@ -61,10 +61,10 @@
             this.topPanel.Controls.Add(this.ebidBtn);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1600, 103);
+            this.topPanel.Size = new System.Drawing.Size(1422, 82);
             this.topPanel.TabIndex = 3;
-            this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint);
             // 
             // maximizeBtn
             // 
@@ -74,9 +74,10 @@
             this.maximizeBtn.FlatAppearance.BorderSize = 0;
             this.maximizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maximizeBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.maximizeBtn.Location = new System.Drawing.Point(1524, 0);
+            this.maximizeBtn.Location = new System.Drawing.Point(1355, 0);
+            this.maximizeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maximizeBtn.Name = "maximizeBtn";
-            this.maximizeBtn.Size = new System.Drawing.Size(35, 35);
+            this.maximizeBtn.Size = new System.Drawing.Size(31, 28);
             this.maximizeBtn.TabIndex = 7;
             this.maximizeBtn.UseVisualStyleBackColor = true;
             this.maximizeBtn.Click += new System.EventHandler(this.maximizeBtn_Click);
@@ -89,9 +90,10 @@
             this.exitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.exitBtn.FlatAppearance.BorderSize = 0;
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtn.Location = new System.Drawing.Point(1565, 0);
+            this.exitBtn.Location = new System.Drawing.Point(1391, 0);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(35, 35);
+            this.exitBtn.Size = new System.Drawing.Size(31, 28);
             this.exitBtn.TabIndex = 6;
             this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
@@ -105,8 +107,9 @@
             this.ebidBtn.Font = new System.Drawing.Font("Harlow Solid Italic", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ebidBtn.ForeColor = System.Drawing.Color.Black;
             this.ebidBtn.Location = new System.Drawing.Point(0, 0);
+            this.ebidBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ebidBtn.Name = "ebidBtn";
-            this.ebidBtn.Size = new System.Drawing.Size(330, 103);
+            this.ebidBtn.Size = new System.Drawing.Size(293, 82);
             this.ebidBtn.TabIndex = 4;
             this.ebidBtn.Text = "E-Bid";
             this.ebidBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -117,38 +120,39 @@
             this.usernameLbl.AutoSize = true;
             this.usernameLbl.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.usernameLbl.ForeColor = System.Drawing.Color.White;
-            this.usernameLbl.Location = new System.Drawing.Point(284, 339);
+            this.usernameLbl.Location = new System.Drawing.Point(252, 271);
             this.usernameLbl.Name = "usernameLbl";
-            this.usernameLbl.Size = new System.Drawing.Size(257, 58);
+            this.usernameLbl.Size = new System.Drawing.Size(219, 49);
             this.usernameLbl.TabIndex = 4;
             this.usernameLbl.Text = "Username";
-            this.usernameLbl.Click += new System.EventHandler(this.label2_Click);
             // 
             // passwordLbl
             // 
             this.passwordLbl.AutoSize = true;
             this.passwordLbl.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.passwordLbl.ForeColor = System.Drawing.Color.White;
-            this.passwordLbl.Location = new System.Drawing.Point(284, 462);
+            this.passwordLbl.Location = new System.Drawing.Point(252, 370);
             this.passwordLbl.Name = "passwordLbl";
-            this.passwordLbl.Size = new System.Drawing.Size(240, 58);
+            this.passwordLbl.Size = new System.Drawing.Size(204, 49);
             this.passwordLbl.TabIndex = 5;
             this.passwordLbl.Text = "Password";
             // 
             // usernameTxtBox
             // 
             this.usernameTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.usernameTxtBox.Location = new System.Drawing.Point(636, 351);
+            this.usernameTxtBox.Location = new System.Drawing.Point(565, 281);
+            this.usernameTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.usernameTxtBox.Name = "usernameTxtBox";
-            this.usernameTxtBox.Size = new System.Drawing.Size(263, 47);
+            this.usernameTxtBox.Size = new System.Drawing.Size(234, 40);
             this.usernameTxtBox.TabIndex = 6;
             // 
             // passwordTxtBox
             // 
             this.passwordTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.passwordTxtBox.Location = new System.Drawing.Point(636, 474);
+            this.passwordTxtBox.Location = new System.Drawing.Point(565, 379);
+            this.passwordTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.passwordTxtBox.Name = "passwordTxtBox";
-            this.passwordTxtBox.Size = new System.Drawing.Size(263, 47);
+            this.passwordTxtBox.Size = new System.Drawing.Size(234, 40);
             this.passwordTxtBox.TabIndex = 7;
             this.passwordTxtBox.UseSystemPasswordChar = true;
             // 
@@ -160,20 +164,39 @@
             this.loginBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.loginBtn.Image = global::AuctionSystem.Client.Properties.Resources.login;
             this.loginBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.loginBtn.Location = new System.Drawing.Point(651, 562);
+            this.loginBtn.Location = new System.Drawing.Point(553, 458);
+            this.loginBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(292, 70);
+            this.loginBtn.Size = new System.Drawing.Size(260, 56);
             this.loginBtn.TabIndex = 8;
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = true;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
+            // registerBtn
+            // 
+            this.registerBtn.FlatAppearance.BorderSize = 0;
+            this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registerBtn.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.registerBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.registerBtn.Image = global::AuctionSystem.Client.Properties.Resources.login;
+            this.registerBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.registerBtn.Location = new System.Drawing.Point(553, 535);
+            this.registerBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.registerBtn.Name = "registerBtn";
+            this.registerBtn.Size = new System.Drawing.Size(354, 56);
+            this.registerBtn.TabIndex = 9;
+            this.registerBtn.Text = "Registration";
+            this.registerBtn.UseVisualStyleBackColor = true;
+            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
+            // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(1600, 900);
+            this.ClientSize = new System.Drawing.Size(1422, 720);
+            this.Controls.Add(this.registerBtn);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.passwordTxtBox);
             this.Controls.Add(this.usernameTxtBox);
@@ -182,6 +205,7 @@
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.loginLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Login";
             this.Text = "Login";
             this.topPanel.ResumeLayout(false);
@@ -202,5 +226,6 @@
         private System.Windows.Forms.TextBox usernameTxtBox;
         private System.Windows.Forms.TextBox passwordTxtBox;
         private System.Windows.Forms.Button loginBtn;
+        private System.Windows.Forms.Button registerBtn;
     }
 }

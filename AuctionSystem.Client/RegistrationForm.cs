@@ -6,30 +6,52 @@ namespace AuctionSystem.Client
     public partial class RegistrationForm : Form
     {
         UserServiceReference.UserServiceClient client;
+        UserServiceReference.Gender gender;
         public RegistrationForm()
         {
             client = new UserServiceReference.UserServiceClient();
             InitializeComponent();
+            gender = UserServiceReference.Gender.Male;
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        protected override void WndProc(ref Message m)
         {
+            switch (m.Msg)
+            {
+                case 0x84:
+                    base.WndProc(ref m);
+                    if ((int)m.Result == 0x1)
+                        m.Result = (IntPtr)0x2;
+                    return;
+            }
 
+            base.WndProc(ref m);
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
             var newUser = CreateNewUser();
             client.CreateUser(newUser);
+            Login l = new Login();
+            l.Show();
+            this.Close();
             
         }
         private UserServiceReference.User CreateNewUser()
         {
+            if (femaleRadio.Checked)
+            {
+               gender = UserServiceReference.Gender.Female;
+            }
+            else if (maleRadio.Checked)
+            {
+                gender = UserServiceReference.Gender.Male;
+            }
+            else
+            {
+                throw new ArgumentException("specify gender");
+            }
+
             return new UserServiceReference.User
             {
                 Username = usernameTxtBox.Text,
@@ -38,22 +60,29 @@ namespace AuctionSystem.Client
                 Phone = phoneTxtBox.Text,
                 Email = emailTxtBox.Text,
                 Password = passwordTxtBox.Text,
-                Gender = UserServiceReference.Gender.Female,
-                IsAdmin = true,
+                Gender = gender,
+                IsAdmin = false,
                 Coins = 0,
-                Address = addressTxtBox.Text
+                ZipId = 1,
+                Address = addressTxtBox.Text,
+                IsDeleted = false,
+                
+
             };
             
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
+  
 
-        }
+     
+
+      
+
+
     }
 }

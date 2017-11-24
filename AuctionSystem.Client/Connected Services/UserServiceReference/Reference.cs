@@ -330,10 +330,10 @@ namespace AuctionSystem.Client.UserServiceReference {
         private string CountryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ZipCodeField;
+        private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ZipIdField;
+        private string ZipCodeField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -372,6 +372,19 @@ namespace AuctionSystem.Client.UserServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string ZipCode {
             get {
                 return this.ZipCodeField;
@@ -380,19 +393,6 @@ namespace AuctionSystem.Client.UserServiceReference {
                 if ((object.ReferenceEquals(this.ZipCodeField, value) != true)) {
                     this.ZipCodeField = value;
                     this.RaisePropertyChanged("ZipCode");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ZipId {
-            get {
-                return this.ZipIdField;
-            }
-            set {
-                if ((this.ZipIdField.Equals(value) != true)) {
-                    this.ZipIdField = value;
-                    this.RaisePropertyChanged("ZipId");
                 }
             }
         }
@@ -1245,6 +1245,12 @@ namespace AuctionSystem.Client.UserServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserInvoices", ReplyAction="http://tempuri.org/IUserService/GetUserInvoicesResponse")]
         System.Threading.Tasks.Task<AuctionSystem.Client.UserServiceReference.Invoice[]> GetUserInvoicesAsync(AuctionSystem.Client.UserServiceReference.User user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserByUsername", ReplyAction="http://tempuri.org/IUserService/GetUserByUsernameResponse")]
+        AuctionSystem.Client.UserServiceReference.UserDto GetUserByUsername(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserByUsername", ReplyAction="http://tempuri.org/IUserService/GetUserByUsernameResponse")]
+        System.Threading.Tasks.Task<AuctionSystem.Client.UserServiceReference.UserDto> GetUserByUsernameAsync(string username);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1344,6 +1350,14 @@ namespace AuctionSystem.Client.UserServiceReference {
         
         public System.Threading.Tasks.Task<AuctionSystem.Client.UserServiceReference.Invoice[]> GetUserInvoicesAsync(AuctionSystem.Client.UserServiceReference.User user) {
             return base.Channel.GetUserInvoicesAsync(user);
+        }
+        
+        public AuctionSystem.Client.UserServiceReference.UserDto GetUserByUsername(string username) {
+            return base.Channel.GetUserByUsername(username);
+        }
+        
+        public System.Threading.Tasks.Task<AuctionSystem.Client.UserServiceReference.UserDto> GetUserByUsernameAsync(string username) {
+            return base.Channel.GetUserByUsernameAsync(username);
         }
     }
 }

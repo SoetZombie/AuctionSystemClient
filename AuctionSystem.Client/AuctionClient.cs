@@ -13,42 +13,49 @@ using AutoMapper;
 
 namespace AuctionSystem.Client
 {
-    
+
     public partial class AuctionClient : Form
     {
         UserServiceReference.UserDto currentUser;
-        UserServiceReference.User currentUser2;
         UserServiceReference.UserServiceClient client;
-        string username;
-        
+       
+
+        public static string username;
+
         public AuctionClient()
         {
-           
+
             client = new UserServiceReference.UserServiceClient();
-            currentUser2 = new UserServiceReference.User();
             InitializeComponent();
-           
-        }
-        public void CreateUserObject()
-        {
-            currentUser = client.GetUserById(1);
-            currentUser2.Name = currentUser.Name;
 
         }
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case 0x84:
+                    base.WndProc(ref m);
+                    if ((int)m.Result == 0x1)
+                        m.Result = (IntPtr)0x2;
+                    return;
+            }
 
-        public void UpdateUser()
-        {
-            CreateUserObject();
-            client.UpdateUser(currentUser2, "name", "alois");
+            base.WndProc(ref m);
         }
-       public void SetUsername(string usernamelog)
+        public void GetUserObject()
         {
-            loggedasLbl.Text = "Logged as:  " + usernamelog;
+            currentUser = client.GetUserByUsername(username);
+        }
+
+        public void SetUsername(string usernamelog)
+        {
+            loggedasUsernameLbl.Text = usernamelog;
             username = usernamelog;
+            GetUserObject();
         }
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
         private void button2_Click_1(object sender, EventArgs e)
         {
@@ -72,6 +79,9 @@ namespace AuctionSystem.Client
         {
             selectionPanel.Height = myaccountbtn.Height;
             selectionPanel.Top = myaccountbtn.Top;
+            myAccountPanel.BringToFront();
+            usernameTxtBox.Text = currentUser.Username;
+            
         }
 
         private void newsBtn_Click(object sender, EventArgs e)
@@ -79,18 +89,17 @@ namespace AuctionSystem.Client
             selectionPanel.Height = newsBtn.Height;
             selectionPanel.Top = newsBtn.Top;
             //label1.Text = client.GetUserById(1).Name;
-           // label1.Text = username;
+            // label1.Text = username;
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
-            
+
         }
 
         private void biddingBtn_Click(object sender, EventArgs e)
         {
-            UpdateUser();
             selectionPanel.Height = biddingBtn.Height;
             selectionPanel.Top = biddingBtn.Top;
         }
@@ -115,6 +124,26 @@ namespace AuctionSystem.Client
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userDataUserControll1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userDataUserControll11_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AuctionClient_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void myAccountPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
