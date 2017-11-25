@@ -17,15 +17,17 @@ namespace AuctionSystem.Client
     public partial class AuctionClient : Form
     {
         UserServiceReference.UserDto currentUser;
-        UserServiceReference.UserServiceClient client;
-       
+        UserServiceReference.UserServiceClient userClient;
+        PaymentServiceReference.PaymentServiceClient paymentClient;
+
 
         public static string username;
 
         public AuctionClient()
         {
 
-            client = new UserServiceReference.UserServiceClient();
+            userClient = new UserServiceReference.UserServiceClient();
+            paymentClient = new PaymentServiceReference.PaymentServiceClient();
             InitializeComponent();
 
         }
@@ -44,7 +46,7 @@ namespace AuctionSystem.Client
         }
         public void GetUserObject()
         {
-            currentUser = client.GetUserByUsername(username);
+            currentUser = userClient.GetUserByUsername(username);
         }
 
         public void SetUsername(string usernamelog)
@@ -81,6 +83,12 @@ namespace AuctionSystem.Client
             selectionPanel.Top = myaccountbtn.Top;
             myAccountPanel.BringToFront();
             usernameTxtBox.Text = currentUser.Username;
+            nameTxtBox.Text = currentUser.Name;
+            birthdateTxtBox.Text = currentUser.DateOfBirth.ToString();
+            emailTxtBox.Text = currentUser.Email;
+            addressTxtbox.Text = currentUser.Address;
+            phoneNumberTxtBox.Text = currentUser.Phone;
+            zipTxtBox.Text = currentUser.ZipCountryCity;
             
         }
 
@@ -144,6 +152,11 @@ namespace AuctionSystem.Client
         }
 
         private void myAccountPanel_Paint(object sender, PaintEventArgs e)
+        {
+            paymentClient.AddPayment()
+        }
+
+        private void saveNewPaymentBtn_Click(object sender, EventArgs e)
         {
 
         }

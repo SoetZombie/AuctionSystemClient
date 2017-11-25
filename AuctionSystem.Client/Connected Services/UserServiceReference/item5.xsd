@@ -18,8 +18,6 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="user" nillable="true" type="q2:User" />
-        <xs:element minOccurs="0" name="property" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -61,7 +59,7 @@
   <xs:element name="IsUserExisting">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="user" nillable="true" type="q5:User" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -75,8 +73,8 @@
   <xs:element name="CountUserBidsForGivenProduct">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="user" nillable="true" type="q6:User" />
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="product" nillable="true" type="q7:Product" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="user" nillable="true" type="q5:User" />
+        <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -87,45 +85,60 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetAllUserSpentCoinsForGivenProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="user" nillable="true" type="q6:User" />
+        <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUserSpentCoinsForGivenProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllUserSpentCoinsForGivenProductResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetUserProducts">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="user" nillable="true" type="q8:User" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="user" nillable="true" type="q7:User" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetUserProductsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="GetUserProductsResult" nillable="true" type="q9:ArrayOfProduct" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="GetUserProductsResult" nillable="true" type="q8:ArrayOfProduct" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetUserBids">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="user" nillable="true" type="q10:User" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="user" nillable="true" type="q9:User" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetUserBidsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="GetUserBidsResult" nillable="true" type="q11:ArrayOfBid" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="GetUserBidsResult" nillable="true" type="q10:ArrayOfBid" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetUserInvoices">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="user" nillable="true" type="q12:User" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="user" nillable="true" type="q11:User" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetUserInvoicesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="GetUserInvoicesResult" nillable="true" type="q13:ArrayOfInvoice" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="GetUserInvoicesResult" nillable="true" type="q12:ArrayOfInvoice" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -139,7 +152,7 @@
   <xs:element name="GetUserByUsernameResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.DTOs" minOccurs="0" name="GetUserByUsernameResult" nillable="true" type="q14:UserDto" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.DTOs" minOccurs="0" name="GetUserByUsernameResult" nillable="true" type="q13:UserDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

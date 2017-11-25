@@ -157,6 +157,9 @@
     <None Include="Connected Services\PaymentServiceReference\AuctionSystem.Client.PaymentServiceReference.Payment.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\PaymentServiceReference\AuctionSystem.Client.PaymentServiceReference.PaymentDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\PaymentServiceReference\item.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -170,6 +173,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\PaymentServiceReference\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PaymentServiceReference\item5.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\PaymentServiceReference\PaymentService.wsdl" />

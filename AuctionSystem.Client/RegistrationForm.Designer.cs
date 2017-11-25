@@ -51,8 +51,10 @@
             this.addressLbl = new System.Windows.Forms.Label();
             this.addressTxtBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.femaleRadio = new System.Windows.Forms.RadioButton();
             this.maleRadio = new System.Windows.Forms.RadioButton();
+            this.femaleRadio = new System.Windows.Forms.RadioButton();
+            this.zipIdTxtBox = new System.Windows.Forms.TextBox();
+            this.zipIdLbl = new System.Windows.Forms.Label();
             this.topPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +65,7 @@
             this.topPanel.Controls.Add(this.maximizeBtn);
             this.topPanel.Controls.Add(this.exitBtn);
             this.topPanel.Controls.Add(this.ebidBtn);
+            this.topPanel.Controls.Add(this.registrationLabel);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -149,17 +152,16 @@
             // phoneTxtBox
             // 
             this.phoneTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.phoneTxtBox.Location = new System.Drawing.Point(644, 310);
+            this.phoneTxtBox.Location = new System.Drawing.Point(644, 242);
             this.phoneTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.phoneTxtBox.Name = "phoneTxtBox";
             this.phoneTxtBox.Size = new System.Drawing.Size(234, 40);
             this.phoneTxtBox.TabIndex = 14;
-            this.phoneTxtBox.UseSystemPasswordChar = true;
             // 
             // usernameTxtBox
             // 
             this.usernameTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.usernameTxtBox.Location = new System.Drawing.Point(644, 171);
+            this.usernameTxtBox.Location = new System.Drawing.Point(644, 103);
             this.usernameTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.usernameTxtBox.Name = "usernameTxtBox";
             this.usernameTxtBox.Size = new System.Drawing.Size(234, 40);
@@ -170,7 +172,7 @@
             this.passwordLbl.AutoSize = true;
             this.passwordLbl.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.passwordLbl.ForeColor = System.Drawing.Color.White;
-            this.passwordLbl.Location = new System.Drawing.Point(305, 394);
+            this.passwordLbl.Location = new System.Drawing.Point(305, 326);
             this.passwordLbl.Name = "passwordLbl";
             this.passwordLbl.Size = new System.Drawing.Size(204, 49);
             this.passwordLbl.TabIndex = 12;
@@ -181,7 +183,7 @@
             this.usernameLbl.AutoSize = true;
             this.usernameLbl.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.usernameLbl.ForeColor = System.Drawing.Color.White;
-            this.usernameLbl.Location = new System.Drawing.Point(305, 162);
+            this.usernameLbl.Location = new System.Drawing.Point(305, 94);
             this.usernameLbl.Name = "usernameLbl";
             this.usernameLbl.Size = new System.Drawing.Size(219, 49);
             this.usernameLbl.TabIndex = 11;
@@ -192,7 +194,7 @@
             this.registrationLabel.AutoSize = true;
             this.registrationLabel.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.registrationLabel.ForeColor = System.Drawing.Color.White;
-            this.registrationLabel.Location = new System.Drawing.Point(503, 85);
+            this.registrationLabel.Location = new System.Drawing.Point(518, 33);
             this.registrationLabel.Name = "registrationLabel";
             this.registrationLabel.Size = new System.Drawing.Size(360, 49);
             this.registrationLabel.TabIndex = 16;
@@ -203,7 +205,7 @@
             this.nameLbl.AutoSize = true;
             this.nameLbl.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.nameLbl.ForeColor = System.Drawing.Color.White;
-            this.nameLbl.Location = new System.Drawing.Point(305, 208);
+            this.nameLbl.Location = new System.Drawing.Point(305, 140);
             this.nameLbl.Name = "nameLbl";
             this.nameLbl.Size = new System.Drawing.Size(216, 49);
             this.nameLbl.TabIndex = 17;
@@ -214,7 +216,7 @@
             this.birthdateLbl.AutoSize = true;
             this.birthdateLbl.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.birthdateLbl.ForeColor = System.Drawing.Color.White;
-            this.birthdateLbl.Location = new System.Drawing.Point(305, 254);
+            this.birthdateLbl.Location = new System.Drawing.Point(305, 186);
             this.birthdateLbl.Name = "birthdateLbl";
             this.birthdateLbl.Size = new System.Drawing.Size(266, 49);
             this.birthdateLbl.TabIndex = 18;
@@ -225,7 +227,7 @@
             this.phoneLbl.AutoSize = true;
             this.phoneLbl.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.phoneLbl.ForeColor = System.Drawing.Color.White;
-            this.phoneLbl.Location = new System.Drawing.Point(305, 301);
+            this.phoneLbl.Location = new System.Drawing.Point(305, 233);
             this.phoneLbl.Name = "phoneLbl";
             this.phoneLbl.Size = new System.Drawing.Size(315, 49);
             this.phoneLbl.TabIndex = 19;
@@ -236,7 +238,7 @@
             this.emailLbl.AutoSize = true;
             this.emailLbl.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.emailLbl.ForeColor = System.Drawing.Color.White;
-            this.emailLbl.Location = new System.Drawing.Point(305, 347);
+            this.emailLbl.Location = new System.Drawing.Point(305, 279);
             this.emailLbl.Name = "emailLbl";
             this.emailLbl.Size = new System.Drawing.Size(127, 49);
             this.emailLbl.TabIndex = 20;
@@ -247,7 +249,7 @@
             this.genderLbl.AutoSize = true;
             this.genderLbl.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.genderLbl.ForeColor = System.Drawing.Color.White;
-            this.genderLbl.Location = new System.Drawing.Point(306, 490);
+            this.genderLbl.Location = new System.Drawing.Point(306, 488);
             this.genderLbl.Name = "genderLbl";
             this.genderLbl.Size = new System.Drawing.Size(172, 49);
             this.genderLbl.TabIndex = 21;
@@ -256,7 +258,7 @@
             // nameTxtBox
             // 
             this.nameTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.nameTxtBox.Location = new System.Drawing.Point(644, 218);
+            this.nameTxtBox.Location = new System.Drawing.Point(644, 150);
             this.nameTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nameTxtBox.Name = "nameTxtBox";
             this.nameTxtBox.Size = new System.Drawing.Size(234, 40);
@@ -265,7 +267,7 @@
             // birthdateTxtBox
             // 
             this.birthdateTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.birthdateTxtBox.Location = new System.Drawing.Point(644, 264);
+            this.birthdateTxtBox.Location = new System.Drawing.Point(644, 196);
             this.birthdateTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.birthdateTxtBox.Name = "birthdateTxtBox";
             this.birthdateTxtBox.Size = new System.Drawing.Size(234, 40);
@@ -274,7 +276,7 @@
             // emailTxtBox
             // 
             this.emailTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.emailTxtBox.Location = new System.Drawing.Point(644, 357);
+            this.emailTxtBox.Location = new System.Drawing.Point(644, 289);
             this.emailTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailTxtBox.Name = "emailTxtBox";
             this.emailTxtBox.Size = new System.Drawing.Size(234, 40);
@@ -283,18 +285,19 @@
             // passwordTxtBox
             // 
             this.passwordTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.passwordTxtBox.Location = new System.Drawing.Point(644, 403);
+            this.passwordTxtBox.Location = new System.Drawing.Point(644, 335);
             this.passwordTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.passwordTxtBox.Name = "passwordTxtBox";
             this.passwordTxtBox.Size = new System.Drawing.Size(234, 40);
             this.passwordTxtBox.TabIndex = 25;
+            this.passwordTxtBox.UseSystemPasswordChar = true;
             // 
             // addressLbl
             // 
             this.addressLbl.AutoSize = true;
             this.addressLbl.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.addressLbl.ForeColor = System.Drawing.Color.White;
-            this.addressLbl.Location = new System.Drawing.Point(305, 441);
+            this.addressLbl.Location = new System.Drawing.Point(305, 373);
             this.addressLbl.Name = "addressLbl";
             this.addressLbl.Size = new System.Drawing.Size(173, 49);
             this.addressLbl.TabIndex = 26;
@@ -303,7 +306,7 @@
             // addressTxtBox
             // 
             this.addressTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.addressTxtBox.Location = new System.Drawing.Point(644, 450);
+            this.addressTxtBox.Location = new System.Drawing.Point(644, 382);
             this.addressTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addressTxtBox.Name = "addressTxtBox";
             this.addressTxtBox.Size = new System.Drawing.Size(234, 40);
@@ -313,23 +316,11 @@
             // 
             this.groupBox1.Controls.Add(this.maleRadio);
             this.groupBox1.Controls.Add(this.femaleRadio);
-            this.groupBox1.Location = new System.Drawing.Point(644, 496);
+            this.groupBox1.Location = new System.Drawing.Point(615, 523);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(234, 53);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
-            // 
-            // femaleRadio
-            // 
-            this.femaleRadio.AutoSize = true;
-            this.femaleRadio.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.femaleRadio.Location = new System.Drawing.Point(7, 16);
-            this.femaleRadio.Name = "femaleRadio";
-            this.femaleRadio.Size = new System.Drawing.Size(101, 27);
-            this.femaleRadio.TabIndex = 0;
-            this.femaleRadio.TabStop = true;
-            this.femaleRadio.Text = "female";
-            this.femaleRadio.UseVisualStyleBackColor = true;
             // 
             // maleRadio
             // 
@@ -343,12 +334,46 @@
             this.maleRadio.Text = "male";
             this.maleRadio.UseVisualStyleBackColor = true;
             // 
+            // femaleRadio
+            // 
+            this.femaleRadio.AutoSize = true;
+            this.femaleRadio.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.femaleRadio.Location = new System.Drawing.Point(7, 16);
+            this.femaleRadio.Name = "femaleRadio";
+            this.femaleRadio.Size = new System.Drawing.Size(101, 27);
+            this.femaleRadio.TabIndex = 0;
+            this.femaleRadio.TabStop = true;
+            this.femaleRadio.Text = "female";
+            this.femaleRadio.UseVisualStyleBackColor = true;
+            // 
+            // zipIdTxtBox
+            // 
+            this.zipIdTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.zipIdTxtBox.Location = new System.Drawing.Point(645, 431);
+            this.zipIdTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.zipIdTxtBox.Name = "zipIdTxtBox";
+            this.zipIdTxtBox.Size = new System.Drawing.Size(234, 40);
+            this.zipIdTxtBox.TabIndex = 30;
+            // 
+            // zipIdLbl
+            // 
+            this.zipIdLbl.AutoSize = true;
+            this.zipIdLbl.Font = new System.Drawing.Font("Century Gothic", 24F);
+            this.zipIdLbl.ForeColor = System.Drawing.Color.White;
+            this.zipIdLbl.Location = new System.Drawing.Point(306, 422);
+            this.zipIdLbl.Name = "zipIdLbl";
+            this.zipIdLbl.Size = new System.Drawing.Size(126, 49);
+            this.zipIdLbl.TabIndex = 29;
+            this.zipIdLbl.Text = "Zip Id";
+            // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(1403, 675);
+            this.Controls.Add(this.zipIdTxtBox);
+            this.Controls.Add(this.zipIdLbl);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.addressTxtBox);
             this.Controls.Add(this.addressLbl);
@@ -361,7 +386,6 @@
             this.Controls.Add(this.phoneLbl);
             this.Controls.Add(this.birthdateLbl);
             this.Controls.Add(this.nameLbl);
-            this.Controls.Add(this.registrationLabel);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.loginLbl);
             this.Controls.Add(this.registerBtn);
@@ -374,6 +398,7 @@
             this.Name = "RegistrationForm";
             this.Text = "RegistrationForm";
             this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -408,5 +433,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton maleRadio;
         private System.Windows.Forms.RadioButton femaleRadio;
+        private System.Windows.Forms.TextBox zipIdTxtBox;
+        private System.Windows.Forms.Label zipIdLbl;
     }
 }

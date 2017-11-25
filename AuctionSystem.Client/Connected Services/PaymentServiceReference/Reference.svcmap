@@ -24,6 +24,7 @@
   <Metadata>
     <MetadataFile FileName="PaymentService.wsdl" MetadataType="Wsdl" ID="3946a173-dee0-4723-a378-bb7feb0ee773" SourceId="1" SourceUrl="http://localhost:9999/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?wsdl" />
     <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="acab5537-a736-4ff4-abb8-458282b5aac5" SourceId="1" SourceUrl="http://localhost:9999/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd4" />
+    <MetadataFile FileName="item5.xsd" MetadataType="Schema" ID="ae417290-858d-4c4c-9760-37f564e81c13" SourceId="1" SourceUrl="http://localhost:9999/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd5" />
     <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="b0fd1eb2-b543-42e9-8122-e7570fd30c47" SourceId="1" SourceUrl="http://localhost:9999/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd2" />
     <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="acf9b792-c386-42eb-97cf-70821a7a437b" SourceId="1" SourceUrl="http://localhost:9999/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd3" />
     <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="ff2864b4-e8f0-4498-9c7a-1acbd10764de" SourceId="1" SourceUrl="http://localhost:9999/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd0" />

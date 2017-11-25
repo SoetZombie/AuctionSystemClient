@@ -32,6 +32,9 @@ namespace AuctionSystem.Client.PaymentServiceReference {
         private AuctionSystem.Client.PaymentServiceReference.PaymentType TypeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AuctionSystem.Client.PaymentServiceReference.User UserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int UserIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -84,6 +87,19 @@ namespace AuctionSystem.Client.PaymentServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public AuctionSystem.Client.PaymentServiceReference.User User {
+            get {
+                return this.UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserField, value) != true)) {
+                    this.UserField = value;
+                    this.RaisePropertyChanged("User");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int UserId {
             get {
                 return this.UserIdField;
@@ -104,23 +120,6 @@ namespace AuctionSystem.Client.PaymentServiceReference {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PaymentType", Namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.Enums")]
-    public enum PaymentType : int {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        PayPal = 0,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        CreditCard = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        BankTransfer = 2,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        AmazonPayment = 3,
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -424,6 +423,23 @@ namespace AuctionSystem.Client.PaymentServiceReference {
         }
     }
     
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PaymentType", Namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.Enums")]
+    public enum PaymentType : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        PayPal = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        CreditCard = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        BankTransfer = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        AmazonPayment = 3,
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Zip", Namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models")]
@@ -440,10 +456,10 @@ namespace AuctionSystem.Client.PaymentServiceReference {
         private string CountryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ZipCodeField;
+        private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ZipIdField;
+        private string ZipCodeField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -482,6 +498,19 @@ namespace AuctionSystem.Client.PaymentServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string ZipCode {
             get {
                 return this.ZipCodeField;
@@ -490,19 +519,6 @@ namespace AuctionSystem.Client.PaymentServiceReference {
                 if ((object.ReferenceEquals(this.ZipCodeField, value) != true)) {
                     this.ZipCodeField = value;
                     this.RaisePropertyChanged("ZipCode");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ZipId {
-            get {
-                return this.ZipIdField;
-            }
-            set {
-                if ((this.ZipIdField.Equals(value) != true)) {
-                    this.ZipIdField = value;
-                    this.RaisePropertyChanged("ZipId");
                 }
             }
         }
@@ -951,6 +967,83 @@ namespace AuctionSystem.Client.PaymentServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PaymentDto", Namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.DTOs")]
+    [System.SerializableAttribute()]
+    public partial class PaymentDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PaymentTypeCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AuctionSystem.Client.PaymentServiceReference.PaymentType TypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsernameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PaymentTypeCode {
+            get {
+                return this.PaymentTypeCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PaymentTypeCodeField, value) != true)) {
+                    this.PaymentTypeCodeField = value;
+                    this.RaisePropertyChanged("PaymentTypeCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public AuctionSystem.Client.PaymentServiceReference.PaymentType Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((this.TypeField.Equals(value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Username {
+            get {
+                return this.UsernameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsernameField, value) != true)) {
+                    this.UsernameField = value;
+                    this.RaisePropertyChanged("Username");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="PaymentServiceReference.IPaymentService")]
     public interface IPaymentService {
@@ -962,10 +1055,10 @@ namespace AuctionSystem.Client.PaymentServiceReference {
         System.Threading.Tasks.Task AddPaymentAsync(AuctionSystem.Client.PaymentServiceReference.Payment payment, AuctionSystem.Client.PaymentServiceReference.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPaymentService/GetPayment", ReplyAction="http://tempuri.org/IPaymentService/GetPaymentResponse")]
-        AuctionSystem.Client.PaymentServiceReference.Payment GetPayment(int paymentId);
+        AuctionSystem.Client.PaymentServiceReference.PaymentDto GetPayment(int paymentId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPaymentService/GetPayment", ReplyAction="http://tempuri.org/IPaymentService/GetPaymentResponse")]
-        System.Threading.Tasks.Task<AuctionSystem.Client.PaymentServiceReference.Payment> GetPaymentAsync(int paymentId);
+        System.Threading.Tasks.Task<AuctionSystem.Client.PaymentServiceReference.PaymentDto> GetPaymentAsync(int paymentId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPaymentService/DeletePayment", ReplyAction="http://tempuri.org/IPaymentService/DeletePaymentResponse")]
         bool DeletePayment(AuctionSystem.Client.PaymentServiceReference.Payment payment);
@@ -974,10 +1067,10 @@ namespace AuctionSystem.Client.PaymentServiceReference {
         System.Threading.Tasks.Task<bool> DeletePaymentAsync(AuctionSystem.Client.PaymentServiceReference.Payment payment);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPaymentService/UpdatePayment", ReplyAction="http://tempuri.org/IPaymentService/UpdatePaymentResponse")]
-        bool UpdatePayment(AuctionSystem.Client.PaymentServiceReference.Payment payment, string property, string value);
+        bool UpdatePayment(AuctionSystem.Client.PaymentServiceReference.Payment payment);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPaymentService/UpdatePayment", ReplyAction="http://tempuri.org/IPaymentService/UpdatePaymentResponse")]
-        System.Threading.Tasks.Task<bool> UpdatePaymentAsync(AuctionSystem.Client.PaymentServiceReference.Payment payment, string property, string value);
+        System.Threading.Tasks.Task<bool> UpdatePaymentAsync(AuctionSystem.Client.PaymentServiceReference.Payment payment);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPaymentService/GetPaymentsByUser", ReplyAction="http://tempuri.org/IPaymentService/GetPaymentsByUserResponse")]
         AuctionSystem.Client.PaymentServiceReference.Payment[] GetPaymentsByUser(AuctionSystem.Client.PaymentServiceReference.User user);
@@ -1021,11 +1114,11 @@ namespace AuctionSystem.Client.PaymentServiceReference {
             return base.Channel.AddPaymentAsync(payment, user);
         }
         
-        public AuctionSystem.Client.PaymentServiceReference.Payment GetPayment(int paymentId) {
+        public AuctionSystem.Client.PaymentServiceReference.PaymentDto GetPayment(int paymentId) {
             return base.Channel.GetPayment(paymentId);
         }
         
-        public System.Threading.Tasks.Task<AuctionSystem.Client.PaymentServiceReference.Payment> GetPaymentAsync(int paymentId) {
+        public System.Threading.Tasks.Task<AuctionSystem.Client.PaymentServiceReference.PaymentDto> GetPaymentAsync(int paymentId) {
             return base.Channel.GetPaymentAsync(paymentId);
         }
         
@@ -1037,12 +1130,12 @@ namespace AuctionSystem.Client.PaymentServiceReference {
             return base.Channel.DeletePaymentAsync(payment);
         }
         
-        public bool UpdatePayment(AuctionSystem.Client.PaymentServiceReference.Payment payment, string property, string value) {
-            return base.Channel.UpdatePayment(payment, property, value);
+        public bool UpdatePayment(AuctionSystem.Client.PaymentServiceReference.Payment payment) {
+            return base.Channel.UpdatePayment(payment);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdatePaymentAsync(AuctionSystem.Client.PaymentServiceReference.Payment payment, string property, string value) {
-            return base.Channel.UpdatePaymentAsync(payment, property, value);
+        public System.Threading.Tasks.Task<bool> UpdatePaymentAsync(AuctionSystem.Client.PaymentServiceReference.Payment payment) {
+            return base.Channel.UpdatePaymentAsync(payment);
         }
         
         public AuctionSystem.Client.PaymentServiceReference.Payment[] GetPaymentsByUser(AuctionSystem.Client.PaymentServiceReference.User user) {

@@ -1199,10 +1199,10 @@ namespace AuctionSystem.Client.UserServiceReference {
         System.Threading.Tasks.Task CreateUserAsync(AuctionSystem.Client.UserServiceReference.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/UpdateUser", ReplyAction="http://tempuri.org/IUserService/UpdateUserResponse")]
-        bool UpdateUser(AuctionSystem.Client.UserServiceReference.User user, string property, string value);
+        bool UpdateUser(AuctionSystem.Client.UserServiceReference.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/UpdateUser", ReplyAction="http://tempuri.org/IUserService/UpdateUserResponse")]
-        System.Threading.Tasks.Task<bool> UpdateUserAsync(AuctionSystem.Client.UserServiceReference.User user, string property, string value);
+        System.Threading.Tasks.Task<bool> UpdateUserAsync(AuctionSystem.Client.UserServiceReference.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserById", ReplyAction="http://tempuri.org/IUserService/GetUserByIdResponse")]
         AuctionSystem.Client.UserServiceReference.UserDto GetUserById(int id);
@@ -1217,16 +1217,22 @@ namespace AuctionSystem.Client.UserServiceReference {
         System.Threading.Tasks.Task<bool> DeleteUserAsync(AuctionSystem.Client.UserServiceReference.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/IsUserExisting", ReplyAction="http://tempuri.org/IUserService/IsUserExistingResponse")]
-        bool IsUserExisting(AuctionSystem.Client.UserServiceReference.User user);
+        bool IsUserExisting(string username);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/IsUserExisting", ReplyAction="http://tempuri.org/IUserService/IsUserExistingResponse")]
-        System.Threading.Tasks.Task<bool> IsUserExistingAsync(AuctionSystem.Client.UserServiceReference.User user);
+        System.Threading.Tasks.Task<bool> IsUserExistingAsync(string username);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/CountUserBidsForGivenProduct", ReplyAction="http://tempuri.org/IUserService/CountUserBidsForGivenProductResponse")]
-        int CountUserBidsForGivenProduct(AuctionSystem.Client.UserServiceReference.User user, AuctionSystem.Client.UserServiceReference.Product product);
+        int CountUserBidsForGivenProduct(AuctionSystem.Client.UserServiceReference.User user, string productName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/CountUserBidsForGivenProduct", ReplyAction="http://tempuri.org/IUserService/CountUserBidsForGivenProductResponse")]
-        System.Threading.Tasks.Task<int> CountUserBidsForGivenProductAsync(AuctionSystem.Client.UserServiceReference.User user, AuctionSystem.Client.UserServiceReference.Product product);
+        System.Threading.Tasks.Task<int> CountUserBidsForGivenProductAsync(AuctionSystem.Client.UserServiceReference.User user, string productName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAllUserSpentCoinsForGivenProduct", ReplyAction="http://tempuri.org/IUserService/GetAllUserSpentCoinsForGivenProductResponse")]
+        int GetAllUserSpentCoinsForGivenProduct(AuctionSystem.Client.UserServiceReference.User user, string productName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAllUserSpentCoinsForGivenProduct", ReplyAction="http://tempuri.org/IUserService/GetAllUserSpentCoinsForGivenProductResponse")]
+        System.Threading.Tasks.Task<int> GetAllUserSpentCoinsForGivenProductAsync(AuctionSystem.Client.UserServiceReference.User user, string productName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserProducts", ReplyAction="http://tempuri.org/IUserService/GetUserProductsResponse")]
         AuctionSystem.Client.UserServiceReference.Product[] GetUserProducts(AuctionSystem.Client.UserServiceReference.User user);
@@ -1288,12 +1294,12 @@ namespace AuctionSystem.Client.UserServiceReference {
             return base.Channel.CreateUserAsync(user);
         }
         
-        public bool UpdateUser(AuctionSystem.Client.UserServiceReference.User user, string property, string value) {
-            return base.Channel.UpdateUser(user, property, value);
+        public bool UpdateUser(AuctionSystem.Client.UserServiceReference.User user) {
+            return base.Channel.UpdateUser(user);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdateUserAsync(AuctionSystem.Client.UserServiceReference.User user, string property, string value) {
-            return base.Channel.UpdateUserAsync(user, property, value);
+        public System.Threading.Tasks.Task<bool> UpdateUserAsync(AuctionSystem.Client.UserServiceReference.User user) {
+            return base.Channel.UpdateUserAsync(user);
         }
         
         public AuctionSystem.Client.UserServiceReference.UserDto GetUserById(int id) {
@@ -1312,20 +1318,28 @@ namespace AuctionSystem.Client.UserServiceReference {
             return base.Channel.DeleteUserAsync(user);
         }
         
-        public bool IsUserExisting(AuctionSystem.Client.UserServiceReference.User user) {
-            return base.Channel.IsUserExisting(user);
+        public bool IsUserExisting(string username) {
+            return base.Channel.IsUserExisting(username);
         }
         
-        public System.Threading.Tasks.Task<bool> IsUserExistingAsync(AuctionSystem.Client.UserServiceReference.User user) {
-            return base.Channel.IsUserExistingAsync(user);
+        public System.Threading.Tasks.Task<bool> IsUserExistingAsync(string username) {
+            return base.Channel.IsUserExistingAsync(username);
         }
         
-        public int CountUserBidsForGivenProduct(AuctionSystem.Client.UserServiceReference.User user, AuctionSystem.Client.UserServiceReference.Product product) {
-            return base.Channel.CountUserBidsForGivenProduct(user, product);
+        public int CountUserBidsForGivenProduct(AuctionSystem.Client.UserServiceReference.User user, string productName) {
+            return base.Channel.CountUserBidsForGivenProduct(user, productName);
         }
         
-        public System.Threading.Tasks.Task<int> CountUserBidsForGivenProductAsync(AuctionSystem.Client.UserServiceReference.User user, AuctionSystem.Client.UserServiceReference.Product product) {
-            return base.Channel.CountUserBidsForGivenProductAsync(user, product);
+        public System.Threading.Tasks.Task<int> CountUserBidsForGivenProductAsync(AuctionSystem.Client.UserServiceReference.User user, string productName) {
+            return base.Channel.CountUserBidsForGivenProductAsync(user, productName);
+        }
+        
+        public int GetAllUserSpentCoinsForGivenProduct(AuctionSystem.Client.UserServiceReference.User user, string productName) {
+            return base.Channel.GetAllUserSpentCoinsForGivenProduct(user, productName);
+        }
+        
+        public System.Threading.Tasks.Task<int> GetAllUserSpentCoinsForGivenProductAsync(AuctionSystem.Client.UserServiceReference.User user, string productName) {
+            return base.Channel.GetAllUserSpentCoinsForGivenProductAsync(user, productName);
         }
         
         public AuctionSystem.Client.UserServiceReference.Product[] GetUserProducts(AuctionSystem.Client.UserServiceReference.User user) {

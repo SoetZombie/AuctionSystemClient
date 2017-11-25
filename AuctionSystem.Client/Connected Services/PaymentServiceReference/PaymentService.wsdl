@@ -317,6 +317,7 @@
       <xsd:import schemaLocation="http://localhost:9999/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" />
       <xsd:import schemaLocation="http://localhost:9999/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.Enums" />
       <xsd:import schemaLocation="http://localhost:9999/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost:9999/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.DTOs" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IPaymentService_AddPayment_InputMessage">

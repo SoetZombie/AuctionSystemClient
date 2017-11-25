@@ -7,6 +7,7 @@
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="PaymentTypeCode" nillable="true" type="xs:string" />
       <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.Enums" minOccurs="0" name="Type" type="q1:PaymentType" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="tns:User" />
       <xs:element minOccurs="0" name="UserId" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
@@ -91,8 +92,8 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="ZipCode" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ZipId" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Zip" nillable="true" type="tns:Zip" />
