@@ -58,18 +58,29 @@
             this.passwordTxtBox = new System.Windows.Forms.TextBox();
             this.addressTxtbox = new System.Windows.Forms.TextBox();
             this.myAccountPanel = new System.Windows.Forms.Panel();
-            this.zipTxtBox = new System.Windows.Forms.TextBox();
-            this.zipLbl = new System.Windows.Forms.Label();
-            this.buyCoinsButton = new System.Windows.Forms.Button();
+            this.BiddingPanel = new System.Windows.Forms.Panel();
+            this.SearchProductTextBox = new System.Windows.Forms.TextBox();
+            this.GetProductBids = new System.Windows.Forms.Button();
+            this.ResultTextBox = new System.Windows.Forms.TextBox();
+            this.ProductTextBox = new System.Windows.Forms.TextBox();
+            this.ProductLbl = new System.Windows.Forms.Label();
+            this.CoinsTextBox = new System.Windows.Forms.TextBox();
+            this.CoinsLbl = new System.Windows.Forms.Label();
+            this.MakeBidBtn = new System.Windows.Forms.Button();
+            this.GetBidBtn = new System.Windows.Forms.Button();
             this.buyCoinsPanel = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.paymentTypeLbl = new System.Windows.Forms.Label();
-            this.paymentTypeCodelbl = new System.Windows.Forms.Label();
-            this.newPaymentPaymentTypeCodelbl = new System.Windows.Forms.TextBox();
             this.saveNewPaymentBtn = new System.Windows.Forms.Button();
+            this.newPaymentPaymentTypeCodelbl = new System.Windows.Forms.TextBox();
+            this.paymentTypeCodelbl = new System.Windows.Forms.Label();
+            this.paymentTypeLbl = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buyCoinsButton = new System.Windows.Forms.Button();
+            this.zipLbl = new System.Windows.Forms.Label();
+            this.zipTxtBox = new System.Windows.Forms.TextBox();
             this.topPanel.SuspendLayout();
             this.leftMenuPanel.SuspendLayout();
             this.myAccountPanel.SuspendLayout();
+            this.BiddingPanel.SuspendLayout();
             this.buyCoinsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -423,6 +434,7 @@
             // 
             // myAccountPanel
             // 
+            this.myAccountPanel.Controls.Add(this.BiddingPanel);
             this.myAccountPanel.Controls.Add(this.buyCoinsPanel);
             this.myAccountPanel.Controls.Add(this.buyCoinsButton);
             this.myAccountPanel.Controls.Add(this.zipLbl);
@@ -447,36 +459,102 @@
             this.myAccountPanel.TabIndex = 7;
             this.myAccountPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.myAccountPanel_Paint);
             // 
-            // zipTxtBox
+            // BiddingPanel
             // 
-            this.zipTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.zipTxtBox.Location = new System.Drawing.Point(283, 360);
-            this.zipTxtBox.Name = "zipTxtBox";
-            this.zipTxtBox.Size = new System.Drawing.Size(167, 40);
-            this.zipTxtBox.TabIndex = 68;
+            this.BiddingPanel.Controls.Add(this.SearchProductTextBox);
+            this.BiddingPanel.Controls.Add(this.GetProductBids);
+            this.BiddingPanel.Controls.Add(this.ResultTextBox);
+            this.BiddingPanel.Controls.Add(this.ProductTextBox);
+            this.BiddingPanel.Controls.Add(this.ProductLbl);
+            this.BiddingPanel.Controls.Add(this.CoinsTextBox);
+            this.BiddingPanel.Controls.Add(this.CoinsLbl);
+            this.BiddingPanel.Controls.Add(this.MakeBidBtn);
+            this.BiddingPanel.Controls.Add(this.GetBidBtn);
+            this.BiddingPanel.Location = new System.Drawing.Point(3, 0);
+            this.BiddingPanel.Name = "BiddingPanel";
+            this.BiddingPanel.Size = new System.Drawing.Size(776, 537);
+            this.BiddingPanel.TabIndex = 72;
             // 
-            // zipLbl
+            // SearchProductTextBox
             // 
-            this.zipLbl.AutoSize = true;
-            this.zipLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.zipLbl.ForeColor = System.Drawing.Color.Black;
-            this.zipLbl.Location = new System.Drawing.Point(29, 360);
-            this.zipLbl.Name = "zipLbl";
-            this.zipLbl.Size = new System.Drawing.Size(84, 33);
-            this.zipLbl.TabIndex = 69;
-            this.zipLbl.Text = "Zip Id";
+            this.SearchProductTextBox.Location = new System.Drawing.Point(258, 24);
+            this.SearchProductTextBox.Name = "SearchProductTextBox";
+            this.SearchProductTextBox.Size = new System.Drawing.Size(110, 22);
+            this.SearchProductTextBox.TabIndex = 9;
             // 
-            // buyCoinsButton
+            // GetProductBids
             // 
-            this.buyCoinsButton.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.buyCoinsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buyCoinsButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buyCoinsButton.Location = new System.Drawing.Point(567, 43);
-            this.buyCoinsButton.Name = "buyCoinsButton";
-            this.buyCoinsButton.Size = new System.Drawing.Size(170, 56);
-            this.buyCoinsButton.TabIndex = 70;
-            this.buyCoinsButton.Text = "Buy Coins";
-            this.buyCoinsButton.UseVisualStyleBackColor = false;
+            this.GetProductBids.Location = new System.Drawing.Point(41, 23);
+            this.GetProductBids.Name = "GetProductBids";
+            this.GetProductBids.Size = new System.Drawing.Size(202, 28);
+            this.GetProductBids.TabIndex = 8;
+            this.GetProductBids.Text = "Get all bids for product name\r\n";
+            this.GetProductBids.UseVisualStyleBackColor = true;
+            this.GetProductBids.Click += new System.EventHandler(this.GetProductBids_Click);
+            // 
+            // ResultTextBox
+            // 
+            this.ResultTextBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ResultTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ResultTextBox.Location = new System.Drawing.Point(41, 63);
+            this.ResultTextBox.Multiline = true;
+            this.ResultTextBox.Name = "ResultTextBox";
+            this.ResultTextBox.ReadOnly = true;
+            this.ResultTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.ResultTextBox.Size = new System.Drawing.Size(720, 294);
+            this.ResultTextBox.TabIndex = 7;
+            // 
+            // ProductTextBox
+            // 
+            this.ProductTextBox.Location = new System.Drawing.Point(165, 435);
+            this.ProductTextBox.Name = "ProductTextBox";
+            this.ProductTextBox.Size = new System.Drawing.Size(100, 22);
+            this.ProductTextBox.TabIndex = 6;
+            // 
+            // ProductLbl
+            // 
+            this.ProductLbl.AutoSize = true;
+            this.ProductLbl.Location = new System.Drawing.Point(48, 435);
+            this.ProductLbl.Name = "ProductLbl";
+            this.ProductLbl.Size = new System.Drawing.Size(96, 17);
+            this.ProductLbl.TabIndex = 5;
+            this.ProductLbl.Text = "Product name";
+            // 
+            // CoinsTextBox
+            // 
+            this.CoinsTextBox.Location = new System.Drawing.Point(165, 390);
+            this.CoinsTextBox.Name = "CoinsTextBox";
+            this.CoinsTextBox.Size = new System.Drawing.Size(100, 22);
+            this.CoinsTextBox.TabIndex = 4;
+            // 
+            // CoinsLbl
+            // 
+            this.CoinsLbl.AutoSize = true;
+            this.CoinsLbl.Location = new System.Drawing.Point(48, 390);
+            this.CoinsLbl.Name = "CoinsLbl";
+            this.CoinsLbl.Size = new System.Drawing.Size(43, 17);
+            this.CoinsLbl.TabIndex = 3;
+            this.CoinsLbl.Text = "Coins";
+            // 
+            // MakeBidBtn
+            // 
+            this.MakeBidBtn.Location = new System.Drawing.Point(183, 471);
+            this.MakeBidBtn.Name = "MakeBidBtn";
+            this.MakeBidBtn.Size = new System.Drawing.Size(82, 33);
+            this.MakeBidBtn.TabIndex = 2;
+            this.MakeBidBtn.Text = "Make bid";
+            this.MakeBidBtn.UseVisualStyleBackColor = true;
+            this.MakeBidBtn.Click += new System.EventHandler(this.MakeBidBtn_Click);
+            // 
+            // GetBidBtn
+            // 
+            this.GetBidBtn.Location = new System.Drawing.Point(665, 24);
+            this.GetBidBtn.Name = "GetBidBtn";
+            this.GetBidBtn.Size = new System.Drawing.Size(96, 33);
+            this.GetBidBtn.TabIndex = 0;
+            this.GetBidBtn.Text = "Get my bids";
+            this.GetBidBtn.UseVisualStyleBackColor = true;
+            this.GetBidBtn.Click += new System.EventHandler(this.GetBidBtn_Click);
             // 
             // buyCoinsPanel
             // 
@@ -490,45 +568,6 @@
             this.buyCoinsPanel.Size = new System.Drawing.Size(389, 321);
             this.buyCoinsPanel.TabIndex = 71;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Location = new System.Drawing.Point(7, 37);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(356, 43);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // paymentTypeLbl
-            // 
-            this.paymentTypeLbl.AutoSize = true;
-            this.paymentTypeLbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paymentTypeLbl.ForeColor = System.Drawing.Color.Black;
-            this.paymentTypeLbl.Location = new System.Drawing.Point(3, 11);
-            this.paymentTypeLbl.Name = "paymentTypeLbl";
-            this.paymentTypeLbl.Size = new System.Drawing.Size(150, 23);
-            this.paymentTypeLbl.TabIndex = 72;
-            this.paymentTypeLbl.Text = "Payment Type";
-            // 
-            // paymentTypeCodelbl
-            // 
-            this.paymentTypeCodelbl.AutoSize = true;
-            this.paymentTypeCodelbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paymentTypeCodelbl.ForeColor = System.Drawing.Color.Black;
-            this.paymentTypeCodelbl.Location = new System.Drawing.Point(3, 89);
-            this.paymentTypeCodelbl.Name = "paymentTypeCodelbl";
-            this.paymentTypeCodelbl.Size = new System.Drawing.Size(218, 23);
-            this.paymentTypeCodelbl.TabIndex = 73;
-            this.paymentTypeCodelbl.Text = "Payment Type Code ";
-            // 
-            // newPaymentPaymentTypeCodelbl
-            // 
-            this.newPaymentPaymentTypeCodelbl.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.newPaymentPaymentTypeCodelbl.Location = new System.Drawing.Point(7, 118);
-            this.newPaymentPaymentTypeCodelbl.Name = "newPaymentPaymentTypeCodelbl";
-            this.newPaymentPaymentTypeCodelbl.Size = new System.Drawing.Size(214, 40);
-            this.newPaymentPaymentTypeCodelbl.TabIndex = 72;
-            // 
             // saveNewPaymentBtn
             // 
             this.saveNewPaymentBtn.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -541,6 +580,76 @@
             this.saveNewPaymentBtn.Text = "Save new payment";
             this.saveNewPaymentBtn.UseVisualStyleBackColor = false;
             this.saveNewPaymentBtn.Click += new System.EventHandler(this.saveNewPaymentBtn_Click);
+            // 
+            // newPaymentPaymentTypeCodelbl
+            // 
+            this.newPaymentPaymentTypeCodelbl.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.newPaymentPaymentTypeCodelbl.Location = new System.Drawing.Point(7, 118);
+            this.newPaymentPaymentTypeCodelbl.Name = "newPaymentPaymentTypeCodelbl";
+            this.newPaymentPaymentTypeCodelbl.Size = new System.Drawing.Size(214, 40);
+            this.newPaymentPaymentTypeCodelbl.TabIndex = 72;
+            // 
+            // paymentTypeCodelbl
+            // 
+            this.paymentTypeCodelbl.AutoSize = true;
+            this.paymentTypeCodelbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paymentTypeCodelbl.ForeColor = System.Drawing.Color.Black;
+            this.paymentTypeCodelbl.Location = new System.Drawing.Point(3, 89);
+            this.paymentTypeCodelbl.Name = "paymentTypeCodelbl";
+            this.paymentTypeCodelbl.Size = new System.Drawing.Size(218, 23);
+            this.paymentTypeCodelbl.TabIndex = 73;
+            this.paymentTypeCodelbl.Text = "Payment Type Code ";
+            // 
+            // paymentTypeLbl
+            // 
+            this.paymentTypeLbl.AutoSize = true;
+            this.paymentTypeLbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paymentTypeLbl.ForeColor = System.Drawing.Color.Black;
+            this.paymentTypeLbl.Location = new System.Drawing.Point(3, 11);
+            this.paymentTypeLbl.Name = "paymentTypeLbl";
+            this.paymentTypeLbl.Size = new System.Drawing.Size(150, 23);
+            this.paymentTypeLbl.TabIndex = 72;
+            this.paymentTypeLbl.Text = "Payment Type";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(7, 37);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(356, 43);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // buyCoinsButton
+            // 
+            this.buyCoinsButton.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buyCoinsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buyCoinsButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buyCoinsButton.Location = new System.Drawing.Point(567, 43);
+            this.buyCoinsButton.Name = "buyCoinsButton";
+            this.buyCoinsButton.Size = new System.Drawing.Size(170, 56);
+            this.buyCoinsButton.TabIndex = 70;
+            this.buyCoinsButton.Text = "Buy Coins";
+            this.buyCoinsButton.UseVisualStyleBackColor = false;
+            // 
+            // zipLbl
+            // 
+            this.zipLbl.AutoSize = true;
+            this.zipLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.zipLbl.ForeColor = System.Drawing.Color.Black;
+            this.zipLbl.Location = new System.Drawing.Point(29, 360);
+            this.zipLbl.Name = "zipLbl";
+            this.zipLbl.Size = new System.Drawing.Size(84, 33);
+            this.zipLbl.TabIndex = 69;
+            this.zipLbl.Text = "Zip Id";
+            // 
+            // zipTxtBox
+            // 
+            this.zipTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.zipTxtBox.Location = new System.Drawing.Point(283, 360);
+            this.zipTxtBox.Name = "zipTxtBox";
+            this.zipTxtBox.Size = new System.Drawing.Size(167, 40);
+            this.zipTxtBox.TabIndex = 68;
             // 
             // AuctionClient
             // 
@@ -560,6 +669,8 @@
             this.leftMenuPanel.ResumeLayout(false);
             this.myAccountPanel.ResumeLayout(false);
             this.myAccountPanel.PerformLayout();
+            this.BiddingPanel.ResumeLayout(false);
+            this.BiddingPanel.PerformLayout();
             this.buyCoinsPanel.ResumeLayout(false);
             this.buyCoinsPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -605,5 +716,15 @@
         private System.Windows.Forms.Label paymentTypeLbl;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button buyCoinsButton;
+        private System.Windows.Forms.Panel BiddingPanel;
+        private System.Windows.Forms.TextBox ProductTextBox;
+        private System.Windows.Forms.Label ProductLbl;
+        private System.Windows.Forms.TextBox CoinsTextBox;
+        private System.Windows.Forms.Label CoinsLbl;
+        private System.Windows.Forms.Button MakeBidBtn;
+        private System.Windows.Forms.Button GetBidBtn;
+        private System.Windows.Forms.TextBox ResultTextBox;
+        private System.Windows.Forms.TextBox SearchProductTextBox;
+        private System.Windows.Forms.Button GetProductBids;
     }
 }

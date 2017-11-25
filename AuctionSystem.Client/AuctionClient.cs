@@ -16,17 +16,19 @@ namespace AuctionSystem.Client
 
     public partial class AuctionClient : Form
     {
-        UserServiceReference.UserDto currentUser;
-        UserServiceReference.UserServiceClient userClient;
-        PaymentServiceReference.PaymentServiceClient paymentClient;
-
+        private UserService.UserDto currentUser;
+        private UserService.UserServiceClient userClient;
+        private PaymentServiceReference.PaymentServiceClient paymentClient;
+        private BidService.IBidService bidService;
+        private ProductService.IProductService productService;
 
         public static string username;
 
         public AuctionClient()
         {
-
-            userClient = new UserServiceReference.UserServiceClient();
+            this.productService = new ProductService.ProductServiceClient();
+            this.bidService = new BidService.BidServiceClient();
+            this.userClient = new UserService.UserServiceClient();
             paymentClient = new PaymentServiceReference.PaymentServiceClient();
             InitializeComponent();
 
@@ -88,7 +90,7 @@ namespace AuctionSystem.Client
             emailTxtBox.Text = currentUser.Email;
             addressTxtbox.Text = currentUser.Address;
             phoneNumberTxtBox.Text = currentUser.Phone;
-            zipTxtBox.Text = currentUser.ZipCountryCity;
+            zipTxtBox.Text = currentUser.Zip.City + ", " + currentUser.Zip.Country;
             
         }
 
@@ -153,12 +155,64 @@ namespace AuctionSystem.Client
 
         private void myAccountPanel_Paint(object sender, PaintEventArgs e)
         {
-            paymentClient.AddPayment()
+            //paymentClient.AddPayment();
         }
 
         private void saveNewPaymentBtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void GetBidBtn_Click(object sender, EventArgs e)
+        {
+            var bidDtoArray = this.bidService.GetAllBidsByUserId(4); // take the current logged user id which in our case is 4 because login option is off for now!
+
+            var sb = new StringBuilder();
+
+            foreach (var item in bidDtoArray)
+            {
+                sb.AppendLine($"Product: {item.ProductName}");
+                sb.AppendLine($"Username: {item.Username}");
+                sb.AppendLine($"Date of creation: {item.DateOfCreated.ToString()}");
+                sb.AppendLine($"Coins: {item.Coins.ToString()}");
+                sb.AppendLine($"Is won: {item.IsWon.ToString()}");
+                sb.AppendLine("----------------");
+            }
+
+            ResultTextBox.Text = sb.ToString(); 
+        }
+
+        // Take a look here !
+        private void MakeBidBtn_Click(object sender, EventArgs e)
+        {
+            var productName = ProductTextBox.Text;
+            var productId = this.productService.GetProductByName(productName).Id;
+
+            var userId = this.userClient.GetUserByUsername("gosho").Id;
+
+            var coins = int.Parse(CoinsTextBox.Text);
+
+            this.bidService.MakeBid(userId, productId, coins);
+        }
+
+        private void GetProductBids_Click(object sender, EventArgs e)
+        {
+            var productName = SearchProductTextBox.Text;
+            var bidDtoArray = this.bidService.GetAllBidsByProductName(productName);
+
+            var sb = new StringBuilder();
+
+            foreach (var item in bidDtoArray)
+            {
+                sb.AppendLine($"Product: {item.ProductName}");
+                sb.AppendLine($"Username: {item.Username}");
+                sb.AppendLine($"Date of creation: {item.DateOfCreated.ToString()}");
+                sb.AppendLine($"Coins: {item.Coins.ToString()}");
+                sb.AppendLine($"Is won: {item.IsWon.ToString()}");
+                sb.AppendLine("----------------");
+            }
+
+            ResultTextBox.Text = sb.ToString();
         }
     }
 }

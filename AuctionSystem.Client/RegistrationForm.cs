@@ -5,13 +5,13 @@ namespace AuctionSystem.Client
 {
     public partial class RegistrationForm : Form
     {
-        UserServiceReference.UserServiceClient client;
-        UserServiceReference.Gender gender;
+        UserService.UserServiceClient client;
+        UserService.Gender gender;
         public RegistrationForm()
         {
-            client = new UserServiceReference.UserServiceClient();
+            client = new UserService.UserServiceClient();
             InitializeComponent();
-            gender = UserServiceReference.Gender.Male;
+            gender = UserService.Gender.Male;
         }
         protected override void WndProc(ref Message m)
         {
@@ -37,22 +37,22 @@ namespace AuctionSystem.Client
             this.Close();
             
         }
-        private UserServiceReference.User CreateNewUser()
+        private UserService.User CreateNewUser()
         {
             if (femaleRadio.Checked)
             {
-               gender = UserServiceReference.Gender.Female;
+               gender = UserService.Gender.Female;
             }
             else if (maleRadio.Checked)
             {
-                gender = UserServiceReference.Gender.Male;
+                gender = UserService.Gender.Male;
             }
             else
             {
                 throw new ArgumentException("specify gender");
             }
 
-            return new UserServiceReference.User
+            return new UserService.User
             {
                 Username = usernameTxtBox.Text,
                 Name = nameTxtBox.Text,

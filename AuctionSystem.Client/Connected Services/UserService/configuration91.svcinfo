@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="bOgQGoRdamkfYfFmXc17eVOaoXE=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="U0pf0/eYU+rUNKzj8QsMyHXmzyw=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="wsDualHttpBinding" name="WSDualHttpBinding_IUserService">
       <properties>
@@ -97,10 +97,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="WSDualHttpBinding_IUserService" contract="UserServiceReference.IUserService" bindingType="wsDualHttpBinding" address="http://localhost:9997/Design_Time_Addresses/AuctionSystem.WcfService/UserService/" bindingConfiguration="WSDualHttpBinding_IUserService">
+    <endpoint name="WSDualHttpBinding_IUserService" contract="UserService.IUserService" bindingType="wsDualHttpBinding" address="http://localhost:9994/Design_Time_Addresses/AuctionSystem.WcfService/UserService/" bindingConfiguration="WSDualHttpBinding_IUserService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:9997/Design_Time_Addresses/AuctionSystem.WcfService/UserService/</serializedValue>
+          <serializedValue>http://localhost:9994/Design_Time_Addresses/AuctionSystem.WcfService/UserService/</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -112,7 +112,7 @@
           <serializedValue>WSDualHttpBinding_IUserService</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>UserServiceReference.IUserService</serializedValue>
+          <serializedValue>UserService.IUserService</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

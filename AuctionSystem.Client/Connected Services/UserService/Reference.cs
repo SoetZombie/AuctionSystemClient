@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AuctionSystem.Client.UserServiceReference {
+namespace AuctionSystem.Client.UserService {
     using System.Runtime.Serialization;
     using System;
     
@@ -26,7 +26,7 @@ namespace AuctionSystem.Client.UserServiceReference {
         private string AddressField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.UserServiceReference.Bid[] BidsField;
+        private AuctionSystem.Client.UserService.Bid[] BidsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int CoinsField;
@@ -38,13 +38,13 @@ namespace AuctionSystem.Client.UserServiceReference {
         private string EmailField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.UserServiceReference.Gender GenderField;
+        private AuctionSystem.Client.UserService.Gender GenderField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.UserServiceReference.Invoice[] InvoicesField;
+        private AuctionSystem.Client.UserService.Invoice[] InvoicesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool IsAdminField;
@@ -59,7 +59,7 @@ namespace AuctionSystem.Client.UserServiceReference {
         private string PasswordField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.UserServiceReference.Payment[] PaymentsField;
+        private AuctionSystem.Client.UserService.Payment[] PaymentsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PhoneField;
@@ -68,7 +68,7 @@ namespace AuctionSystem.Client.UserServiceReference {
         private string UsernameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.UserServiceReference.Zip ZipField;
+        private AuctionSystem.Client.UserService.Zip ZipField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<int> ZipIdField;
@@ -97,7 +97,7 @@ namespace AuctionSystem.Client.UserServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.UserServiceReference.Bid[] Bids {
+        public AuctionSystem.Client.UserService.Bid[] Bids {
             get {
                 return this.BidsField;
             }
@@ -149,7 +149,7 @@ namespace AuctionSystem.Client.UserServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.UserServiceReference.Gender Gender {
+        public AuctionSystem.Client.UserService.Gender Gender {
             get {
                 return this.GenderField;
             }
@@ -175,7 +175,7 @@ namespace AuctionSystem.Client.UserServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.UserServiceReference.Invoice[] Invoices {
+        public AuctionSystem.Client.UserService.Invoice[] Invoices {
             get {
                 return this.InvoicesField;
             }
@@ -240,7 +240,7 @@ namespace AuctionSystem.Client.UserServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.UserServiceReference.Payment[] Payments {
+        public AuctionSystem.Client.UserService.Payment[] Payments {
             get {
                 return this.PaymentsField;
             }
@@ -279,7 +279,7 @@ namespace AuctionSystem.Client.UserServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.UserServiceReference.Zip Zip {
+        public AuctionSystem.Client.UserService.Zip Zip {
             get {
                 return this.ZipField;
             }
@@ -429,13 +429,13 @@ namespace AuctionSystem.Client.UserServiceReference {
         private bool IsWonField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.UserServiceReference.Product ProductField;
+        private AuctionSystem.Client.UserService.Product ProductField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int ProductIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.UserServiceReference.User UserField;
+        private AuctionSystem.Client.UserService.User UserField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int UserIdField;
@@ -503,7 +503,7 @@ namespace AuctionSystem.Client.UserServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.UserServiceReference.Product Product {
+        public AuctionSystem.Client.UserService.Product Product {
             get {
                 return this.ProductField;
             }
@@ -529,7 +529,7 @@ namespace AuctionSystem.Client.UserServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.UserServiceReference.User User {
+        public AuctionSystem.Client.UserService.User User {
             get {
                 return this.UserField;
             }
@@ -585,13 +585,13 @@ namespace AuctionSystem.Client.UserServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.UserServiceReference.Product ProductField;
+        private AuctionSystem.Client.UserService.Product ProductField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int ProductIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.UserServiceReference.User UserField;
+        private AuctionSystem.Client.UserService.User UserField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int UserIdField;
@@ -607,7 +607,7 @@ namespace AuctionSystem.Client.UserServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.UserServiceReference.Product Product {
+        public AuctionSystem.Client.UserService.Product Product {
             get {
                 return this.ProductField;
             }
@@ -633,7 +633,7 @@ namespace AuctionSystem.Client.UserServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.UserServiceReference.User User {
+        public AuctionSystem.Client.UserService.User User {
             get {
                 return this.UserField;
             }
@@ -684,10 +684,10 @@ namespace AuctionSystem.Client.UserServiceReference {
         private string PaymentTypeCodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.UserServiceReference.PaymentType TypeField;
+        private AuctionSystem.Client.UserService.PaymentType TypeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.UserServiceReference.User UserField;
+        private AuctionSystem.Client.UserService.User UserField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int UserIdField;
@@ -729,7 +729,7 @@ namespace AuctionSystem.Client.UserServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.UserServiceReference.PaymentType Type {
+        public AuctionSystem.Client.UserService.PaymentType Type {
             get {
                 return this.TypeField;
             }
@@ -742,7 +742,7 @@ namespace AuctionSystem.Client.UserServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.UserServiceReference.User User {
+        public AuctionSystem.Client.UserService.User User {
             get {
                 return this.UserField;
             }
@@ -787,7 +787,7 @@ namespace AuctionSystem.Client.UserServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.UserServiceReference.Bid[] BidsField;
+        private AuctionSystem.Client.UserService.Bid[] BidsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string DescriptionField;
@@ -824,7 +824,7 @@ namespace AuctionSystem.Client.UserServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.UserServiceReference.Bid[] Bids {
+        public AuctionSystem.Client.UserService.Bid[] Bids {
             get {
                 return this.BidsField;
             }
@@ -980,7 +980,7 @@ namespace AuctionSystem.Client.UserServiceReference {
         private string AddressField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string BidsField;
+        private AuctionSystem.Client.UserService.Bid[] BidsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int CoinsField;
@@ -992,16 +992,28 @@ namespace AuctionSystem.Client.UserServiceReference {
         private string EmailField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.UserServiceReference.Gender GenderField;
+        private AuctionSystem.Client.UserService.Gender GenderField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string InvoicesField;
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AuctionSystem.Client.UserService.Invoice[] InvoicesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsAdminField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsDeletedField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PaymentsField;
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AuctionSystem.Client.UserService.Payment[] PaymentsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PhoneField;
@@ -1010,7 +1022,10 @@ namespace AuctionSystem.Client.UserServiceReference {
         private string UsernameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ZipCountryCityField;
+        private AuctionSystem.Client.UserService.Zip ZipField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> ZipIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1036,7 +1051,7 @@ namespace AuctionSystem.Client.UserServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Bids {
+        public AuctionSystem.Client.UserService.Bid[] Bids {
             get {
                 return this.BidsField;
             }
@@ -1088,7 +1103,7 @@ namespace AuctionSystem.Client.UserServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.UserServiceReference.Gender Gender {
+        public AuctionSystem.Client.UserService.Gender Gender {
             get {
                 return this.GenderField;
             }
@@ -1101,7 +1116,20 @@ namespace AuctionSystem.Client.UserServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Invoices {
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public AuctionSystem.Client.UserService.Invoice[] Invoices {
             get {
                 return this.InvoicesField;
             }
@@ -1109,6 +1137,32 @@ namespace AuctionSystem.Client.UserServiceReference {
                 if ((object.ReferenceEquals(this.InvoicesField, value) != true)) {
                     this.InvoicesField = value;
                     this.RaisePropertyChanged("Invoices");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsAdmin {
+            get {
+                return this.IsAdminField;
+            }
+            set {
+                if ((this.IsAdminField.Equals(value) != true)) {
+                    this.IsAdminField = value;
+                    this.RaisePropertyChanged("IsAdmin");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsDeleted {
+            get {
+                return this.IsDeletedField;
+            }
+            set {
+                if ((this.IsDeletedField.Equals(value) != true)) {
+                    this.IsDeletedField = value;
+                    this.RaisePropertyChanged("IsDeleted");
                 }
             }
         }
@@ -1127,7 +1181,20 @@ namespace AuctionSystem.Client.UserServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Payments {
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public AuctionSystem.Client.UserService.Payment[] Payments {
             get {
                 return this.PaymentsField;
             }
@@ -1166,14 +1233,27 @@ namespace AuctionSystem.Client.UserServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ZipCountryCity {
+        public AuctionSystem.Client.UserService.Zip Zip {
             get {
-                return this.ZipCountryCityField;
+                return this.ZipField;
             }
             set {
-                if ((object.ReferenceEquals(this.ZipCountryCityField, value) != true)) {
-                    this.ZipCountryCityField = value;
-                    this.RaisePropertyChanged("ZipCountryCity");
+                if ((object.ReferenceEquals(this.ZipField, value) != true)) {
+                    this.ZipField = value;
+                    this.RaisePropertyChanged("Zip");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> ZipId {
+            get {
+                return this.ZipIdField;
+            }
+            set {
+                if ((this.ZipIdField.Equals(value) != true)) {
+                    this.ZipIdField = value;
+                    this.RaisePropertyChanged("ZipId");
                 }
             }
         }
@@ -1189,32 +1269,32 @@ namespace AuctionSystem.Client.UserServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="UserServiceReference.IUserService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="UserService.IUserService")]
     public interface IUserService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/CreateUser", ReplyAction="http://tempuri.org/IUserService/CreateUserResponse")]
-        void CreateUser(AuctionSystem.Client.UserServiceReference.User user);
+        void CreateUser(AuctionSystem.Client.UserService.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/CreateUser", ReplyAction="http://tempuri.org/IUserService/CreateUserResponse")]
-        System.Threading.Tasks.Task CreateUserAsync(AuctionSystem.Client.UserServiceReference.User user);
+        System.Threading.Tasks.Task CreateUserAsync(AuctionSystem.Client.UserService.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/UpdateUser", ReplyAction="http://tempuri.org/IUserService/UpdateUserResponse")]
-        bool UpdateUser(AuctionSystem.Client.UserServiceReference.User user);
+        bool UpdateUser(AuctionSystem.Client.UserService.UserDto user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/UpdateUser", ReplyAction="http://tempuri.org/IUserService/UpdateUserResponse")]
-        System.Threading.Tasks.Task<bool> UpdateUserAsync(AuctionSystem.Client.UserServiceReference.User user);
+        System.Threading.Tasks.Task<bool> UpdateUserAsync(AuctionSystem.Client.UserService.UserDto user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserById", ReplyAction="http://tempuri.org/IUserService/GetUserByIdResponse")]
-        AuctionSystem.Client.UserServiceReference.UserDto GetUserById(int id);
+        AuctionSystem.Client.UserService.UserDto GetUserById(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserById", ReplyAction="http://tempuri.org/IUserService/GetUserByIdResponse")]
-        System.Threading.Tasks.Task<AuctionSystem.Client.UserServiceReference.UserDto> GetUserByIdAsync(int id);
+        System.Threading.Tasks.Task<AuctionSystem.Client.UserService.UserDto> GetUserByIdAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/DeleteUser", ReplyAction="http://tempuri.org/IUserService/DeleteUserResponse")]
-        bool DeleteUser(AuctionSystem.Client.UserServiceReference.User user);
+        bool DeleteUser(AuctionSystem.Client.UserService.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/DeleteUser", ReplyAction="http://tempuri.org/IUserService/DeleteUserResponse")]
-        System.Threading.Tasks.Task<bool> DeleteUserAsync(AuctionSystem.Client.UserServiceReference.User user);
+        System.Threading.Tasks.Task<bool> DeleteUserAsync(AuctionSystem.Client.UserService.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/IsUserExisting", ReplyAction="http://tempuri.org/IUserService/IsUserExistingResponse")]
         bool IsUserExisting(string username);
@@ -1223,49 +1303,49 @@ namespace AuctionSystem.Client.UserServiceReference {
         System.Threading.Tasks.Task<bool> IsUserExistingAsync(string username);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/CountUserBidsForGivenProduct", ReplyAction="http://tempuri.org/IUserService/CountUserBidsForGivenProductResponse")]
-        int CountUserBidsForGivenProduct(AuctionSystem.Client.UserServiceReference.User user, string productName);
+        int CountUserBidsForGivenProduct(AuctionSystem.Client.UserService.User user, string productName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/CountUserBidsForGivenProduct", ReplyAction="http://tempuri.org/IUserService/CountUserBidsForGivenProductResponse")]
-        System.Threading.Tasks.Task<int> CountUserBidsForGivenProductAsync(AuctionSystem.Client.UserServiceReference.User user, string productName);
+        System.Threading.Tasks.Task<int> CountUserBidsForGivenProductAsync(AuctionSystem.Client.UserService.User user, string productName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAllUserSpentCoinsForGivenProduct", ReplyAction="http://tempuri.org/IUserService/GetAllUserSpentCoinsForGivenProductResponse")]
-        int GetAllUserSpentCoinsForGivenProduct(AuctionSystem.Client.UserServiceReference.User user, string productName);
+        int GetAllUserSpentCoinsForGivenProduct(AuctionSystem.Client.UserService.User user, string productName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAllUserSpentCoinsForGivenProduct", ReplyAction="http://tempuri.org/IUserService/GetAllUserSpentCoinsForGivenProductResponse")]
-        System.Threading.Tasks.Task<int> GetAllUserSpentCoinsForGivenProductAsync(AuctionSystem.Client.UserServiceReference.User user, string productName);
+        System.Threading.Tasks.Task<int> GetAllUserSpentCoinsForGivenProductAsync(AuctionSystem.Client.UserService.User user, string productName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserProducts", ReplyAction="http://tempuri.org/IUserService/GetUserProductsResponse")]
-        AuctionSystem.Client.UserServiceReference.Product[] GetUserProducts(AuctionSystem.Client.UserServiceReference.User user);
+        AuctionSystem.Client.UserService.Product[] GetUserProducts(AuctionSystem.Client.UserService.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserProducts", ReplyAction="http://tempuri.org/IUserService/GetUserProductsResponse")]
-        System.Threading.Tasks.Task<AuctionSystem.Client.UserServiceReference.Product[]> GetUserProductsAsync(AuctionSystem.Client.UserServiceReference.User user);
+        System.Threading.Tasks.Task<AuctionSystem.Client.UserService.Product[]> GetUserProductsAsync(AuctionSystem.Client.UserService.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserBids", ReplyAction="http://tempuri.org/IUserService/GetUserBidsResponse")]
-        AuctionSystem.Client.UserServiceReference.Bid[] GetUserBids(AuctionSystem.Client.UserServiceReference.User user);
+        AuctionSystem.Client.UserService.Bid[] GetUserBids(AuctionSystem.Client.UserService.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserBids", ReplyAction="http://tempuri.org/IUserService/GetUserBidsResponse")]
-        System.Threading.Tasks.Task<AuctionSystem.Client.UserServiceReference.Bid[]> GetUserBidsAsync(AuctionSystem.Client.UserServiceReference.User user);
+        System.Threading.Tasks.Task<AuctionSystem.Client.UserService.Bid[]> GetUserBidsAsync(AuctionSystem.Client.UserService.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserInvoices", ReplyAction="http://tempuri.org/IUserService/GetUserInvoicesResponse")]
-        AuctionSystem.Client.UserServiceReference.Invoice[] GetUserInvoices(AuctionSystem.Client.UserServiceReference.User user);
+        AuctionSystem.Client.UserService.Invoice[] GetUserInvoices(AuctionSystem.Client.UserService.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserInvoices", ReplyAction="http://tempuri.org/IUserService/GetUserInvoicesResponse")]
-        System.Threading.Tasks.Task<AuctionSystem.Client.UserServiceReference.Invoice[]> GetUserInvoicesAsync(AuctionSystem.Client.UserServiceReference.User user);
+        System.Threading.Tasks.Task<AuctionSystem.Client.UserService.Invoice[]> GetUserInvoicesAsync(AuctionSystem.Client.UserService.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserByUsername", ReplyAction="http://tempuri.org/IUserService/GetUserByUsernameResponse")]
-        AuctionSystem.Client.UserServiceReference.UserDto GetUserByUsername(string username);
+        AuctionSystem.Client.UserService.UserDto GetUserByUsername(string username);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserByUsername", ReplyAction="http://tempuri.org/IUserService/GetUserByUsernameResponse")]
-        System.Threading.Tasks.Task<AuctionSystem.Client.UserServiceReference.UserDto> GetUserByUsernameAsync(string username);
+        System.Threading.Tasks.Task<AuctionSystem.Client.UserService.UserDto> GetUserByUsernameAsync(string username);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IUserServiceChannel : AuctionSystem.Client.UserServiceReference.IUserService, System.ServiceModel.IClientChannel {
+    public interface IUserServiceChannel : AuctionSystem.Client.UserService.IUserService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class UserServiceClient : System.ServiceModel.ClientBase<AuctionSystem.Client.UserServiceReference.IUserService>, AuctionSystem.Client.UserServiceReference.IUserService {
+    public partial class UserServiceClient : System.ServiceModel.ClientBase<AuctionSystem.Client.UserService.IUserService>, AuctionSystem.Client.UserService.IUserService {
         
         public UserServiceClient() {
         }
@@ -1286,35 +1366,35 @@ namespace AuctionSystem.Client.UserServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public void CreateUser(AuctionSystem.Client.UserServiceReference.User user) {
+        public void CreateUser(AuctionSystem.Client.UserService.User user) {
             base.Channel.CreateUser(user);
         }
         
-        public System.Threading.Tasks.Task CreateUserAsync(AuctionSystem.Client.UserServiceReference.User user) {
+        public System.Threading.Tasks.Task CreateUserAsync(AuctionSystem.Client.UserService.User user) {
             return base.Channel.CreateUserAsync(user);
         }
         
-        public bool UpdateUser(AuctionSystem.Client.UserServiceReference.User user) {
+        public bool UpdateUser(AuctionSystem.Client.UserService.UserDto user) {
             return base.Channel.UpdateUser(user);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdateUserAsync(AuctionSystem.Client.UserServiceReference.User user) {
+        public System.Threading.Tasks.Task<bool> UpdateUserAsync(AuctionSystem.Client.UserService.UserDto user) {
             return base.Channel.UpdateUserAsync(user);
         }
         
-        public AuctionSystem.Client.UserServiceReference.UserDto GetUserById(int id) {
+        public AuctionSystem.Client.UserService.UserDto GetUserById(int id) {
             return base.Channel.GetUserById(id);
         }
         
-        public System.Threading.Tasks.Task<AuctionSystem.Client.UserServiceReference.UserDto> GetUserByIdAsync(int id) {
+        public System.Threading.Tasks.Task<AuctionSystem.Client.UserService.UserDto> GetUserByIdAsync(int id) {
             return base.Channel.GetUserByIdAsync(id);
         }
         
-        public bool DeleteUser(AuctionSystem.Client.UserServiceReference.User user) {
+        public bool DeleteUser(AuctionSystem.Client.UserService.User user) {
             return base.Channel.DeleteUser(user);
         }
         
-        public System.Threading.Tasks.Task<bool> DeleteUserAsync(AuctionSystem.Client.UserServiceReference.User user) {
+        public System.Threading.Tasks.Task<bool> DeleteUserAsync(AuctionSystem.Client.UserService.User user) {
             return base.Channel.DeleteUserAsync(user);
         }
         
@@ -1326,51 +1406,51 @@ namespace AuctionSystem.Client.UserServiceReference {
             return base.Channel.IsUserExistingAsync(username);
         }
         
-        public int CountUserBidsForGivenProduct(AuctionSystem.Client.UserServiceReference.User user, string productName) {
+        public int CountUserBidsForGivenProduct(AuctionSystem.Client.UserService.User user, string productName) {
             return base.Channel.CountUserBidsForGivenProduct(user, productName);
         }
         
-        public System.Threading.Tasks.Task<int> CountUserBidsForGivenProductAsync(AuctionSystem.Client.UserServiceReference.User user, string productName) {
+        public System.Threading.Tasks.Task<int> CountUserBidsForGivenProductAsync(AuctionSystem.Client.UserService.User user, string productName) {
             return base.Channel.CountUserBidsForGivenProductAsync(user, productName);
         }
         
-        public int GetAllUserSpentCoinsForGivenProduct(AuctionSystem.Client.UserServiceReference.User user, string productName) {
+        public int GetAllUserSpentCoinsForGivenProduct(AuctionSystem.Client.UserService.User user, string productName) {
             return base.Channel.GetAllUserSpentCoinsForGivenProduct(user, productName);
         }
         
-        public System.Threading.Tasks.Task<int> GetAllUserSpentCoinsForGivenProductAsync(AuctionSystem.Client.UserServiceReference.User user, string productName) {
+        public System.Threading.Tasks.Task<int> GetAllUserSpentCoinsForGivenProductAsync(AuctionSystem.Client.UserService.User user, string productName) {
             return base.Channel.GetAllUserSpentCoinsForGivenProductAsync(user, productName);
         }
         
-        public AuctionSystem.Client.UserServiceReference.Product[] GetUserProducts(AuctionSystem.Client.UserServiceReference.User user) {
+        public AuctionSystem.Client.UserService.Product[] GetUserProducts(AuctionSystem.Client.UserService.User user) {
             return base.Channel.GetUserProducts(user);
         }
         
-        public System.Threading.Tasks.Task<AuctionSystem.Client.UserServiceReference.Product[]> GetUserProductsAsync(AuctionSystem.Client.UserServiceReference.User user) {
+        public System.Threading.Tasks.Task<AuctionSystem.Client.UserService.Product[]> GetUserProductsAsync(AuctionSystem.Client.UserService.User user) {
             return base.Channel.GetUserProductsAsync(user);
         }
         
-        public AuctionSystem.Client.UserServiceReference.Bid[] GetUserBids(AuctionSystem.Client.UserServiceReference.User user) {
+        public AuctionSystem.Client.UserService.Bid[] GetUserBids(AuctionSystem.Client.UserService.User user) {
             return base.Channel.GetUserBids(user);
         }
         
-        public System.Threading.Tasks.Task<AuctionSystem.Client.UserServiceReference.Bid[]> GetUserBidsAsync(AuctionSystem.Client.UserServiceReference.User user) {
+        public System.Threading.Tasks.Task<AuctionSystem.Client.UserService.Bid[]> GetUserBidsAsync(AuctionSystem.Client.UserService.User user) {
             return base.Channel.GetUserBidsAsync(user);
         }
         
-        public AuctionSystem.Client.UserServiceReference.Invoice[] GetUserInvoices(AuctionSystem.Client.UserServiceReference.User user) {
+        public AuctionSystem.Client.UserService.Invoice[] GetUserInvoices(AuctionSystem.Client.UserService.User user) {
             return base.Channel.GetUserInvoices(user);
         }
         
-        public System.Threading.Tasks.Task<AuctionSystem.Client.UserServiceReference.Invoice[]> GetUserInvoicesAsync(AuctionSystem.Client.UserServiceReference.User user) {
+        public System.Threading.Tasks.Task<AuctionSystem.Client.UserService.Invoice[]> GetUserInvoicesAsync(AuctionSystem.Client.UserService.User user) {
             return base.Channel.GetUserInvoicesAsync(user);
         }
         
-        public AuctionSystem.Client.UserServiceReference.UserDto GetUserByUsername(string username) {
+        public AuctionSystem.Client.UserService.UserDto GetUserByUsername(string username) {
             return base.Channel.GetUserByUsername(username);
         }
         
-        public System.Threading.Tasks.Task<AuctionSystem.Client.UserServiceReference.UserDto> GetUserByUsernameAsync(string username) {
+        public System.Threading.Tasks.Task<AuctionSystem.Client.UserService.UserDto> GetUserByUsernameAsync(string username) {
             return base.Channel.GetUserByUsernameAsync(username);
         }
     }

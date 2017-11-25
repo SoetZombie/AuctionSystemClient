@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace AuctionSystem.Client
 {
-    using UserServiceReference;
+    using UserService;
 
     public partial class UserDataUserControll1 : UserControl
     {

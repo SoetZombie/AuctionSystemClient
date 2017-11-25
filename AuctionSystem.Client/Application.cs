@@ -5,10 +5,10 @@ namespace AuctionSystem.Client
 {
     public partial class MainPanel : Form
     {
-        UserServiceReference.UserServiceClient client;
+        UserService.UserServiceClient client;
         public MainPanel()
         {
-            client = new UserServiceReference.UserServiceClient();
+            client = new UserService.UserServiceClient();
             InitializeComponent();
            
             
