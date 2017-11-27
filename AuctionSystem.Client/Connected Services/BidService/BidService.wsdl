@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProductService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IProductService_policy">
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BidService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <wsrm:RMAssertion xmlns:wsrm="http://schemas.xmlsoap.org/ws/2005/02/rm/policy">
@@ -103,7 +103,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IProductService_CreateProduct_Input_policy">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_MakeBid_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -126,7 +126,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IProductService_UpdateProduct_Input_policy">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_MakeBid_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -149,7 +149,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IProductService_UpdateProduct_output_policy">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_IsBidWon_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -172,7 +172,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IProductService_DeleteProduct_Input_policy">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_IsBidWon_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -195,7 +195,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IProductService_DeleteProduct_output_policy">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetBidById_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -218,7 +218,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IProductService_GetProductByName_Input_policy">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetBidById_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -241,7 +241,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IProductService_GetProductByName_output_policy">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetAllBidsByProductName_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -264,7 +264,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IProductService_GetProductById_Input_policy">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetAllBidsByProductName_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -287,7 +287,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IProductService_GetProductById_output_policy">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetAllBidsByUserId_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -310,7 +310,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IProductService_IsProductExisting_Input_policy">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetAllBidsByUserId_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -333,7 +333,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IProductService_IsProductExisting_output_policy">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetAllBidsByProductId_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -356,7 +356,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IProductService_CountUserBidsForProduct_Input_policy">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetAllBidsByProductId_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -379,7 +379,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IProductService_CountUserBidsForProduct_output_policy">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetAllEarnedBids_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -402,30 +402,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IProductService_GetProductUsers_Input_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IProductService_GetProductUsers_output_policy">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetAllEarnedBids_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -450,185 +427,172 @@
   </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
-      <xsd:import namespace="http://tempuri.org/" />
-      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" />
-      <xsd:import namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.Enums" />
-      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System" />
-      <xsd:import namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.DTOs" />
+      <xsd:import schemaLocation="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" />
+      <xsd:import schemaLocation="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.Enums" />
+      <xsd:import schemaLocation="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.DTOs" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IProductService_CreateProduct_InputMessage">
-    <wsdl:part name="parameters" element="tns:CreateProduct" />
+  <wsdl:message name="IBidService_MakeBid_InputMessage">
+    <wsdl:part name="parameters" element="tns:MakeBid" />
   </wsdl:message>
-  <wsdl:message name="IProductService_UpdateProduct_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateProduct" />
+  <wsdl:message name="IBidService_MakeBid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MakeBidResponse" />
   </wsdl:message>
-  <wsdl:message name="IProductService_UpdateProduct_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateProductResponse" />
+  <wsdl:message name="IBidService_IsBidWon_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsBidWon" />
   </wsdl:message>
-  <wsdl:message name="IProductService_DeleteProduct_InputMessage">
-    <wsdl:part name="parameters" element="tns:DeleteProduct" />
+  <wsdl:message name="IBidService_IsBidWon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsBidWonResponse" />
   </wsdl:message>
-  <wsdl:message name="IProductService_DeleteProduct_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DeleteProductResponse" />
+  <wsdl:message name="IBidService_GetBidById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBidById" />
   </wsdl:message>
-  <wsdl:message name="IProductService_GetProductByName_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetProductByName" />
+  <wsdl:message name="IBidService_GetBidById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBidByIdResponse" />
   </wsdl:message>
-  <wsdl:message name="IProductService_GetProductByName_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetProductByNameResponse" />
+  <wsdl:message name="IBidService_GetAllBidsByProductName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBidsByProductName" />
   </wsdl:message>
-  <wsdl:message name="IProductService_GetProductById_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetProductById" />
+  <wsdl:message name="IBidService_GetAllBidsByProductName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBidsByProductNameResponse" />
   </wsdl:message>
-  <wsdl:message name="IProductService_GetProductById_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetProductByIdResponse" />
+  <wsdl:message name="IBidService_GetAllBidsByUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBidsByUserId" />
   </wsdl:message>
-  <wsdl:message name="IProductService_IsProductExisting_InputMessage">
-    <wsdl:part name="parameters" element="tns:IsProductExisting" />
+  <wsdl:message name="IBidService_GetAllBidsByUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBidsByUserIdResponse" />
   </wsdl:message>
-  <wsdl:message name="IProductService_IsProductExisting_OutputMessage">
-    <wsdl:part name="parameters" element="tns:IsProductExistingResponse" />
+  <wsdl:message name="IBidService_GetAllBidsByProductId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBidsByProductId" />
   </wsdl:message>
-  <wsdl:message name="IProductService_CountUserBidsForProduct_InputMessage">
-    <wsdl:part name="parameters" element="tns:CountUserBidsForProduct" />
+  <wsdl:message name="IBidService_GetAllBidsByProductId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBidsByProductIdResponse" />
   </wsdl:message>
-  <wsdl:message name="IProductService_CountUserBidsForProduct_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CountUserBidsForProductResponse" />
+  <wsdl:message name="IBidService_GetAllEarnedBids_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEarnedBids" />
   </wsdl:message>
-  <wsdl:message name="IProductService_GetProductUsers_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetProductUsers" />
+  <wsdl:message name="IBidService_GetAllEarnedBids_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEarnedBidsResponse" />
   </wsdl:message>
-  <wsdl:message name="IProductService_GetProductUsers_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetProductUsersResponse" />
-  </wsdl:message>
-  <wsdl:portType name="IProductService">
-    <wsdl:operation name="CreateProduct">
-      <wsdl:input wsaw:Action="http://tempuri.org/IProductService/CreateProduct" message="tns:IProductService_CreateProduct_InputMessage" />
+  <wsdl:portType name="IBidService">
+    <wsdl:operation name="MakeBid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBidService/MakeBid" message="tns:IBidService_MakeBid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBidService/MakeBidResponse" message="tns:IBidService_MakeBid_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="UpdateProduct">
-      <wsdl:input wsaw:Action="http://tempuri.org/IProductService/UpdateProduct" message="tns:IProductService_UpdateProduct_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IProductService/UpdateProductResponse" message="tns:IProductService_UpdateProduct_OutputMessage" />
+    <wsdl:operation name="IsBidWon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBidService/IsBidWon" message="tns:IBidService_IsBidWon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBidService/IsBidWonResponse" message="tns:IBidService_IsBidWon_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="DeleteProduct">
-      <wsdl:input wsaw:Action="http://tempuri.org/IProductService/DeleteProduct" message="tns:IProductService_DeleteProduct_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IProductService/DeleteProductResponse" message="tns:IProductService_DeleteProduct_OutputMessage" />
+    <wsdl:operation name="GetBidById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBidService/GetBidById" message="tns:IBidService_GetBidById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBidService/GetBidByIdResponse" message="tns:IBidService_GetBidById_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetProductByName">
-      <wsdl:input wsaw:Action="http://tempuri.org/IProductService/GetProductByName" message="tns:IProductService_GetProductByName_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IProductService/GetProductByNameResponse" message="tns:IProductService_GetProductByName_OutputMessage" />
+    <wsdl:operation name="GetAllBidsByProductName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBidService/GetAllBidsByProductName" message="tns:IBidService_GetAllBidsByProductName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBidService/GetAllBidsByProductNameResponse" message="tns:IBidService_GetAllBidsByProductName_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetProductById">
-      <wsdl:input wsaw:Action="http://tempuri.org/IProductService/GetProductById" message="tns:IProductService_GetProductById_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IProductService/GetProductByIdResponse" message="tns:IProductService_GetProductById_OutputMessage" />
+    <wsdl:operation name="GetAllBidsByUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBidService/GetAllBidsByUserId" message="tns:IBidService_GetAllBidsByUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBidService/GetAllBidsByUserIdResponse" message="tns:IBidService_GetAllBidsByUserId_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="IsProductExisting">
-      <wsdl:input wsaw:Action="http://tempuri.org/IProductService/IsProductExisting" message="tns:IProductService_IsProductExisting_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IProductService/IsProductExistingResponse" message="tns:IProductService_IsProductExisting_OutputMessage" />
+    <wsdl:operation name="GetAllBidsByProductId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBidService/GetAllBidsByProductId" message="tns:IBidService_GetAllBidsByProductId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBidService/GetAllBidsByProductIdResponse" message="tns:IBidService_GetAllBidsByProductId_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="CountUserBidsForProduct">
-      <wsdl:input wsaw:Action="http://tempuri.org/IProductService/CountUserBidsForProduct" message="tns:IProductService_CountUserBidsForProduct_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IProductService/CountUserBidsForProductResponse" message="tns:IProductService_CountUserBidsForProduct_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetProductUsers">
-      <wsdl:input wsaw:Action="http://tempuri.org/IProductService/GetProductUsers" message="tns:IProductService_GetProductUsers_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IProductService/GetProductUsersResponse" message="tns:IProductService_GetProductUsers_OutputMessage" />
+    <wsdl:operation name="GetAllEarnedBids">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBidService/GetAllEarnedBids" message="tns:IBidService_GetAllEarnedBids_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBidService/GetAllEarnedBidsResponse" message="tns:IBidService_GetAllEarnedBids_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="WSDualHttpBinding_IProductService" type="tns:IProductService">
-    <wsp:PolicyReference URI="#WSDualHttpBinding_IProductService_policy" />
+  <wsdl:binding name="WSDualHttpBinding_IBidService" type="tns:IBidService">
+    <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_policy" />
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="CreateProduct">
-      <soap12:operation soapAction="http://tempuri.org/IProductService/CreateProduct" style="document" />
+    <wsdl:operation name="MakeBid">
+      <soap12:operation soapAction="http://tempuri.org/IBidService/MakeBid" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IProductService_CreateProduct_Input_policy" />
-        <soap12:body use="literal" />
-      </wsdl:input>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateProduct">
-      <soap12:operation soapAction="http://tempuri.org/IProductService/UpdateProduct" style="document" />
-      <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IProductService_UpdateProduct_Input_policy" />
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_MakeBid_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IProductService_UpdateProduct_output_policy" />
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_MakeBid_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="DeleteProduct">
-      <soap12:operation soapAction="http://tempuri.org/IProductService/DeleteProduct" style="document" />
+    <wsdl:operation name="IsBidWon">
+      <soap12:operation soapAction="http://tempuri.org/IBidService/IsBidWon" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IProductService_DeleteProduct_Input_policy" />
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_IsBidWon_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IProductService_DeleteProduct_output_policy" />
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_IsBidWon_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetProductByName">
-      <soap12:operation soapAction="http://tempuri.org/IProductService/GetProductByName" style="document" />
+    <wsdl:operation name="GetBidById">
+      <soap12:operation soapAction="http://tempuri.org/IBidService/GetBidById" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IProductService_GetProductByName_Input_policy" />
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetBidById_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IProductService_GetProductByName_output_policy" />
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetBidById_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetProductById">
-      <soap12:operation soapAction="http://tempuri.org/IProductService/GetProductById" style="document" />
+    <wsdl:operation name="GetAllBidsByProductName">
+      <soap12:operation soapAction="http://tempuri.org/IBidService/GetAllBidsByProductName" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IProductService_GetProductById_Input_policy" />
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetAllBidsByProductName_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IProductService_GetProductById_output_policy" />
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetAllBidsByProductName_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="IsProductExisting">
-      <soap12:operation soapAction="http://tempuri.org/IProductService/IsProductExisting" style="document" />
+    <wsdl:operation name="GetAllBidsByUserId">
+      <soap12:operation soapAction="http://tempuri.org/IBidService/GetAllBidsByUserId" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IProductService_IsProductExisting_Input_policy" />
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetAllBidsByUserId_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IProductService_IsProductExisting_output_policy" />
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetAllBidsByUserId_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="CountUserBidsForProduct">
-      <soap12:operation soapAction="http://tempuri.org/IProductService/CountUserBidsForProduct" style="document" />
+    <wsdl:operation name="GetAllBidsByProductId">
+      <soap12:operation soapAction="http://tempuri.org/IBidService/GetAllBidsByProductId" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IProductService_CountUserBidsForProduct_Input_policy" />
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetAllBidsByProductId_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IProductService_CountUserBidsForProduct_output_policy" />
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetAllBidsByProductId_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetProductUsers">
-      <soap12:operation soapAction="http://tempuri.org/IProductService/GetProductUsers" style="document" />
+    <wsdl:operation name="GetAllEarnedBids">
+      <soap12:operation soapAction="http://tempuri.org/IBidService/GetAllEarnedBids" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IProductService_GetProductUsers_Input_policy" />
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetAllEarnedBids_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IProductService_GetProductUsers_output_policy" />
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetAllEarnedBids_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
-  <wsdl:service name="ProductService">
-    <wsdl:port name="WSDualHttpBinding_IProductService" binding="tns:WSDualHttpBinding_IProductService">
-      <soap12:address location="http://localhost:9993/Design_Time_Addresses/AuctionSystem.WcfService/ProductService/" />
+  <wsdl:service name="BidService">
+    <wsdl:port name="WSDualHttpBinding_IBidService" binding="tns:WSDualHttpBinding_IBidService">
+      <soap12:address location="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/" />
       <wsa10:EndpointReference>
-        <wsa10:Address>http://localhost:9993/Design_Time_Addresses/AuctionSystem.WcfService/ProductService/</wsa10:Address>
+        <wsa10:Address>http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
           <Dns>localhost</Dns>
         </Identity>

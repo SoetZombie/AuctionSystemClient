@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="x3upWQJi3UVx8rD+BBGJ9F+pmEU=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="tH52UD1kj8xCzlzxM+00YQpJB3k=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="wsDualHttpBinding" name="WSDualHttpBinding_ILoginService">
       <properties>
@@ -97,10 +97,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="WSDualHttpBinding_ILoginService" contract="LoginServiceReference.ILoginService" bindingType="wsDualHttpBinding" address="http://localhost:9998/Design_Time_Addresses/AuctionSystem.WcfService.Contracts/LoginService/" bindingConfiguration="WSDualHttpBinding_ILoginService">
+    <endpoint name="WSDualHttpBinding_ILoginService" contract="LoginServiceReference.ILoginService" bindingType="wsDualHttpBinding" address="http://localhost:9995/Design_Time_Addresses/AuctionSystem.WcfService.Contracts/LoginService/" bindingConfiguration="WSDualHttpBinding_ILoginService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:9998/Design_Time_Addresses/AuctionSystem.WcfService.Contracts/LoginService/</serializedValue>
+          <serializedValue>http://localhost:9995/Design_Time_Addresses/AuctionSystem.WcfService.Contracts/LoginService/</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

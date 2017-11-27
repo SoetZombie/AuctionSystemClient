@@ -5,40 +5,23 @@ namespace AuctionSystem.Client
 {
     public partial class RegistrationForm : Form
     {
-        UserService.UserServiceClient client;
-        ZipServiceReference.ZipServiceClient zipClient;
-
-        UserService.Gender gender;
+        private UserService.UserServiceClient client;
+        private ZipServiceReference.ZipServiceClient zipClient;
+        private  UserService.Gender gender;
         public RegistrationForm()
         {
+            InitializeComponent();
             client = new UserService.UserServiceClient();
             zipClient = new ZipServiceReference.ZipServiceClient();
-            InitializeComponent();
-            gender = UserService.Gender.Male;
+            gender = new UserService.Gender();
             dataGridView1.DataSource = zipClient.GetAllZips();
-            
+     
         }
-        protected override void WndProc(ref Message m)
-        {
-            switch (m.Msg)
-            {
-                case 0x84:
-                    base.WndProc(ref m);
-                    if ((int)m.Result == 0x1)
-                        m.Result = (IntPtr)0x2;
-                    return;
-            }
-
-            base.WndProc(ref m);
-        }
-
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
             var newUser = CreateNewUser();
             client.CreateUser(newUser);
-            Login l = new Login();
-            l.Show();
             this.Close();
             
         }

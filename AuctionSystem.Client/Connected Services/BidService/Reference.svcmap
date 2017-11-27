@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a2a37856-966a-4bbf-9fa9-a503d3acfa9c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="92762a87-e76a-43ff-ac8f-66ed6d0b66b0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,16 +19,17 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="2b45837d-04b7-4f67-8826-c59df957452c" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="84b3ea65-e667-41cc-acfe-d456ba49059f" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="10649db3-83ad-4d76-9df0-711dddc8f73b" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/mex" />
-    <MetadataFile FileName="AuctionSystem.Models.xsd" MetadataType="Schema" ID="17c7549e-39cd-4003-b67d-76e05ac41320" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/mex" />
-    <MetadataFile FileName="System.xsd" MetadataType="Schema" ID="2283fd60-2cf5-4805-9faf-32e0a4ecb7f9" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/mex" />
-    <MetadataFile FileName="AuctionSystem.Models.Enums.xsd" MetadataType="Schema" ID="56de9f6b-782b-476f-8be8-67f46d736390" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/mex" />
-    <MetadataFile FileName="AuctionSystem.Models.DTOs.xsd" MetadataType="Schema" ID="8c73bb76-27b3-494a-b7be-bb181340199d" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/mex" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="b3f7bc23-4436-4d92-91e3-6e214a5c7266" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd2" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="b278691f-b6d1-4d0e-8441-809006f599a9" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd3" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="1b5014e2-bd07-4601-85b9-daa8bfe2435b" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd0" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="81e8949a-b554-477f-8dd4-b55911dcee0e" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd1" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="7f60e22e-66ec-4411-90ab-1e8de66bcf83" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?disco" />
+    <MetadataFile FileName="item4.xsd" MetadataType="Schema" ID="000ae6bf-32c5-408d-acbc-0e24dd42b273" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd4" />
+    <MetadataFile FileName="item5.xsd" MetadataType="Schema" ID="401a3e73-7839-4daf-9781-9b5fe0a9bfc9" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd5" />
+    <MetadataFile FileName="BidService.wsdl" MetadataType="Wsdl" ID="7661e383-fabd-44d3-9a18-8848b8e1b4cc" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

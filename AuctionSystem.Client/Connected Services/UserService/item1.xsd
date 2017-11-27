@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" />
-  <xs:import namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.DTOs" />
+  <xs:import schemaLocation="http://localhost:9994/Design_Time_Addresses/AuctionSystem.WcfService/UserService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" />
+  <xs:import schemaLocation="http://localhost:9994/Design_Time_Addresses/AuctionSystem.WcfService/UserService/?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.DTOs" />
   <xs:element name="CreateUser">
     <xs:complexType>
       <xs:sequence>
@@ -110,7 +110,7 @@
   <xs:element name="GetUserProductsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="GetUserProductsResult" nillable="true" type="q8:ArrayOfProduct" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.DTOs" minOccurs="0" name="GetUserProductsResult" nillable="true" type="q8:ArrayOfProductDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -124,7 +124,7 @@
   <xs:element name="GetUserBidsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="GetUserBidsResult" nillable="true" type="q10:ArrayOfBid" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.DTOs" minOccurs="0" name="GetUserBidsResult" nillable="true" type="q10:ArrayOfBidDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -138,7 +138,7 @@
   <xs:element name="GetUserInvoicesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="GetUserInvoicesResult" nillable="true" type="q12:ArrayOfInvoice" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.DTOs" minOccurs="0" name="GetUserInvoicesResult" nillable="true" type="q12:ArrayOfInvoiceDto" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

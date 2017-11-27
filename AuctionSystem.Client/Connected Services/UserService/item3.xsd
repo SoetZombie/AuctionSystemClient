@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.Enums" />
-  <xs:import namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:import schemaLocation="http://localhost:9994/Design_Time_Addresses/AuctionSystem.WcfService/UserService/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.Enums" />
+  <xs:import schemaLocation="http://localhost:9994/Design_Time_Addresses/AuctionSystem.WcfService/UserService/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
   <xs:complexType name="User">
     <xs:sequence>
       <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
@@ -97,10 +97,4 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Zip" nillable="true" type="tns:Zip" />
-  <xs:complexType name="ArrayOfProduct">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Product" nillable="true" type="tns:Product" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfProduct" nillable="true" type="tns:ArrayOfProduct" />
 </xs:schema>

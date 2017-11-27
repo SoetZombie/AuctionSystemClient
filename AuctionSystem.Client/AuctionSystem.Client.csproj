@@ -159,23 +159,23 @@
     <None Include="Connected Services\BidService\AuctionSystem.Client.BidService.BidDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\BidService\AuctionSystem.Models.DTOs.xsd">
+    <None Include="Connected Services\BidService\BidService.wsdl" />
+    <None Include="Connected Services\BidService\item.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\BidService\AuctionSystem.Models.Enums.xsd">
+    <None Include="Connected Services\BidService\item1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\BidService\AuctionSystem.Models.xsd">
+    <None Include="Connected Services\BidService\item2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\BidService\service.wsdl" />
-    <None Include="Connected Services\BidService\service.xsd">
+    <None Include="Connected Services\BidService\item3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\BidService\service1.xsd">
+    <None Include="Connected Services\BidService\item4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\BidService\System.xsd">
+    <None Include="Connected Services\BidService\item5.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\LoginServiceReference\item.xsd">
@@ -216,56 +216,56 @@
     <None Include="Connected Services\ProductService\AuctionSystem.Client.ProductService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ProductService\AuctionSystem.Models.DTOs.xsd">
+    <None Include="Connected Services\ProductService\item.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ProductService\AuctionSystem.Models.Enums.xsd">
+    <None Include="Connected Services\ProductService\item1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ProductService\AuctionSystem.Models.xsd">
+    <None Include="Connected Services\ProductService\item2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ProductService\service.wsdl" />
-    <None Include="Connected Services\ProductService\service.xsd">
+    <None Include="Connected Services\ProductService\item3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ProductService\service1.xsd">
+    <None Include="Connected Services\ProductService\item4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ProductService\System.xsd">
+    <None Include="Connected Services\ProductService\item5.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\UserService\AuctionSystem.Client.UserService.Bid.datasource">
+    <None Include="Connected Services\ProductService\ProductService.wsdl" />
+    <None Include="Connected Services\UserService\AuctionSystem.Client.UserService.BidDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\UserService\AuctionSystem.Client.UserService.Invoice.datasource">
+    <None Include="Connected Services\UserService\AuctionSystem.Client.UserService.InvoiceDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\UserService\AuctionSystem.Client.UserService.Product.datasource">
+    <None Include="Connected Services\UserService\AuctionSystem.Client.UserService.ProductDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UserService\AuctionSystem.Client.UserService.UserDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\UserService\AuctionSystem.Models.DTOs.xsd">
+    <None Include="Connected Services\UserService\item.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\UserService\AuctionSystem.Models.Enums.xsd">
+    <None Include="Connected Services\UserService\item1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\UserService\AuctionSystem.Models.xsd">
+    <None Include="Connected Services\UserService\item2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\UserService\service.wsdl" />
-    <None Include="Connected Services\UserService\service.xsd">
+    <None Include="Connected Services\UserService\item3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\UserService\service1.xsd">
+    <None Include="Connected Services\UserService\item4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\UserService\System.xsd">
+    <None Include="Connected Services\UserService\item5.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\UserService\UserService.wsdl" />
     <None Include="Connected Services\ZipServiceReference\AuctionSystem.Client.ZipServiceReference.Zip.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -341,6 +341,18 @@
     <None Include="Resources\login.png" />
   </ItemGroup>
   <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\BidService\" />
     <WCFMetadataStorage Include="Connected Services\LoginServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\PaymentServiceReference\" />
@@ -364,55 +376,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\LoginServiceReference\item.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\LoginServiceReference\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\LoginServiceReference\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\LoginServiceReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\BidService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\BidService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\BidService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ProductService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ProductService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ProductService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    <None Include="Connected Services\UserService\item.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\UserService\configuration91.svcinfo" />
@@ -437,6 +401,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\ZipServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ProductService\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ProductService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ProductService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ProductService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BidService\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BidService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BidService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BidService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LoginServiceReference\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LoginServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LoginServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LoginServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

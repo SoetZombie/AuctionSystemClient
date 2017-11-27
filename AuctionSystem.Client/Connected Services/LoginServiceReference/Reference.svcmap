@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f11cfb8a-ec24-4b14-b4ae-e71feb9f0ad6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0afb8ff0-29fb-44ed-8694-d470d58a7369" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,13 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:9998/Design_Time_Addresses/AuctionSystem.WcfService.Contracts/LoginService/" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:9995/Design_Time_Addresses/AuctionSystem.WcfService.Contracts/LoginService/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="572efbdd-e6e2-40cc-8cab-76ed00313855" SourceId="1" SourceUrl="http://localhost:9998/Design_Time_Addresses/AuctionSystem.WcfService.Contracts/LoginService/?disco" />
-    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="2cc2215c-a533-401c-8352-206fbfb28290" SourceId="1" SourceUrl="http://localhost:9998/Design_Time_Addresses/AuctionSystem.WcfService.Contracts/LoginService/?xsd=xsd1" />
-    <MetadataFile FileName="LoginService.wsdl" MetadataType="Wsdl" ID="b91f7710-79d5-4962-aa71-44d6c209f3df" SourceId="1" SourceUrl="http://localhost:9998/Design_Time_Addresses/AuctionSystem.WcfService.Contracts/LoginService/?wsdl" />
-    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="ae9b8b26-8b71-4c9d-b5c8-781a4ed15639" SourceId="1" SourceUrl="http://localhost:9998/Design_Time_Addresses/AuctionSystem.WcfService.Contracts/LoginService/?xsd=xsd0" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="64b0a6dc-497f-4a81-88ac-d57298fb3b6e" SourceId="1" SourceUrl="http://localhost:9995/Design_Time_Addresses/AuctionSystem.WcfService.Contracts/LoginService/?xsd=xsd1" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="7d52ab5f-1bfa-4b85-86af-f2450d036689" SourceId="1" SourceUrl="http://localhost:9995/Design_Time_Addresses/AuctionSystem.WcfService.Contracts/LoginService/?disco" />
+    <MetadataFile FileName="LoginService.wsdl" MetadataType="Wsdl" ID="7e2a8280-137f-425c-b0a6-06f5eea26b57" SourceId="1" SourceUrl="http://localhost:9995/Design_Time_Addresses/AuctionSystem.WcfService.Contracts/LoginService/?wsdl" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="81244f45-7354-4bac-8c49-ccd44897f5e5" SourceId="1" SourceUrl="http://localhost:9995/Design_Time_Addresses/AuctionSystem.WcfService.Contracts/LoginService/?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

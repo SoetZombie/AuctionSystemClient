@@ -12,6 +12,9 @@ namespace AuctionSystem.Client
         public Login()
         {
             InitializeComponent();
+            usernameTxtBox.Text = "libor";
+            passwordTxtBox.Text = "liboR1";
+
             client = new LoginServiceReference.LoginServiceClient();
         }
 
@@ -19,11 +22,12 @@ namespace AuctionSystem.Client
         private void loginBtn_Click(object sender, EventArgs e)
         {
             var username = usernameTxtBox.Text;
+            var password = passwordTxtBox.Text;
             if (client.ValidateLogin(usernameTxtBox.Text, passwordTxtBox.Text)) 
             {
                 AuctionClient a = new AuctionClient();
                 a.Show();
-                a.SetUsername(username);
+                a.setUsernameAndPw(username, password);
                 this.Close();
             }
 

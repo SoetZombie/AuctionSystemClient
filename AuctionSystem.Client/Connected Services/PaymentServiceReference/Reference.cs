@@ -1049,10 +1049,10 @@ namespace AuctionSystem.Client.PaymentServiceReference {
     public interface IPaymentService {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IPaymentService/AddPayment")]
-        void AddPayment(AuctionSystem.Client.PaymentServiceReference.Payment payment, AuctionSystem.Client.PaymentServiceReference.User user);
+        void AddPayment(AuctionSystem.Client.PaymentServiceReference.Payment payment, int userId);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IPaymentService/AddPayment")]
-        System.Threading.Tasks.Task AddPaymentAsync(AuctionSystem.Client.PaymentServiceReference.Payment payment, AuctionSystem.Client.PaymentServiceReference.User user);
+        System.Threading.Tasks.Task AddPaymentAsync(AuctionSystem.Client.PaymentServiceReference.Payment payment, int userId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPaymentService/GetPayment", ReplyAction="http://tempuri.org/IPaymentService/GetPaymentResponse")]
         AuctionSystem.Client.PaymentServiceReference.PaymentDto GetPayment(int paymentId);
@@ -1106,12 +1106,12 @@ namespace AuctionSystem.Client.PaymentServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public void AddPayment(AuctionSystem.Client.PaymentServiceReference.Payment payment, AuctionSystem.Client.PaymentServiceReference.User user) {
-            base.Channel.AddPayment(payment, user);
+        public void AddPayment(AuctionSystem.Client.PaymentServiceReference.Payment payment, int userId) {
+            base.Channel.AddPayment(payment, userId);
         }
         
-        public System.Threading.Tasks.Task AddPaymentAsync(AuctionSystem.Client.PaymentServiceReference.Payment payment, AuctionSystem.Client.PaymentServiceReference.User user) {
-            return base.Channel.AddPaymentAsync(payment, user);
+        public System.Threading.Tasks.Task AddPaymentAsync(AuctionSystem.Client.PaymentServiceReference.Payment payment, int userId) {
+            return base.Channel.AddPaymentAsync(payment, userId);
         }
         
         public AuctionSystem.Client.PaymentServiceReference.PaymentDto GetPayment(int paymentId) {

@@ -23,6 +23,7 @@ namespace AuctionSystem.Client
         private ProductService.IProductService productService;
 
         public static string username;
+        public static string password;
 
         public AuctionClient()
         {
@@ -31,6 +32,7 @@ namespace AuctionSystem.Client
             this.userClient = new UserService.UserServiceClient();
             paymentClient = new PaymentServiceReference.PaymentServiceClient();
             InitializeComponent();
+            myAccountPanel.Hide();
 
         }
         protected override void WndProc(ref Message m)
@@ -49,12 +51,13 @@ namespace AuctionSystem.Client
         public void GetUserObject()
         {
             currentUser = userClient.GetUserByUsername(username);
+            currentUser.Password = password;
         }
 
-        public void SetUsername(string usernamelog)
+        public void setUsernameAndPw(string usernamelog, string passwordlog)
         {
-            loggedasUsernameLbl.Text = usernamelog;
             username = usernamelog;
+            password = passwordlog;
             GetUserObject();
         }
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -81,17 +84,24 @@ namespace AuctionSystem.Client
         }
         private void myaccountbtn_Click(object sender, EventArgs e)
         {
+            SetUserData();
+            currentpaymentlbl.Text = currentUser.Payments;
+            myAccountPanel.Show();
+            
+        }
+        private void SetUserData()
+        {
             selectionPanel.Height = myaccountbtn.Height;
             selectionPanel.Top = myaccountbtn.Top;
             myAccountPanel.BringToFront();
             usernameTxtBox.Text = currentUser.Username;
+            passwordTxtBox.Text = currentUser.Password;
             nameTxtBox.Text = currentUser.Name;
             birthdateTxtBox.Text = currentUser.DateOfBirth.ToString();
             emailTxtBox.Text = currentUser.Email;
             addressTxtbox.Text = currentUser.Address;
             phoneNumberTxtBox.Text = currentUser.Phone;
             zipTxtBox.Text = currentUser.Zip.City + ", " + currentUser.Zip.Country;
-            
         }
 
         private void newsBtn_Click(object sender, EventArgs e)
@@ -155,12 +165,27 @@ namespace AuctionSystem.Client
 
         private void myAccountPanel_Paint(object sender, PaintEventArgs e)
         {
-            //paymentClient.AddPayment();
         }
 
         private void saveNewPaymentBtn_Click(object sender, EventArgs e)
         {
+            if (!currentUser.Payments.Any()) { paymentClient.AddPayment(CreatePaymentObject(), currentUser.Id); }
+            currentUser = userClient.GetUserByUsername(currentUser.Username);
+        }
 
+        private PaymentServiceReference.Payment CreatePaymentObject()
+        {
+            PaymentServiceReference.PaymentType paymentType = new PaymentServiceReference.PaymentType();
+            if (paypalRadioBtn.Checked) { paymentType = PaymentServiceReference.PaymentType.PayPal; }
+            else if (creditCardRadioBtn.Checked) { paymentType = PaymentServiceReference.PaymentType.CreditCard; }
+            else if (banktransferRadioBtn.Checked) { paymentType = PaymentServiceReference.PaymentType.BankTransfer; }
+            return new PaymentServiceReference.Payment
+            {
+                Type = paymentType,
+                PaymentTypeCode = paymentTypeCodeTxtBox.Text,
+                UserId = currentUser.Id,
+
+            };
         }
 
         private void GetBidBtn_Click(object sender, EventArgs e)
@@ -188,11 +213,11 @@ namespace AuctionSystem.Client
             var productName = ProductTextBox.Text;
             var productId = this.productService.GetProductByName(productName).Id;
 
-            var userId = this.userClient.GetUserByUsername("gosho").Id;
+           // var userId = this.userClient.GetUserByUsername("gosho").Id;
 
             var coins = int.Parse(CoinsTextBox.Text);
 
-            this.bidService.MakeBid(userId, productId, coins);
+            //this.bidService.MakeBid(userId, productId, coins);
         }
 
         private void GetProductBids_Click(object sender, EventArgs e)
@@ -213,6 +238,43 @@ namespace AuctionSystem.Client
             }
 
             ResultTextBox.Text = sb.ToString();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void updateExistingPaymentBtn_Click(object sender, EventArgs e)
+        {
+            paymentClient.UpdatePayment(CreatePaymentObject());
+        }
+
+        private void buyCoinsButton_Click(object sender, EventArgs e)
+        {
+            currentUser.Coins += int.Parse(amountTxtBox.Text);
+           
+            if (userClient.UpdateUser(currentUser))
+            {
+
+                GetUserObject();
+            }
+           
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (userClient.UpdateUser(currentUser))
+            {
+
+                GetUserObject();
+            }
+        }
+
+        private void yourcurrentpaymentLbl_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

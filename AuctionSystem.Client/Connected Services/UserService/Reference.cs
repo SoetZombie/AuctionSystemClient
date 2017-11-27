@@ -980,7 +980,7 @@ namespace AuctionSystem.Client.UserService {
         private string AddressField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.UserService.Bid[] BidsField;
+        private string BidsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int CoinsField;
@@ -998,7 +998,7 @@ namespace AuctionSystem.Client.UserService {
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.UserService.Invoice[] InvoicesField;
+        private string InvoicesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool IsAdminField;
@@ -1013,7 +1013,7 @@ namespace AuctionSystem.Client.UserService {
         private string PasswordField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.UserService.Payment[] PaymentsField;
+        private string PaymentsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PhoneField;
@@ -1051,7 +1051,7 @@ namespace AuctionSystem.Client.UserService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.UserService.Bid[] Bids {
+        public string Bids {
             get {
                 return this.BidsField;
             }
@@ -1129,7 +1129,7 @@ namespace AuctionSystem.Client.UserService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.UserService.Invoice[] Invoices {
+        public string Invoices {
             get {
                 return this.InvoicesField;
             }
@@ -1194,7 +1194,7 @@ namespace AuctionSystem.Client.UserService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.UserService.Payment[] Payments {
+        public string Payments {
             get {
                 return this.PaymentsField;
             }
@@ -1268,6 +1268,413 @@ namespace AuctionSystem.Client.UserService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ProductDto", Namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.DTOs")]
+    [System.SerializableAttribute()]
+    public partial class ProductDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BidsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime EndDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<byte>[] ImageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsAvailableField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime StartDateField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Bids {
+            get {
+                return this.BidsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BidsField, value) != true)) {
+                    this.BidsField = value;
+                    this.RaisePropertyChanged("Bids");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime EndDate {
+            get {
+                return this.EndDateField;
+            }
+            set {
+                if ((this.EndDateField.Equals(value) != true)) {
+                    this.EndDateField = value;
+                    this.RaisePropertyChanged("EndDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<byte>[] Image {
+            get {
+                return this.ImageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ImageField, value) != true)) {
+                    this.ImageField = value;
+                    this.RaisePropertyChanged("Image");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsAvailable {
+            get {
+                return this.IsAvailableField;
+            }
+            set {
+                if ((this.IsAvailableField.Equals(value) != true)) {
+                    this.IsAvailableField = value;
+                    this.RaisePropertyChanged("IsAvailable");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime StartDate {
+            get {
+                return this.StartDateField;
+            }
+            set {
+                if ((this.StartDateField.Equals(value) != true)) {
+                    this.StartDateField = value;
+                    this.RaisePropertyChanged("StartDate");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BidDto", Namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.DTOs")]
+    [System.SerializableAttribute()]
+    public partial class BidDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CoinsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateOfCreatedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsWonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ProductIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProductNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int UserIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsernameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Coins {
+            get {
+                return this.CoinsField;
+            }
+            set {
+                if ((this.CoinsField.Equals(value) != true)) {
+                    this.CoinsField = value;
+                    this.RaisePropertyChanged("Coins");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DateOfCreated {
+            get {
+                return this.DateOfCreatedField;
+            }
+            set {
+                if ((this.DateOfCreatedField.Equals(value) != true)) {
+                    this.DateOfCreatedField = value;
+                    this.RaisePropertyChanged("DateOfCreated");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsWon {
+            get {
+                return this.IsWonField;
+            }
+            set {
+                if ((this.IsWonField.Equals(value) != true)) {
+                    this.IsWonField = value;
+                    this.RaisePropertyChanged("IsWon");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ProductId {
+            get {
+                return this.ProductIdField;
+            }
+            set {
+                if ((this.ProductIdField.Equals(value) != true)) {
+                    this.ProductIdField = value;
+                    this.RaisePropertyChanged("ProductId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProductName {
+            get {
+                return this.ProductNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductNameField, value) != true)) {
+                    this.ProductNameField = value;
+                    this.RaisePropertyChanged("ProductName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int UserId {
+            get {
+                return this.UserIdField;
+            }
+            set {
+                if ((this.UserIdField.Equals(value) != true)) {
+                    this.UserIdField = value;
+                    this.RaisePropertyChanged("UserId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Username {
+            get {
+                return this.UsernameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsernameField, value) != true)) {
+                    this.UsernameField = value;
+                    this.RaisePropertyChanged("Username");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InvoiceDto", Namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.DTOs")]
+    [System.SerializableAttribute()]
+    public partial class InvoiceDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateOfIssuedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProductField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DateOfIssued {
+            get {
+                return this.DateOfIssuedField;
+            }
+            set {
+                if ((this.DateOfIssuedField.Equals(value) != true)) {
+                    this.DateOfIssuedField = value;
+                    this.RaisePropertyChanged("DateOfIssued");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Product {
+            get {
+                return this.ProductField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductField, value) != true)) {
+                    this.ProductField = value;
+                    this.RaisePropertyChanged("Product");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string User {
+            get {
+                return this.UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserField, value) != true)) {
+                    this.UserField = value;
+                    this.RaisePropertyChanged("User");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="UserService.IUserService")]
     public interface IUserService {
@@ -1315,22 +1722,22 @@ namespace AuctionSystem.Client.UserService {
         System.Threading.Tasks.Task<int> GetAllUserSpentCoinsForGivenProductAsync(AuctionSystem.Client.UserService.User user, string productName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserProducts", ReplyAction="http://tempuri.org/IUserService/GetUserProductsResponse")]
-        AuctionSystem.Client.UserService.Product[] GetUserProducts(AuctionSystem.Client.UserService.User user);
+        AuctionSystem.Client.UserService.ProductDto[] GetUserProducts(AuctionSystem.Client.UserService.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserProducts", ReplyAction="http://tempuri.org/IUserService/GetUserProductsResponse")]
-        System.Threading.Tasks.Task<AuctionSystem.Client.UserService.Product[]> GetUserProductsAsync(AuctionSystem.Client.UserService.User user);
+        System.Threading.Tasks.Task<AuctionSystem.Client.UserService.ProductDto[]> GetUserProductsAsync(AuctionSystem.Client.UserService.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserBids", ReplyAction="http://tempuri.org/IUserService/GetUserBidsResponse")]
-        AuctionSystem.Client.UserService.Bid[] GetUserBids(AuctionSystem.Client.UserService.User user);
+        AuctionSystem.Client.UserService.BidDto[] GetUserBids(AuctionSystem.Client.UserService.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserBids", ReplyAction="http://tempuri.org/IUserService/GetUserBidsResponse")]
-        System.Threading.Tasks.Task<AuctionSystem.Client.UserService.Bid[]> GetUserBidsAsync(AuctionSystem.Client.UserService.User user);
+        System.Threading.Tasks.Task<AuctionSystem.Client.UserService.BidDto[]> GetUserBidsAsync(AuctionSystem.Client.UserService.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserInvoices", ReplyAction="http://tempuri.org/IUserService/GetUserInvoicesResponse")]
-        AuctionSystem.Client.UserService.Invoice[] GetUserInvoices(AuctionSystem.Client.UserService.User user);
+        AuctionSystem.Client.UserService.InvoiceDto[] GetUserInvoices(AuctionSystem.Client.UserService.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserInvoices", ReplyAction="http://tempuri.org/IUserService/GetUserInvoicesResponse")]
-        System.Threading.Tasks.Task<AuctionSystem.Client.UserService.Invoice[]> GetUserInvoicesAsync(AuctionSystem.Client.UserService.User user);
+        System.Threading.Tasks.Task<AuctionSystem.Client.UserService.InvoiceDto[]> GetUserInvoicesAsync(AuctionSystem.Client.UserService.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserByUsername", ReplyAction="http://tempuri.org/IUserService/GetUserByUsernameResponse")]
         AuctionSystem.Client.UserService.UserDto GetUserByUsername(string username);
@@ -1422,27 +1829,27 @@ namespace AuctionSystem.Client.UserService {
             return base.Channel.GetAllUserSpentCoinsForGivenProductAsync(user, productName);
         }
         
-        public AuctionSystem.Client.UserService.Product[] GetUserProducts(AuctionSystem.Client.UserService.User user) {
+        public AuctionSystem.Client.UserService.ProductDto[] GetUserProducts(AuctionSystem.Client.UserService.User user) {
             return base.Channel.GetUserProducts(user);
         }
         
-        public System.Threading.Tasks.Task<AuctionSystem.Client.UserService.Product[]> GetUserProductsAsync(AuctionSystem.Client.UserService.User user) {
+        public System.Threading.Tasks.Task<AuctionSystem.Client.UserService.ProductDto[]> GetUserProductsAsync(AuctionSystem.Client.UserService.User user) {
             return base.Channel.GetUserProductsAsync(user);
         }
         
-        public AuctionSystem.Client.UserService.Bid[] GetUserBids(AuctionSystem.Client.UserService.User user) {
+        public AuctionSystem.Client.UserService.BidDto[] GetUserBids(AuctionSystem.Client.UserService.User user) {
             return base.Channel.GetUserBids(user);
         }
         
-        public System.Threading.Tasks.Task<AuctionSystem.Client.UserService.Bid[]> GetUserBidsAsync(AuctionSystem.Client.UserService.User user) {
+        public System.Threading.Tasks.Task<AuctionSystem.Client.UserService.BidDto[]> GetUserBidsAsync(AuctionSystem.Client.UserService.User user) {
             return base.Channel.GetUserBidsAsync(user);
         }
         
-        public AuctionSystem.Client.UserService.Invoice[] GetUserInvoices(AuctionSystem.Client.UserService.User user) {
+        public AuctionSystem.Client.UserService.InvoiceDto[] GetUserInvoices(AuctionSystem.Client.UserService.User user) {
             return base.Channel.GetUserInvoices(user);
         }
         
-        public System.Threading.Tasks.Task<AuctionSystem.Client.UserService.Invoice[]> GetUserInvoicesAsync(AuctionSystem.Client.UserService.User user) {
+        public System.Threading.Tasks.Task<AuctionSystem.Client.UserService.InvoiceDto[]> GetUserInvoicesAsync(AuctionSystem.Client.UserService.User user) {
             return base.Channel.GetUserInvoicesAsync(user);
         }
         
