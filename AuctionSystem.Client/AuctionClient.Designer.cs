@@ -453,7 +453,7 @@
             this.myAccountPanel.Controls.Add(this.passwordLbl);
             this.myAccountPanel.Controls.Add(this.usernameLbl);
             this.myAccountPanel.Controls.Add(this.usernameTxtBox);
-            this.myAccountPanel.Location = new System.Drawing.Point(299, 87);
+            this.myAccountPanel.Location = new System.Drawing.Point(299, 105);
             this.myAccountPanel.Name = "myAccountPanel";
             this.myAccountPanel.Size = new System.Drawing.Size(934, 540);
             this.myAccountPanel.TabIndex = 7;
@@ -470,7 +470,7 @@
             this.BiddingPanel.Controls.Add(this.CoinsLbl);
             this.BiddingPanel.Controls.Add(this.MakeBidBtn);
             this.BiddingPanel.Controls.Add(this.GetBidBtn);
-            this.BiddingPanel.Location = new System.Drawing.Point(3, 0);
+            this.BiddingPanel.Location = new System.Drawing.Point(3, 3);
             this.BiddingPanel.Name = "BiddingPanel";
             this.BiddingPanel.Size = new System.Drawing.Size(776, 537);
             this.BiddingPanel.TabIndex = 72;

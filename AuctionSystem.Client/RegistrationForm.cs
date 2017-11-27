@@ -6,12 +6,17 @@ namespace AuctionSystem.Client
     public partial class RegistrationForm : Form
     {
         UserService.UserServiceClient client;
+        ZipServiceReference.ZipServiceClient zipClient;
+
         UserService.Gender gender;
         public RegistrationForm()
         {
             client = new UserService.UserServiceClient();
+            zipClient = new ZipServiceReference.ZipServiceClient();
             InitializeComponent();
             gender = UserService.Gender.Male;
+            dataGridView1.DataSource = zipClient.GetAllZips();
+            
         }
         protected override void WndProc(ref Message m)
         {
@@ -77,12 +82,9 @@ namespace AuctionSystem.Client
             this.Close();
         }
 
-  
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-     
-
-      
-
-
+        }
     }
 }
