@@ -17,14 +17,16 @@
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           
+
             Login l = new Login();
             l.Show();
             //RegistrationForm r = new RegistrationForm();
             //r.ShowDialog();
-            ///
-            ///
+                        
             Application.Run();
+
+
+
 
         }
 

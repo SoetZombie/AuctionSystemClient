@@ -21,6 +21,7 @@ namespace AuctionSystem.Client
         private PaymentServiceReference.PaymentServiceClient paymentClient;
         private BidService.IBidService bidService;
         private ProductService.IProductService productService;
+        private ZipServiceReference.IZipService zipService;
 
         public static string username;
         public static string password;
@@ -30,6 +31,7 @@ namespace AuctionSystem.Client
             this.productService = new ProductService.ProductServiceClient();
             this.bidService = new BidService.BidServiceClient();
             this.userClient = new UserService.UserServiceClient();
+            this.zipService = new ZipServiceReference.ZipServiceClient();
             paymentClient = new PaymentServiceReference.PaymentServiceClient();
             InitializeComponent();
             myAccountPanel.Hide();
@@ -59,6 +61,7 @@ namespace AuctionSystem.Client
             username = usernamelog;
             password = passwordlog;
             GetUserObject();
+            loggedasUsernameLbl.Text = username;
         }
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
@@ -85,7 +88,7 @@ namespace AuctionSystem.Client
         private void myaccountbtn_Click(object sender, EventArgs e)
         {
             SetUserData();
-            currentpaymentlbl.Text = currentUser.Payments;
+            
             myAccountPanel.Show();
             
         }
@@ -101,7 +104,11 @@ namespace AuctionSystem.Client
             emailTxtBox.Text = currentUser.Email;
             addressTxtbox.Text = currentUser.Address;
             phoneNumberTxtBox.Text = currentUser.Phone;
-            zipTxtBox.Text = currentUser.Zip.City + ", " + currentUser.Zip.Country;
+            zipTxtBox.Text = currentUser.ZipId.ToString();
+            currentCoinsTxtBox.Text = currentUser.Coins.ToString();
+            currentpaymentlbl.Text = currentUser.Payments;
+            zipsGrid.DataSource = zipService.GetAllZips();
+
         }
 
         private void newsBtn_Click(object sender, EventArgs e)
@@ -247,7 +254,33 @@ namespace AuctionSystem.Client
 
         private void updateExistingPaymentBtn_Click(object sender, EventArgs e)
         {
-            paymentClient.UpdatePayment(CreatePaymentObject());
+            if (currentUser.PaymentId == "")
+            {
+                paymentClient.AddPayment(CreatePaymentObject(), currentUser.Id);
+                GetUserObject();
+                SetUserData();
+            }
+            else
+            {
+                var currentpayment = paymentClient.GetPayment(int.Parse(currentUser.PaymentId));
+
+                PaymentServiceReference.PaymentType paymentType = new PaymentServiceReference.PaymentType();
+
+                if (paypalRadioBtn.Checked) { paymentType = PaymentServiceReference.PaymentType.PayPal; }
+                else if (creditCardRadioBtn.Checked) { paymentType = PaymentServiceReference.PaymentType.CreditCard; }
+                else if (banktransferRadioBtn.Checked) { paymentType = PaymentServiceReference.PaymentType.BankTransfer; }
+
+                currentpayment.PaymentTypeCode = paymentTypeCodeTxtBox.Text;
+                currentpayment.Type = paymentType;  
+                currentpayment.UserId = currentUser.Id;
+
+                paymentClient.UpdatePayment(currentpayment);
+
+                GetUserObject();
+                SetUserData();
+
+
+             }
         }
 
         private void buyCoinsButton_Click(object sender, EventArgs e)
@@ -258,6 +291,7 @@ namespace AuctionSystem.Client
             {
 
                 GetUserObject();
+                SetUserData();
             }
            
 
@@ -265,6 +299,7 @@ namespace AuctionSystem.Client
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            
             if (userClient.UpdateUser(currentUser))
             {
 
@@ -275,6 +310,16 @@ namespace AuctionSystem.Client
         private void yourcurrentpaymentLbl_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void deleteCurrentPaymentBtn_Click(object sender, EventArgs e)
+        {
+            if (!currentUser.PaymentId.Equals(""))
+            {
+                paymentClient.DeletePayment(int.Parse(currentUser.PaymentId));
+                GetUserObject();
+                SetUserData();
+            }
         }
     }
 }

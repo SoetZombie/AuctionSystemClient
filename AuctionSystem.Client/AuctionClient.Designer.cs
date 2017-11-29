@@ -69,7 +69,6 @@
             this.yourcurrentpaymentLbl = new System.Windows.Forms.Label();
             this.updateExistingPaymentBtn = new System.Windows.Forms.Button();
             this.paymentTypeCodeTxtBox = new System.Windows.Forms.TextBox();
-            this.saveNewPaymentBtn = new System.Windows.Forms.Button();
             this.paymentTypeCodelbl = new System.Windows.Forms.Label();
             this.paymentTypeLbl = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -88,6 +87,10 @@
             this.CoinsLbl = new System.Windows.Forms.Label();
             this.MakeBidBtn = new System.Windows.Forms.Button();
             this.GetBidBtn = new System.Windows.Forms.Button();
+            this.deleteCurrentPaymentBtn = new System.Windows.Forms.Button();
+            this.userCoinsLbl = new System.Windows.Forms.Label();
+            this.currentCoinsTxtBox = new System.Windows.Forms.TextBox();
+            this.zipsGrid = new System.Windows.Forms.DataGridView();
             this.topPanel.SuspendLayout();
             this.leftMenuPanel.SuspendLayout();
             this.myAccountPanel.SuspendLayout();
@@ -95,6 +98,7 @@
             this.buyCoinsPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.BiddingPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zipsGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
@@ -455,6 +459,9 @@
             // 
             // myAccountPanel
             // 
+            this.myAccountPanel.Controls.Add(this.zipsGrid);
+            this.myAccountPanel.Controls.Add(this.userCoinsLbl);
+            this.myAccountPanel.Controls.Add(this.currentCoinsTxtBox);
             this.myAccountPanel.Controls.Add(this.updateYourInfoBtn);
             this.myAccountPanel.Controls.Add(this.panel1);
             this.myAccountPanel.Controls.Add(this.buyCoinsPanel);
@@ -486,7 +493,7 @@
             this.updateYourInfoBtn.BackColor = System.Drawing.Color.CornflowerBlue;
             this.updateYourInfoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateYourInfoBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateYourInfoBtn.Location = new System.Drawing.Point(275, 495);
+            this.updateYourInfoBtn.Location = new System.Drawing.Point(275, 681);
             this.updateYourInfoBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.updateYourInfoBtn.Name = "updateYourInfoBtn";
             this.updateYourInfoBtn.Size = new System.Drawing.Size(230, 48);
@@ -553,11 +560,11 @@
             // 
             // buyCoinsPanel
             // 
+            this.buyCoinsPanel.Controls.Add(this.deleteCurrentPaymentBtn);
             this.buyCoinsPanel.Controls.Add(this.currentpaymentlbl);
             this.buyCoinsPanel.Controls.Add(this.yourcurrentpaymentLbl);
             this.buyCoinsPanel.Controls.Add(this.updateExistingPaymentBtn);
             this.buyCoinsPanel.Controls.Add(this.paymentTypeCodeTxtBox);
-            this.buyCoinsPanel.Controls.Add(this.saveNewPaymentBtn);
             this.buyCoinsPanel.Controls.Add(this.paymentTypeCodelbl);
             this.buyCoinsPanel.Controls.Add(this.paymentTypeLbl);
             this.buyCoinsPanel.Controls.Add(this.groupBox1);
@@ -596,12 +603,12 @@
             this.updateExistingPaymentBtn.BackColor = System.Drawing.Color.CornflowerBlue;
             this.updateExistingPaymentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateExistingPaymentBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateExistingPaymentBtn.Location = new System.Drawing.Point(6, 369);
+            this.updateExistingPaymentBtn.Location = new System.Drawing.Point(4, 316);
             this.updateExistingPaymentBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.updateExistingPaymentBtn.Name = "updateExistingPaymentBtn";
             this.updateExistingPaymentBtn.Size = new System.Drawing.Size(387, 48);
             this.updateExistingPaymentBtn.TabIndex = 76;
-            this.updateExistingPaymentBtn.Text = "Update existing payment";
+            this.updateExistingPaymentBtn.Text = "Save or Update payment";
             this.updateExistingPaymentBtn.UseVisualStyleBackColor = false;
             this.updateExistingPaymentBtn.Click += new System.EventHandler(this.updateExistingPaymentBtn_Click);
             // 
@@ -613,20 +620,6 @@
             this.paymentTypeCodeTxtBox.Name = "paymentTypeCodeTxtBox";
             this.paymentTypeCodeTxtBox.Size = new System.Drawing.Size(379, 47);
             this.paymentTypeCodeTxtBox.TabIndex = 75;
-            // 
-            // saveNewPaymentBtn
-            // 
-            this.saveNewPaymentBtn.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.saveNewPaymentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveNewPaymentBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveNewPaymentBtn.Location = new System.Drawing.Point(6, 313);
-            this.saveNewPaymentBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.saveNewPaymentBtn.Name = "saveNewPaymentBtn";
-            this.saveNewPaymentBtn.Size = new System.Drawing.Size(387, 48);
-            this.saveNewPaymentBtn.TabIndex = 72;
-            this.saveNewPaymentBtn.Text = "Save new payment";
-            this.saveNewPaymentBtn.UseVisualStyleBackColor = false;
-            this.saveNewPaymentBtn.Click += new System.EventHandler(this.saveNewPaymentBtn_Click);
             // 
             // paymentTypeCodelbl
             // 
@@ -821,6 +814,52 @@
             this.GetBidBtn.UseVisualStyleBackColor = true;
             this.GetBidBtn.Click += new System.EventHandler(this.GetBidBtn_Click);
             // 
+            // deleteCurrentPaymentBtn
+            // 
+            this.deleteCurrentPaymentBtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.deleteCurrentPaymentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteCurrentPaymentBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteCurrentPaymentBtn.Location = new System.Drawing.Point(6, 372);
+            this.deleteCurrentPaymentBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.deleteCurrentPaymentBtn.Name = "deleteCurrentPaymentBtn";
+            this.deleteCurrentPaymentBtn.Size = new System.Drawing.Size(387, 48);
+            this.deleteCurrentPaymentBtn.TabIndex = 79;
+            this.deleteCurrentPaymentBtn.Text = "Delete current payment";
+            this.deleteCurrentPaymentBtn.UseVisualStyleBackColor = false;
+            this.deleteCurrentPaymentBtn.Click += new System.EventHandler(this.deleteCurrentPaymentBtn_Click);
+            // 
+            // userCoinsLbl
+            // 
+            this.userCoinsLbl.AutoSize = true;
+            this.userCoinsLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.userCoinsLbl.ForeColor = System.Drawing.Color.Black;
+            this.userCoinsLbl.Location = new System.Drawing.Point(33, 480);
+            this.userCoinsLbl.Name = "userCoinsLbl";
+            this.userCoinsLbl.Size = new System.Drawing.Size(103, 39);
+            this.userCoinsLbl.TabIndex = 78;
+            this.userCoinsLbl.Text = "Coins";
+            // 
+            // currentCoinsTxtBox
+            // 
+            this.currentCoinsTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.currentCoinsTxtBox.Location = new System.Drawing.Point(318, 480);
+            this.currentCoinsTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.currentCoinsTxtBox.Name = "currentCoinsTxtBox";
+            this.currentCoinsTxtBox.Size = new System.Drawing.Size(187, 47);
+            this.currentCoinsTxtBox.TabIndex = 77;
+            // 
+            // zipsGrid
+            // 
+            this.zipsGrid.AllowUserToAddRows = false;
+            this.zipsGrid.AllowUserToDeleteRows = false;
+            this.zipsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.zipsGrid.Location = new System.Drawing.Point(16, 537);
+            this.zipsGrid.Name = "zipsGrid";
+            this.zipsGrid.ReadOnly = true;
+            this.zipsGrid.RowTemplate.Height = 28;
+            this.zipsGrid.Size = new System.Drawing.Size(497, 136);
+            this.zipsGrid.TabIndex = 79;
+            // 
             // AuctionClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -848,6 +887,7 @@
             this.groupBox1.PerformLayout();
             this.BiddingPanel.ResumeLayout(false);
             this.BiddingPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zipsGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -885,7 +925,6 @@
         private System.Windows.Forms.Label zipLbl;
         private System.Windows.Forms.TextBox zipTxtBox;
         private System.Windows.Forms.Panel buyCoinsPanel;
-        private System.Windows.Forms.Button saveNewPaymentBtn;
         private System.Windows.Forms.Label paymentTypeCodelbl;
         private System.Windows.Forms.Label paymentTypeLbl;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -912,5 +951,9 @@
         private System.Windows.Forms.Label amountLbl;
         private System.Windows.Forms.TextBox amountTxtBox;
         private System.Windows.Forms.Button updateYourInfoBtn;
+        private System.Windows.Forms.Button deleteCurrentPaymentBtn;
+        private System.Windows.Forms.Label userCoinsLbl;
+        private System.Windows.Forms.TextBox currentCoinsTxtBox;
+        private System.Windows.Forms.DataGridView zipsGrid;
     }
 }

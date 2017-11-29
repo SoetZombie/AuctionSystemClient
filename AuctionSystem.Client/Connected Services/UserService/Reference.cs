@@ -65,6 +65,9 @@ namespace AuctionSystem.Client.UserService {
         private string PhoneField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RememberTokenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string UsernameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -261,6 +264,19 @@ namespace AuctionSystem.Client.UserService {
                 if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
                     this.PhoneField = value;
                     this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RememberToken {
+            get {
+                return this.RememberTokenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RememberTokenField, value) != true)) {
+                    this.RememberTokenField = value;
+                    this.RaisePropertyChanged("RememberToken");
                 }
             }
         }
@@ -687,9 +703,6 @@ namespace AuctionSystem.Client.UserService {
         private AuctionSystem.Client.UserService.PaymentType TypeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.UserService.User UserField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int UserIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -737,19 +750,6 @@ namespace AuctionSystem.Client.UserService {
                 if ((this.TypeField.Equals(value) != true)) {
                     this.TypeField = value;
                     this.RaisePropertyChanged("Type");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.UserService.User User {
-            get {
-                return this.UserField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UserField, value) != true)) {
-                    this.UserField = value;
-                    this.RaisePropertyChanged("User");
                 }
             }
         }
@@ -980,9 +980,6 @@ namespace AuctionSystem.Client.UserService {
         private string AddressField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string BidsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int CoinsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1011,6 +1008,9 @@ namespace AuctionSystem.Client.UserService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PaymentIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PaymentsField;
@@ -1046,19 +1046,6 @@ namespace AuctionSystem.Client.UserService {
                 if ((object.ReferenceEquals(this.AddressField, value) != true)) {
                     this.AddressField = value;
                     this.RaisePropertyChanged("Address");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Bids {
-            get {
-                return this.BidsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.BidsField, value) != true)) {
-                    this.BidsField = value;
-                    this.RaisePropertyChanged("Bids");
                 }
             }
         }
@@ -1194,6 +1181,19 @@ namespace AuctionSystem.Client.UserService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PaymentId {
+            get {
+                return this.PaymentIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PaymentIdField, value) != true)) {
+                    this.PaymentIdField = value;
+                    this.RaisePropertyChanged("PaymentId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Payments {
             get {
                 return this.PaymentsField;
@@ -1278,7 +1278,7 @@ namespace AuctionSystem.Client.UserService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string BidsField;
+        private AuctionSystem.Client.UserService.BidDto[] BidsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string DescriptionField;
@@ -1315,7 +1315,7 @@ namespace AuctionSystem.Client.UserService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Bids {
+        public AuctionSystem.Client.UserService.BidDto[] Bids {
             get {
                 return this.BidsField;
             }
@@ -1460,16 +1460,16 @@ namespace AuctionSystem.Client.UserService {
         private bool IsWonField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AuctionSystem.Client.UserService.ProductDto ProductField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int ProductIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ProductNameField;
+        private AuctionSystem.Client.UserService.UserDto UserField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int UserIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UsernameField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1521,6 +1521,19 @@ namespace AuctionSystem.Client.UserService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public AuctionSystem.Client.UserService.ProductDto Product {
+            get {
+                return this.ProductField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductField, value) != true)) {
+                    this.ProductField = value;
+                    this.RaisePropertyChanged("Product");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int ProductId {
             get {
                 return this.ProductIdField;
@@ -1534,14 +1547,14 @@ namespace AuctionSystem.Client.UserService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ProductName {
+        public AuctionSystem.Client.UserService.UserDto User {
             get {
-                return this.ProductNameField;
+                return this.UserField;
             }
             set {
-                if ((object.ReferenceEquals(this.ProductNameField, value) != true)) {
-                    this.ProductNameField = value;
-                    this.RaisePropertyChanged("ProductName");
+                if ((object.ReferenceEquals(this.UserField, value) != true)) {
+                    this.UserField = value;
+                    this.RaisePropertyChanged("User");
                 }
             }
         }
@@ -1555,19 +1568,6 @@ namespace AuctionSystem.Client.UserService {
                 if ((this.UserIdField.Equals(value) != true)) {
                     this.UserIdField = value;
                     this.RaisePropertyChanged("UserId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Username {
-            get {
-                return this.UsernameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UsernameField, value) != true)) {
-                    this.UsernameField = value;
-                    this.RaisePropertyChanged("Username");
                 }
             }
         }
@@ -1598,7 +1598,7 @@ namespace AuctionSystem.Client.UserService {
         private decimal PriceField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ProductField;
+        private AuctionSystem.Client.UserService.ProductDto ProductField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string UserField;
@@ -1640,7 +1640,7 @@ namespace AuctionSystem.Client.UserService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Product {
+        public AuctionSystem.Client.UserService.ProductDto Product {
             get {
                 return this.ProductField;
             }
