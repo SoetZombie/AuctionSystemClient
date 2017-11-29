@@ -285,25 +285,52 @@ namespace AuctionSystem.Client
 
         private void buyCoinsButton_Click(object sender, EventArgs e)
         {
-            currentUser.Coins += int.Parse(amountTxtBox.Text);
-           
-            if (userClient.UpdateUser(currentUser))
+            if (System.Text.RegularExpressions.Regex.IsMatch(amountTxtBox.Text, "[^0-9]"))
             {
-
-                GetUserObject();
-                SetUserData();
+                throw new ArgumentException("wtf are you trying to do");
             }
-           
+            else
+            {
+                currentUser.Coins += int.Parse(amountTxtBox.Text);
+
+                if (userClient.UpdateUser(currentUser))
+                {
+
+                    GetUserObject();
+                    SetUserData();
+                }
+            }
 
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             
-            if (userClient.UpdateUser(currentUser))
+            currentUser.Username = usernameTxtBox.Text;
+            currentUser.Name = nameTxtBox.Text;
+            currentUser.DateOfBirth = DateTime.Parse(birthdateTxtBox.Text);
+            currentUser.Phone = phoneNumberTxtBox.Text;
+            currentUser.Email = emailTxtBox.Text;
+            currentUser.Address = addressTxtbox.Text;
+            currentUser.ZipId = int.Parse(zipTxtBox.Text);
+            currentUser.Password = passwordTxtBox.Text;
+            try
             {
 
-                GetUserObject();
+
+                if (userClient.UpdateUser(currentUser))
+                {
+
+                    GetUserObject();
+                }
+            }
+            catch (Exception ex)
+            {
+                DialogWindow d = new DialogWindow();
+                d.SetErrorMsg(ex.Message);
+                d.StartPosition = FormStartPosition.CenterParent;
+                d.ShowDialog(this);
+                
             }
         }
 
