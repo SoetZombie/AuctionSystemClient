@@ -88,9 +88,9 @@ namespace AuctionSystem.Client
         private void myaccountbtn_Click(object sender, EventArgs e)
         {
             SetUserData();
-            
+
             myAccountPanel.Show();
-            
+
         }
         private void SetUserData()
         {
@@ -211,7 +211,7 @@ namespace AuctionSystem.Client
                 sb.AppendLine("----------------");
             }
 
-            ResultTextBox.Text = sb.ToString(); 
+            ResultTextBox.Text = sb.ToString();
         }
 
         // Take a look here !
@@ -220,7 +220,7 @@ namespace AuctionSystem.Client
             var productName = ProductTextBox.Text;
             var productId = this.productService.GetProductByName(productName).Id;
 
-           // var userId = this.userClient.GetUserByUsername("gosho").Id;
+            // var userId = this.userClient.GetUserByUsername("gosho").Id;
 
             var coins = int.Parse(CoinsTextBox.Text);
 
@@ -271,7 +271,7 @@ namespace AuctionSystem.Client
                 else if (banktransferRadioBtn.Checked) { paymentType = PaymentServiceReference.PaymentType.BankTransfer; }
 
                 currentpayment.PaymentTypeCode = paymentTypeCodeTxtBox.Text;
-                currentpayment.Type = paymentType;  
+                currentpayment.Type = paymentType;
                 currentpayment.UserId = currentUser.Id;
 
                 paymentClient.UpdatePayment(currentpayment);
@@ -280,18 +280,25 @@ namespace AuctionSystem.Client
                 SetUserData();
 
 
-             }
+            }
         }
 
         private void buyCoinsButton_Click(object sender, EventArgs e)
         {
-            if (System.Text.RegularExpressions.Regex.IsMatch(amountTxtBox.Text, "[^0-9]"))
+          
+            try
             {
-                throw new ArgumentException("wtf are you trying to do");
-            }
-            else
-            {
-                currentUser.Coins += int.Parse(amountTxtBox.Text);
+                int coins;
+                if (!Int32.TryParse(amountTxtBox.Text, out coins))
+                {
+                    throw new ArgumentException("put only numbers please");
+                }
+                if (coins <= 0)
+                {
+                    throw new ArgumentException("coins cannot be negative or zero");
+                }
+
+                currentUser.Coins += coins;
 
                 if (userClient.UpdateUser(currentUser))
                 {
@@ -299,13 +306,23 @@ namespace AuctionSystem.Client
                     GetUserObject();
                     SetUserData();
                 }
+
             }
+            catch (Exception ex)
+            {
+
+                CreateExceptionDialog(ex.Message);
+
+            }
+
+            //  }
+
 
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            
+
             currentUser.Username = usernameTxtBox.Text;
             currentUser.Name = nameTxtBox.Text;
             currentUser.DateOfBirth = DateTime.Parse(birthdateTxtBox.Text);
@@ -326,12 +343,17 @@ namespace AuctionSystem.Client
             }
             catch (Exception ex)
             {
-                DialogWindow d = new DialogWindow();
-                d.SetErrorMsg(ex.Message);
-                d.StartPosition = FormStartPosition.CenterParent;
-                d.ShowDialog(this);
-                
+                CreateExceptionDialog(ex.Message);
+
             }
+        }
+
+        private void CreateExceptionDialog(string errorMsg)
+        {
+            DialogWindow d = new DialogWindow();
+            d.SetErrorMsg(errorMsg);
+            d.StartPosition = FormStartPosition.CenterParent;
+            d.ShowDialog(this);
         }
 
         private void yourcurrentpaymentLbl_Click(object sender, EventArgs e)

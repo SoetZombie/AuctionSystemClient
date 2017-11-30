@@ -9,4 +9,11 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="PaymentType" nillable="true" type="tns:PaymentType" />
+  <xs:simpleType name="Gender">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Male" />
+      <xs:enumeration value="Female" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Gender" nillable="true" type="tns:Gender" />
 </xs:schema>
