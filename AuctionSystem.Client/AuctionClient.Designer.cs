@@ -61,6 +61,16 @@
             this.zipsGrid = new System.Windows.Forms.DataGridView();
             this.userCoinsLbl = new System.Windows.Forms.Label();
             this.currentCoinsTxtBox = new System.Windows.Forms.TextBox();
+            this.BiddingPanel = new System.Windows.Forms.Panel();
+            this.SearchProductTextBox = new System.Windows.Forms.TextBox();
+            this.GetProductBids = new System.Windows.Forms.Button();
+            this.ResultTextBox = new System.Windows.Forms.TextBox();
+            this.ProductTextBox = new System.Windows.Forms.TextBox();
+            this.ProductLbl = new System.Windows.Forms.Label();
+            this.CoinsTextBox = new System.Windows.Forms.TextBox();
+            this.CoinsLbl = new System.Windows.Forms.Label();
+            this.MakeBidBtn = new System.Windows.Forms.Button();
+            this.GetBidBtn = new System.Windows.Forms.Button();
             this.updateYourInfoBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buycoinsLbl = new System.Windows.Forms.Label();
@@ -81,24 +91,22 @@
             this.banktransferRadioBtn = new System.Windows.Forms.RadioButton();
             this.zipLbl = new System.Windows.Forms.Label();
             this.zipTxtBox = new System.Windows.Forms.TextBox();
-            this.BiddingPanel = new System.Windows.Forms.Panel();
-            this.SearchProductTextBox = new System.Windows.Forms.TextBox();
-            this.GetProductBids = new System.Windows.Forms.Button();
-            this.ResultTextBox = new System.Windows.Forms.TextBox();
-            this.ProductTextBox = new System.Windows.Forms.TextBox();
-            this.ProductLbl = new System.Windows.Forms.Label();
-            this.CoinsTextBox = new System.Windows.Forms.TextBox();
-            this.CoinsLbl = new System.Windows.Forms.Label();
-            this.MakeBidBtn = new System.Windows.Forms.Button();
-            this.GetBidBtn = new System.Windows.Forms.Button();
+            this.cataloguePanel = new System.Windows.Forms.Panel();
+            this.sortByStartDate = new System.Windows.Forms.Button();
+            this.catalogueGridView = new System.Windows.Forms.DataGridView();
+            this.sortByEndDateBtn = new System.Windows.Forms.Button();
+            this.sortByNameBtn = new System.Windows.Forms.Button();
+            this.sortByPriceBTn = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             this.leftMenuPanel.SuspendLayout();
             this.myAccountPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.zipsGrid)).BeginInit();
+            this.BiddingPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.buyCoinsPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.BiddingPanel.SuspendLayout();
+            this.cataloguePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.catalogueGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
@@ -109,19 +117,19 @@
             this.topPanel.Controls.Add(this.maximizeBtn);
             this.topPanel.Controls.Add(this.exitBtn);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(293, 0);
+            this.topPanel.Location = new System.Drawing.Point(330, 0);
             this.topPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1110, 82);
+            this.topPanel.Size = new System.Drawing.Size(1248, 102);
             this.topPanel.TabIndex = 5;
             // 
             // loggedAsLbl
             // 
             this.loggedAsLbl.AutoSize = true;
             this.loggedAsLbl.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.loggedAsLbl.Location = new System.Drawing.Point(653, 0);
+            this.loggedAsLbl.Location = new System.Drawing.Point(735, 0);
             this.loggedAsLbl.Name = "loggedAsLbl";
-            this.loggedAsLbl.Size = new System.Drawing.Size(156, 28);
+            this.loggedAsLbl.Size = new System.Drawing.Size(179, 34);
             this.loggedAsLbl.TabIndex = 8;
             this.loggedAsLbl.Text = "Logged as : ";
             // 
@@ -130,12 +138,11 @@
             this.loggedasUsernameLbl.AutoSize = true;
             this.loggedasUsernameLbl.Font = new System.Drawing.Font("Century Gothic", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loggedasUsernameLbl.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.loggedasUsernameLbl.Location = new System.Drawing.Point(825, 0);
+            this.loggedasUsernameLbl.Location = new System.Drawing.Point(928, 0);
             this.loggedasUsernameLbl.Name = "loggedasUsernameLbl";
-            this.loggedasUsernameLbl.Size = new System.Drawing.Size(149, 28);
+            this.loggedasUsernameLbl.Size = new System.Drawing.Size(171, 34);
             this.loggedasUsernameLbl.TabIndex = 7;
             this.loggedasUsernameLbl.Text = "Logged as :";
-            this.loggedasUsernameLbl.Click += new System.EventHandler(this.label1_Click);
             // 
             // maximizeBtn
             // 
@@ -145,10 +152,10 @@
             this.maximizeBtn.FlatAppearance.BorderSize = 0;
             this.maximizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maximizeBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.maximizeBtn.Location = new System.Drawing.Point(1043, 0);
+            this.maximizeBtn.Location = new System.Drawing.Point(1172, 0);
             this.maximizeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maximizeBtn.Name = "maximizeBtn";
-            this.maximizeBtn.Size = new System.Drawing.Size(31, 28);
+            this.maximizeBtn.Size = new System.Drawing.Size(35, 35);
             this.maximizeBtn.TabIndex = 7;
             this.maximizeBtn.UseVisualStyleBackColor = true;
             this.maximizeBtn.Click += new System.EventHandler(this.maximizeBtn_Click);
@@ -161,10 +168,10 @@
             this.exitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.exitBtn.FlatAppearance.BorderSize = 0;
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtn.Location = new System.Drawing.Point(1079, 0);
+            this.exitBtn.Location = new System.Drawing.Point(1213, 0);
             this.exitBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(31, 28);
+            this.exitBtn.Size = new System.Drawing.Size(35, 35);
             this.exitBtn.TabIndex = 6;
             this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
@@ -180,7 +187,7 @@
             this.ebidBtn.Location = new System.Drawing.Point(0, 0);
             this.ebidBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ebidBtn.Name = "ebidBtn";
-            this.ebidBtn.Size = new System.Drawing.Size(587, 82);
+            this.ebidBtn.Size = new System.Drawing.Size(660, 102);
             this.ebidBtn.TabIndex = 4;
             this.ebidBtn.Text = "E-Bid";
             this.ebidBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -201,7 +208,7 @@
             this.leftMenuPanel.Location = new System.Drawing.Point(0, 0);
             this.leftMenuPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.leftMenuPanel.Name = "leftMenuPanel";
-            this.leftMenuPanel.Size = new System.Drawing.Size(293, 675);
+            this.leftMenuPanel.Size = new System.Drawing.Size(330, 844);
             this.leftMenuPanel.TabIndex = 6;
             // 
             // logoutBtn
@@ -212,10 +219,10 @@
             this.logoutBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.logoutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logoutBtn.Image")));
             this.logoutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutBtn.Location = new System.Drawing.Point(20, 522);
+            this.logoutBtn.Location = new System.Drawing.Point(22, 652);
             this.logoutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(270, 69);
+            this.logoutBtn.Size = new System.Drawing.Size(304, 86);
             this.logoutBtn.TabIndex = 10;
             this.logoutBtn.Text = "Logout";
             this.logoutBtn.UseVisualStyleBackColor = true;
@@ -224,10 +231,10 @@
             // selectionPanel
             // 
             this.selectionPanel.BackColor = System.Drawing.Color.DimGray;
-            this.selectionPanel.Location = new System.Drawing.Point(3, 130);
+            this.selectionPanel.Location = new System.Drawing.Point(3, 162);
             this.selectionPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.selectionPanel.Name = "selectionPanel";
-            this.selectionPanel.Size = new System.Drawing.Size(15, 69);
+            this.selectionPanel.Size = new System.Drawing.Size(17, 86);
             this.selectionPanel.TabIndex = 5;
             // 
             // newsBtn
@@ -238,10 +245,10 @@
             this.newsBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.newsBtn.Image = global::AuctionSystem.Client.Properties.Resources.news_icon_136481;
             this.newsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.newsBtn.Location = new System.Drawing.Point(20, 130);
+            this.newsBtn.Location = new System.Drawing.Point(22, 162);
             this.newsBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.newsBtn.Name = "newsBtn";
-            this.newsBtn.Size = new System.Drawing.Size(270, 69);
+            this.newsBtn.Size = new System.Drawing.Size(304, 86);
             this.newsBtn.TabIndex = 9;
             this.newsBtn.Text = "News";
             this.newsBtn.UseVisualStyleBackColor = true;
@@ -255,10 +262,10 @@
             this.settingsBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.settingsBtn.Image = global::AuctionSystem.Client.Properties.Resources.settings_icon_14953;
             this.settingsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.settingsBtn.Location = new System.Drawing.Point(20, 604);
+            this.settingsBtn.Location = new System.Drawing.Point(22, 755);
             this.settingsBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.settingsBtn.Name = "settingsBtn";
-            this.settingsBtn.Size = new System.Drawing.Size(270, 69);
+            this.settingsBtn.Size = new System.Drawing.Size(304, 86);
             this.settingsBtn.TabIndex = 8;
             this.settingsBtn.Text = "    Settings";
             this.settingsBtn.UseVisualStyleBackColor = true;
@@ -272,10 +279,10 @@
             this.myaccountbtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.myaccountbtn.Image = global::AuctionSystem.Client.Properties.Resources.account_icon_25499;
             this.myaccountbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.myaccountbtn.Location = new System.Drawing.Point(20, 354);
+            this.myaccountbtn.Location = new System.Drawing.Point(22, 442);
             this.myaccountbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.myaccountbtn.Name = "myaccountbtn";
-            this.myaccountbtn.Size = new System.Drawing.Size(270, 69);
+            this.myaccountbtn.Size = new System.Drawing.Size(304, 86);
             this.myaccountbtn.TabIndex = 7;
             this.myaccountbtn.Text = "          My account";
             this.myaccountbtn.UseVisualStyleBackColor = true;
@@ -289,11 +296,11 @@
             this.catalogueBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.catalogueBtn.Image = global::AuctionSystem.Client.Properties.Resources.catalog;
             this.catalogueBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.catalogueBtn.Location = new System.Drawing.Point(20, 281);
+            this.catalogueBtn.Location = new System.Drawing.Point(22, 351);
             this.catalogueBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.catalogueBtn.Name = "catalogueBtn";
             this.catalogueBtn.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            this.catalogueBtn.Size = new System.Drawing.Size(270, 69);
+            this.catalogueBtn.Size = new System.Drawing.Size(304, 86);
             this.catalogueBtn.TabIndex = 6;
             this.catalogueBtn.Text = "    Catalog";
             this.catalogueBtn.UseVisualStyleBackColor = true;
@@ -307,10 +314,10 @@
             this.biddingBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.biddingBtn.Image = global::AuctionSystem.Client.Properties.Resources.auction_icon_16281;
             this.biddingBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.biddingBtn.Location = new System.Drawing.Point(20, 203);
+            this.biddingBtn.Location = new System.Drawing.Point(22, 254);
             this.biddingBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.biddingBtn.Name = "biddingBtn";
-            this.biddingBtn.Size = new System.Drawing.Size(270, 69);
+            this.biddingBtn.Size = new System.Drawing.Size(304, 86);
             this.biddingBtn.TabIndex = 5;
             this.biddingBtn.Text = "   Bidding";
             this.biddingBtn.UseVisualStyleBackColor = true;
@@ -319,10 +326,11 @@
             // usernameTxtBox
             // 
             this.usernameTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.usernameTxtBox.Location = new System.Drawing.Point(283, 14);
+            this.usernameTxtBox.Location = new System.Drawing.Point(318, 18);
+            this.usernameTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.usernameTxtBox.Name = "usernameTxtBox";
             this.usernameTxtBox.ReadOnly = true;
-            this.usernameTxtBox.Size = new System.Drawing.Size(167, 40);
+            this.usernameTxtBox.Size = new System.Drawing.Size(187, 47);
             this.usernameTxtBox.TabIndex = 54;
             // 
             // usernameLbl
@@ -330,9 +338,9 @@
             this.usernameLbl.AutoSize = true;
             this.usernameLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
             this.usernameLbl.ForeColor = System.Drawing.Color.Black;
-            this.usernameLbl.Location = new System.Drawing.Point(29, 14);
+            this.usernameLbl.Location = new System.Drawing.Point(33, 18);
             this.usernameLbl.Name = "usernameLbl";
-            this.usernameLbl.Size = new System.Drawing.Size(146, 33);
+            this.usernameLbl.Size = new System.Drawing.Size(174, 39);
             this.usernameLbl.TabIndex = 55;
             this.usernameLbl.Text = "Username";
             // 
@@ -341,9 +349,9 @@
             this.passwordLbl.AutoSize = true;
             this.passwordLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
             this.passwordLbl.ForeColor = System.Drawing.Color.Black;
-            this.passwordLbl.Location = new System.Drawing.Point(29, 246);
+            this.passwordLbl.Location = new System.Drawing.Point(33, 308);
             this.passwordLbl.Name = "passwordLbl";
-            this.passwordLbl.Size = new System.Drawing.Size(138, 33);
+            this.passwordLbl.Size = new System.Drawing.Size(163, 39);
             this.passwordLbl.TabIndex = 56;
             this.passwordLbl.Text = "Password";
             // 
@@ -352,9 +360,9 @@
             this.nameLbl.AutoSize = true;
             this.nameLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
             this.nameLbl.ForeColor = System.Drawing.Color.Black;
-            this.nameLbl.Location = new System.Drawing.Point(29, 60);
+            this.nameLbl.Location = new System.Drawing.Point(33, 75);
             this.nameLbl.Name = "nameLbl";
-            this.nameLbl.Size = new System.Drawing.Size(145, 33);
+            this.nameLbl.Size = new System.Drawing.Size(170, 39);
             this.nameLbl.TabIndex = 57;
             this.nameLbl.Text = "Full Name";
             // 
@@ -363,9 +371,9 @@
             this.birthdateLbl.AutoSize = true;
             this.birthdateLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
             this.birthdateLbl.ForeColor = System.Drawing.Color.Black;
-            this.birthdateLbl.Location = new System.Drawing.Point(29, 106);
+            this.birthdateLbl.Location = new System.Drawing.Point(33, 132);
             this.birthdateLbl.Name = "birthdateLbl";
-            this.birthdateLbl.Size = new System.Drawing.Size(179, 33);
+            this.birthdateLbl.Size = new System.Drawing.Size(212, 39);
             this.birthdateLbl.TabIndex = 58;
             this.birthdateLbl.Text = "Date of birth";
             // 
@@ -374,9 +382,9 @@
             this.phoneLbl.AutoSize = true;
             this.phoneLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
             this.phoneLbl.ForeColor = System.Drawing.Color.Black;
-            this.phoneLbl.Location = new System.Drawing.Point(29, 154);
+            this.phoneLbl.Location = new System.Drawing.Point(33, 192);
             this.phoneLbl.Name = "phoneLbl";
-            this.phoneLbl.Size = new System.Drawing.Size(212, 33);
+            this.phoneLbl.Size = new System.Drawing.Size(253, 39);
             this.phoneLbl.TabIndex = 59;
             this.phoneLbl.Text = "Phone Number";
             // 
@@ -385,9 +393,9 @@
             this.emailLbl.AutoSize = true;
             this.emailLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
             this.emailLbl.ForeColor = System.Drawing.Color.Black;
-            this.emailLbl.Location = new System.Drawing.Point(29, 199);
+            this.emailLbl.Location = new System.Drawing.Point(33, 249);
             this.emailLbl.Name = "emailLbl";
-            this.emailLbl.Size = new System.Drawing.Size(85, 33);
+            this.emailLbl.Size = new System.Drawing.Size(99, 39);
             this.emailLbl.TabIndex = 60;
             this.emailLbl.Text = "Email";
             // 
@@ -396,59 +404,65 @@
             this.addressLbl.AutoSize = true;
             this.addressLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
             this.addressLbl.ForeColor = System.Drawing.Color.Black;
-            this.addressLbl.Location = new System.Drawing.Point(29, 293);
+            this.addressLbl.Location = new System.Drawing.Point(33, 366);
             this.addressLbl.Name = "addressLbl";
-            this.addressLbl.Size = new System.Drawing.Size(118, 33);
+            this.addressLbl.Size = new System.Drawing.Size(139, 39);
             this.addressLbl.TabIndex = 61;
             this.addressLbl.Text = "Address";
             // 
             // nameTxtBox
             // 
             this.nameTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.nameTxtBox.Location = new System.Drawing.Point(283, 60);
+            this.nameTxtBox.Location = new System.Drawing.Point(318, 75);
+            this.nameTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nameTxtBox.Name = "nameTxtBox";
-            this.nameTxtBox.Size = new System.Drawing.Size(167, 40);
+            this.nameTxtBox.Size = new System.Drawing.Size(187, 47);
             this.nameTxtBox.TabIndex = 62;
             // 
             // birthdateTxtBox
             // 
             this.birthdateTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.birthdateTxtBox.Location = new System.Drawing.Point(283, 106);
+            this.birthdateTxtBox.Location = new System.Drawing.Point(318, 132);
+            this.birthdateTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.birthdateTxtBox.Name = "birthdateTxtBox";
-            this.birthdateTxtBox.Size = new System.Drawing.Size(167, 40);
+            this.birthdateTxtBox.Size = new System.Drawing.Size(187, 47);
             this.birthdateTxtBox.TabIndex = 63;
             // 
             // phoneNumberTxtBox
             // 
             this.phoneNumberTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.phoneNumberTxtBox.Location = new System.Drawing.Point(283, 154);
+            this.phoneNumberTxtBox.Location = new System.Drawing.Point(318, 192);
+            this.phoneNumberTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.phoneNumberTxtBox.Name = "phoneNumberTxtBox";
-            this.phoneNumberTxtBox.Size = new System.Drawing.Size(167, 40);
+            this.phoneNumberTxtBox.Size = new System.Drawing.Size(187, 47);
             this.phoneNumberTxtBox.TabIndex = 64;
             // 
             // emailTxtBox
             // 
             this.emailTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.emailTxtBox.Location = new System.Drawing.Point(283, 199);
+            this.emailTxtBox.Location = new System.Drawing.Point(318, 249);
+            this.emailTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.emailTxtBox.Name = "emailTxtBox";
-            this.emailTxtBox.Size = new System.Drawing.Size(167, 40);
+            this.emailTxtBox.Size = new System.Drawing.Size(187, 47);
             this.emailTxtBox.TabIndex = 65;
             // 
             // passwordTxtBox
             // 
             this.passwordTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.passwordTxtBox.Location = new System.Drawing.Point(283, 245);
+            this.passwordTxtBox.Location = new System.Drawing.Point(318, 306);
+            this.passwordTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.passwordTxtBox.Name = "passwordTxtBox";
-            this.passwordTxtBox.Size = new System.Drawing.Size(167, 40);
+            this.passwordTxtBox.Size = new System.Drawing.Size(187, 47);
             this.passwordTxtBox.TabIndex = 66;
             this.passwordTxtBox.UseSystemPasswordChar = true;
             // 
             // addressTxtbox
             // 
             this.addressTxtbox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.addressTxtbox.Location = new System.Drawing.Point(283, 293);
+            this.addressTxtbox.Location = new System.Drawing.Point(318, 366);
+            this.addressTxtbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addressTxtbox.Name = "addressTxtbox";
-            this.addressTxtbox.Size = new System.Drawing.Size(167, 40);
+            this.addressTxtbox.Size = new System.Drawing.Size(187, 47);
             this.addressTxtbox.TabIndex = 67;
             // 
             // myAccountPanel
@@ -456,6 +470,7 @@
             this.myAccountPanel.Controls.Add(this.zipsGrid);
             this.myAccountPanel.Controls.Add(this.userCoinsLbl);
             this.myAccountPanel.Controls.Add(this.currentCoinsTxtBox);
+            this.myAccountPanel.Controls.Add(this.BiddingPanel);
             this.myAccountPanel.Controls.Add(this.updateYourInfoBtn);
             this.myAccountPanel.Controls.Add(this.panel1);
             this.myAccountPanel.Controls.Add(this.buyCoinsPanel);
@@ -475,23 +490,23 @@
             this.myAccountPanel.Controls.Add(this.passwordLbl);
             this.myAccountPanel.Controls.Add(this.usernameLbl);
             this.myAccountPanel.Controls.Add(this.usernameTxtBox);
-            this.myAccountPanel.Location = new System.Drawing.Point(293, 86);
+            this.myAccountPanel.Location = new System.Drawing.Point(330, 108);
+            this.myAccountPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.myAccountPanel.Name = "myAccountPanel";
-            this.myAccountPanel.Size = new System.Drawing.Size(1073, 586);
+            this.myAccountPanel.Size = new System.Drawing.Size(1207, 732);
             this.myAccountPanel.TabIndex = 7;
-            this.myAccountPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.myAccountPanel_Paint);
             // 
             // zipsGrid
             // 
             this.zipsGrid.AllowUserToAddRows = false;
             this.zipsGrid.AllowUserToDeleteRows = false;
             this.zipsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.zipsGrid.Location = new System.Drawing.Point(14, 430);
+            this.zipsGrid.Location = new System.Drawing.Point(16, 538);
             this.zipsGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.zipsGrid.Name = "zipsGrid";
             this.zipsGrid.ReadOnly = true;
             this.zipsGrid.RowTemplate.Height = 28;
-            this.zipsGrid.Size = new System.Drawing.Size(442, 109);
+            this.zipsGrid.Size = new System.Drawing.Size(497, 136);
             this.zipsGrid.TabIndex = 79;
             // 
             // userCoinsLbl
@@ -499,248 +514,20 @@
             this.userCoinsLbl.AutoSize = true;
             this.userCoinsLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
             this.userCoinsLbl.ForeColor = System.Drawing.Color.Black;
-            this.userCoinsLbl.Location = new System.Drawing.Point(29, 384);
+            this.userCoinsLbl.Location = new System.Drawing.Point(33, 480);
             this.userCoinsLbl.Name = "userCoinsLbl";
-            this.userCoinsLbl.Size = new System.Drawing.Size(87, 33);
+            this.userCoinsLbl.Size = new System.Drawing.Size(103, 39);
             this.userCoinsLbl.TabIndex = 78;
             this.userCoinsLbl.Text = "Coins";
             // 
             // currentCoinsTxtBox
             // 
             this.currentCoinsTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.currentCoinsTxtBox.Location = new System.Drawing.Point(283, 384);
+            this.currentCoinsTxtBox.Location = new System.Drawing.Point(318, 480);
+            this.currentCoinsTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.currentCoinsTxtBox.Name = "currentCoinsTxtBox";
-            this.currentCoinsTxtBox.Size = new System.Drawing.Size(167, 40);
+            this.currentCoinsTxtBox.Size = new System.Drawing.Size(187, 47);
             this.currentCoinsTxtBox.TabIndex = 77;
-            // 
-            // updateYourInfoBtn
-            // 
-            this.updateYourInfoBtn.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.updateYourInfoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateYourInfoBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateYourInfoBtn.Location = new System.Drawing.Point(244, 545);
-            this.updateYourInfoBtn.Name = "updateYourInfoBtn";
-            this.updateYourInfoBtn.Size = new System.Drawing.Size(204, 38);
-            this.updateYourInfoBtn.TabIndex = 76;
-            this.updateYourInfoBtn.Text = "Update your info";
-            this.updateYourInfoBtn.UseVisualStyleBackColor = false;
-            this.updateYourInfoBtn.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.buycoinsLbl);
-            this.panel1.Controls.Add(this.amountLbl);
-            this.panel1.Controls.Add(this.buyCoinsButton);
-            this.panel1.Controls.Add(this.amountTxtBox);
-            this.panel1.Location = new System.Drawing.Point(472, 384);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(382, 155);
-            this.panel1.TabIndex = 73;
-            // 
-            // buycoinsLbl
-            // 
-            this.buycoinsLbl.AutoSize = true;
-            this.buycoinsLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.buycoinsLbl.ForeColor = System.Drawing.Color.Black;
-            this.buycoinsLbl.Location = new System.Drawing.Point(109, 12);
-            this.buycoinsLbl.Name = "buycoinsLbl";
-            this.buycoinsLbl.Size = new System.Drawing.Size(141, 33);
-            this.buycoinsLbl.TabIndex = 75;
-            this.buycoinsLbl.Text = "Buy Coins";
-            // 
-            // amountLbl
-            // 
-            this.amountLbl.AutoSize = true;
-            this.amountLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.amountLbl.ForeColor = System.Drawing.Color.Black;
-            this.amountLbl.Location = new System.Drawing.Point(3, 57);
-            this.amountLbl.Name = "amountLbl";
-            this.amountLbl.Size = new System.Drawing.Size(120, 33);
-            this.amountLbl.TabIndex = 74;
-            this.amountLbl.Text = "Amount";
-            // 
-            // buyCoinsButton
-            // 
-            this.buyCoinsButton.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.buyCoinsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buyCoinsButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buyCoinsButton.Location = new System.Drawing.Point(145, 108);
-            this.buyCoinsButton.Name = "buyCoinsButton";
-            this.buyCoinsButton.Size = new System.Drawing.Size(124, 38);
-            this.buyCoinsButton.TabIndex = 70;
-            this.buyCoinsButton.Text = "Buy Coins";
-            this.buyCoinsButton.UseVisualStyleBackColor = false;
-            this.buyCoinsButton.Click += new System.EventHandler(this.buyCoinsButton_Click);
-            // 
-            // amountTxtBox
-            // 
-            this.amountTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.amountTxtBox.Location = new System.Drawing.Point(145, 57);
-            this.amountTxtBox.Name = "amountTxtBox";
-            this.amountTxtBox.Size = new System.Drawing.Size(167, 40);
-            this.amountTxtBox.TabIndex = 72;
-            // 
-            // buyCoinsPanel
-            // 
-            this.buyCoinsPanel.Controls.Add(this.deleteCurrentPaymentBtn);
-            this.buyCoinsPanel.Controls.Add(this.currentpaymentlbl);
-            this.buyCoinsPanel.Controls.Add(this.yourcurrentpaymentLbl);
-            this.buyCoinsPanel.Controls.Add(this.updateExistingPaymentBtn);
-            this.buyCoinsPanel.Controls.Add(this.paymentTypeCodeTxtBox);
-            this.buyCoinsPanel.Controls.Add(this.paymentTypeCodelbl);
-            this.buyCoinsPanel.Controls.Add(this.paymentTypeLbl);
-            this.buyCoinsPanel.Controls.Add(this.groupBox1);
-            this.buyCoinsPanel.Location = new System.Drawing.Point(465, 14);
-            this.buyCoinsPanel.Name = "buyCoinsPanel";
-            this.buyCoinsPanel.Size = new System.Drawing.Size(389, 341);
-            this.buyCoinsPanel.TabIndex = 71;
-            // 
-            // deleteCurrentPaymentBtn
-            // 
-            this.deleteCurrentPaymentBtn.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.deleteCurrentPaymentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteCurrentPaymentBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteCurrentPaymentBtn.Location = new System.Drawing.Point(5, 298);
-            this.deleteCurrentPaymentBtn.Name = "deleteCurrentPaymentBtn";
-            this.deleteCurrentPaymentBtn.Size = new System.Drawing.Size(344, 38);
-            this.deleteCurrentPaymentBtn.TabIndex = 79;
-            this.deleteCurrentPaymentBtn.Text = "Delete current payment";
-            this.deleteCurrentPaymentBtn.UseVisualStyleBackColor = false;
-            this.deleteCurrentPaymentBtn.Click += new System.EventHandler(this.deleteCurrentPaymentBtn_Click);
-            // 
-            // currentpaymentlbl
-            // 
-            this.currentpaymentlbl.AutoSize = true;
-            this.currentpaymentlbl.BackColor = System.Drawing.SystemColors.Window;
-            this.currentpaymentlbl.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currentpaymentlbl.ForeColor = System.Drawing.Color.Black;
-            this.currentpaymentlbl.Location = new System.Drawing.Point(7, 46);
-            this.currentpaymentlbl.Name = "currentpaymentlbl";
-            this.currentpaymentlbl.Size = new System.Drawing.Size(15, 21);
-            this.currentpaymentlbl.TabIndex = 78;
-            this.currentpaymentlbl.Text = " ";
-            // 
-            // yourcurrentpaymentLbl
-            // 
-            this.yourcurrentpaymentLbl.AutoSize = true;
-            this.yourcurrentpaymentLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.yourcurrentpaymentLbl.ForeColor = System.Drawing.Color.Black;
-            this.yourcurrentpaymentLbl.Location = new System.Drawing.Point(4, 2);
-            this.yourcurrentpaymentLbl.Name = "yourcurrentpaymentLbl";
-            this.yourcurrentpaymentLbl.Size = new System.Drawing.Size(301, 33);
-            this.yourcurrentpaymentLbl.TabIndex = 77;
-            this.yourcurrentpaymentLbl.Text = "Your current payment";
-            this.yourcurrentpaymentLbl.Click += new System.EventHandler(this.yourcurrentpaymentLbl_Click);
-            // 
-            // updateExistingPaymentBtn
-            // 
-            this.updateExistingPaymentBtn.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.updateExistingPaymentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateExistingPaymentBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateExistingPaymentBtn.Location = new System.Drawing.Point(4, 253);
-            this.updateExistingPaymentBtn.Name = "updateExistingPaymentBtn";
-            this.updateExistingPaymentBtn.Size = new System.Drawing.Size(344, 38);
-            this.updateExistingPaymentBtn.TabIndex = 76;
-            this.updateExistingPaymentBtn.Text = "Save or Update payment";
-            this.updateExistingPaymentBtn.UseVisualStyleBackColor = false;
-            this.updateExistingPaymentBtn.Click += new System.EventHandler(this.updateExistingPaymentBtn_Click);
-            // 
-            // paymentTypeCodeTxtBox
-            // 
-            this.paymentTypeCodeTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.paymentTypeCodeTxtBox.Location = new System.Drawing.Point(5, 206);
-            this.paymentTypeCodeTxtBox.Name = "paymentTypeCodeTxtBox";
-            this.paymentTypeCodeTxtBox.Size = new System.Drawing.Size(337, 40);
-            this.paymentTypeCodeTxtBox.TabIndex = 75;
-            // 
-            // paymentTypeCodelbl
-            // 
-            this.paymentTypeCodelbl.AutoSize = true;
-            this.paymentTypeCodelbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paymentTypeCodelbl.ForeColor = System.Drawing.Color.Black;
-            this.paymentTypeCodelbl.Location = new System.Drawing.Point(3, 175);
-            this.paymentTypeCodelbl.Name = "paymentTypeCodelbl";
-            this.paymentTypeCodelbl.Size = new System.Drawing.Size(218, 23);
-            this.paymentTypeCodelbl.TabIndex = 73;
-            this.paymentTypeCodelbl.Text = "Payment Type Code ";
-            // 
-            // paymentTypeLbl
-            // 
-            this.paymentTypeLbl.AutoSize = true;
-            this.paymentTypeLbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paymentTypeLbl.ForeColor = System.Drawing.Color.Black;
-            this.paymentTypeLbl.Location = new System.Drawing.Point(3, 92);
-            this.paymentTypeLbl.Name = "paymentTypeLbl";
-            this.paymentTypeLbl.Size = new System.Drawing.Size(150, 23);
-            this.paymentTypeLbl.TabIndex = 72;
-            this.paymentTypeLbl.Text = "Payment Type";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.creditCardRadioBtn);
-            this.groupBox1.Controls.Add(this.paypalRadioBtn);
-            this.groupBox1.Controls.Add(this.banktransferRadioBtn);
-            this.groupBox1.Location = new System.Drawing.Point(7, 118);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(356, 43);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            // 
-            // creditCardRadioBtn
-            // 
-            this.creditCardRadioBtn.AutoSize = true;
-            this.creditCardRadioBtn.Location = new System.Drawing.Point(239, 14);
-            this.creditCardRadioBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.creditCardRadioBtn.Name = "creditCardRadioBtn";
-            this.creditCardRadioBtn.Size = new System.Drawing.Size(96, 21);
-            this.creditCardRadioBtn.TabIndex = 2;
-            this.creditCardRadioBtn.TabStop = true;
-            this.creditCardRadioBtn.Text = "credit card";
-            this.creditCardRadioBtn.UseVisualStyleBackColor = true;
-            // 
-            // paypalRadioBtn
-            // 
-            this.paypalRadioBtn.AutoSize = true;
-            this.paypalRadioBtn.Location = new System.Drawing.Point(140, 14);
-            this.paypalRadioBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.paypalRadioBtn.Name = "paypalRadioBtn";
-            this.paypalRadioBtn.Size = new System.Drawing.Size(71, 21);
-            this.paypalRadioBtn.TabIndex = 1;
-            this.paypalRadioBtn.TabStop = true;
-            this.paypalRadioBtn.Text = "paypal";
-            this.paypalRadioBtn.UseVisualStyleBackColor = true;
-            // 
-            // banktransferRadioBtn
-            // 
-            this.banktransferRadioBtn.AutoSize = true;
-            this.banktransferRadioBtn.Location = new System.Drawing.Point(4, 14);
-            this.banktransferRadioBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.banktransferRadioBtn.Name = "banktransferRadioBtn";
-            this.banktransferRadioBtn.Size = new System.Drawing.Size(113, 21);
-            this.banktransferRadioBtn.TabIndex = 0;
-            this.banktransferRadioBtn.TabStop = true;
-            this.banktransferRadioBtn.Text = "bank transfer";
-            this.banktransferRadioBtn.UseVisualStyleBackColor = true;
-            // 
-            // zipLbl
-            // 
-            this.zipLbl.AutoSize = true;
-            this.zipLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.zipLbl.ForeColor = System.Drawing.Color.Black;
-            this.zipLbl.Location = new System.Drawing.Point(29, 339);
-            this.zipLbl.Name = "zipLbl";
-            this.zipLbl.Size = new System.Drawing.Size(84, 33);
-            this.zipLbl.TabIndex = 69;
-            this.zipLbl.Text = "Zip Id";
-            // 
-            // zipTxtBox
-            // 
-            this.zipTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.zipTxtBox.Location = new System.Drawing.Point(283, 339);
-            this.zipTxtBox.Name = "zipTxtBox";
-            this.zipTxtBox.Size = new System.Drawing.Size(167, 40);
-            this.zipTxtBox.TabIndex = 68;
             // 
             // BiddingPanel
             // 
@@ -753,23 +540,26 @@
             this.BiddingPanel.Controls.Add(this.CoinsLbl);
             this.BiddingPanel.Controls.Add(this.MakeBidBtn);
             this.BiddingPanel.Controls.Add(this.GetBidBtn);
-            this.BiddingPanel.Location = new System.Drawing.Point(1388, 141);
+            this.BiddingPanel.Location = new System.Drawing.Point(1107, 38);
+            this.BiddingPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BiddingPanel.Name = "BiddingPanel";
-            this.BiddingPanel.Size = new System.Drawing.Size(757, 518);
+            this.BiddingPanel.Size = new System.Drawing.Size(852, 648);
             this.BiddingPanel.TabIndex = 72;
             // 
             // SearchProductTextBox
             // 
-            this.SearchProductTextBox.Location = new System.Drawing.Point(258, 24);
+            this.SearchProductTextBox.Location = new System.Drawing.Point(290, 30);
+            this.SearchProductTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SearchProductTextBox.Name = "SearchProductTextBox";
-            this.SearchProductTextBox.Size = new System.Drawing.Size(110, 22);
+            this.SearchProductTextBox.Size = new System.Drawing.Size(123, 26);
             this.SearchProductTextBox.TabIndex = 9;
             // 
             // GetProductBids
             // 
-            this.GetProductBids.Location = new System.Drawing.Point(41, 23);
+            this.GetProductBids.Location = new System.Drawing.Point(46, 29);
+            this.GetProductBids.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GetProductBids.Name = "GetProductBids";
-            this.GetProductBids.Size = new System.Drawing.Size(202, 28);
+            this.GetProductBids.Size = new System.Drawing.Size(227, 35);
             this.GetProductBids.TabIndex = 8;
             this.GetProductBids.Text = "Get all bids for product name\r\n";
             this.GetProductBids.UseVisualStyleBackColor = true;
@@ -779,51 +569,55 @@
             // 
             this.ResultTextBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ResultTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ResultTextBox.Location = new System.Drawing.Point(41, 63);
+            this.ResultTextBox.Location = new System.Drawing.Point(46, 79);
+            this.ResultTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ResultTextBox.Multiline = true;
             this.ResultTextBox.Name = "ResultTextBox";
             this.ResultTextBox.ReadOnly = true;
             this.ResultTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.ResultTextBox.Size = new System.Drawing.Size(720, 294);
+            this.ResultTextBox.Size = new System.Drawing.Size(810, 366);
             this.ResultTextBox.TabIndex = 7;
             // 
             // ProductTextBox
             // 
-            this.ProductTextBox.Location = new System.Drawing.Point(165, 435);
+            this.ProductTextBox.Location = new System.Drawing.Point(186, 544);
+            this.ProductTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ProductTextBox.Name = "ProductTextBox";
-            this.ProductTextBox.Size = new System.Drawing.Size(100, 22);
+            this.ProductTextBox.Size = new System.Drawing.Size(112, 26);
             this.ProductTextBox.TabIndex = 6;
             // 
             // ProductLbl
             // 
             this.ProductLbl.AutoSize = true;
-            this.ProductLbl.Location = new System.Drawing.Point(48, 435);
+            this.ProductLbl.Location = new System.Drawing.Point(54, 544);
             this.ProductLbl.Name = "ProductLbl";
-            this.ProductLbl.Size = new System.Drawing.Size(96, 17);
+            this.ProductLbl.Size = new System.Drawing.Size(108, 20);
             this.ProductLbl.TabIndex = 5;
             this.ProductLbl.Text = "Product name";
             // 
             // CoinsTextBox
             // 
-            this.CoinsTextBox.Location = new System.Drawing.Point(165, 390);
+            this.CoinsTextBox.Location = new System.Drawing.Point(186, 488);
+            this.CoinsTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CoinsTextBox.Name = "CoinsTextBox";
-            this.CoinsTextBox.Size = new System.Drawing.Size(100, 22);
+            this.CoinsTextBox.Size = new System.Drawing.Size(112, 26);
             this.CoinsTextBox.TabIndex = 4;
             // 
             // CoinsLbl
             // 
             this.CoinsLbl.AutoSize = true;
-            this.CoinsLbl.Location = new System.Drawing.Point(48, 390);
+            this.CoinsLbl.Location = new System.Drawing.Point(54, 488);
             this.CoinsLbl.Name = "CoinsLbl";
-            this.CoinsLbl.Size = new System.Drawing.Size(43, 17);
+            this.CoinsLbl.Size = new System.Drawing.Size(49, 20);
             this.CoinsLbl.TabIndex = 3;
             this.CoinsLbl.Text = "Coins";
             // 
             // MakeBidBtn
             // 
-            this.MakeBidBtn.Location = new System.Drawing.Point(183, 471);
+            this.MakeBidBtn.Location = new System.Drawing.Point(206, 589);
+            this.MakeBidBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MakeBidBtn.Name = "MakeBidBtn";
-            this.MakeBidBtn.Size = new System.Drawing.Size(82, 33);
+            this.MakeBidBtn.Size = new System.Drawing.Size(92, 41);
             this.MakeBidBtn.TabIndex = 2;
             this.MakeBidBtn.Text = "Make bid";
             this.MakeBidBtn.UseVisualStyleBackColor = true;
@@ -831,42 +625,362 @@
             // 
             // GetBidBtn
             // 
-            this.GetBidBtn.Location = new System.Drawing.Point(665, 24);
+            this.GetBidBtn.Location = new System.Drawing.Point(748, 30);
+            this.GetBidBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GetBidBtn.Name = "GetBidBtn";
-            this.GetBidBtn.Size = new System.Drawing.Size(96, 33);
+            this.GetBidBtn.Size = new System.Drawing.Size(108, 41);
             this.GetBidBtn.TabIndex = 0;
             this.GetBidBtn.Text = "Get my bids";
             this.GetBidBtn.UseVisualStyleBackColor = true;
             this.GetBidBtn.Click += new System.EventHandler(this.GetBidBtn_Click);
             // 
+            // updateYourInfoBtn
+            // 
+            this.updateYourInfoBtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.updateYourInfoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateYourInfoBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateYourInfoBtn.Location = new System.Drawing.Point(274, 681);
+            this.updateYourInfoBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.updateYourInfoBtn.Name = "updateYourInfoBtn";
+            this.updateYourInfoBtn.Size = new System.Drawing.Size(230, 48);
+            this.updateYourInfoBtn.TabIndex = 76;
+            this.updateYourInfoBtn.Text = "Update your info";
+            this.updateYourInfoBtn.UseVisualStyleBackColor = false;
+            this.updateYourInfoBtn.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.buycoinsLbl);
+            this.panel1.Controls.Add(this.amountLbl);
+            this.panel1.Controls.Add(this.buyCoinsButton);
+            this.panel1.Controls.Add(this.amountTxtBox);
+            this.panel1.Location = new System.Drawing.Point(531, 480);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(430, 194);
+            this.panel1.TabIndex = 73;
+            // 
+            // buycoinsLbl
+            // 
+            this.buycoinsLbl.AutoSize = true;
+            this.buycoinsLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.buycoinsLbl.ForeColor = System.Drawing.Color.Black;
+            this.buycoinsLbl.Location = new System.Drawing.Point(123, 15);
+            this.buycoinsLbl.Name = "buycoinsLbl";
+            this.buycoinsLbl.Size = new System.Drawing.Size(166, 39);
+            this.buycoinsLbl.TabIndex = 75;
+            this.buycoinsLbl.Text = "Buy Coins";
+            // 
+            // amountLbl
+            // 
+            this.amountLbl.AutoSize = true;
+            this.amountLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.amountLbl.ForeColor = System.Drawing.Color.Black;
+            this.amountLbl.Location = new System.Drawing.Point(3, 71);
+            this.amountLbl.Name = "amountLbl";
+            this.amountLbl.Size = new System.Drawing.Size(140, 39);
+            this.amountLbl.TabIndex = 74;
+            this.amountLbl.Text = "Amount";
+            // 
+            // buyCoinsButton
+            // 
+            this.buyCoinsButton.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buyCoinsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buyCoinsButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buyCoinsButton.Location = new System.Drawing.Point(163, 135);
+            this.buyCoinsButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buyCoinsButton.Name = "buyCoinsButton";
+            this.buyCoinsButton.Size = new System.Drawing.Size(140, 48);
+            this.buyCoinsButton.TabIndex = 70;
+            this.buyCoinsButton.Text = "Buy Coins";
+            this.buyCoinsButton.UseVisualStyleBackColor = false;
+            this.buyCoinsButton.Click += new System.EventHandler(this.buyCoinsButton_Click);
+            // 
+            // amountTxtBox
+            // 
+            this.amountTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.amountTxtBox.Location = new System.Drawing.Point(163, 71);
+            this.amountTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.amountTxtBox.Name = "amountTxtBox";
+            this.amountTxtBox.Size = new System.Drawing.Size(187, 47);
+            this.amountTxtBox.TabIndex = 72;
+            // 
+            // buyCoinsPanel
+            // 
+            this.buyCoinsPanel.Controls.Add(this.deleteCurrentPaymentBtn);
+            this.buyCoinsPanel.Controls.Add(this.currentpaymentlbl);
+            this.buyCoinsPanel.Controls.Add(this.yourcurrentpaymentLbl);
+            this.buyCoinsPanel.Controls.Add(this.updateExistingPaymentBtn);
+            this.buyCoinsPanel.Controls.Add(this.paymentTypeCodeTxtBox);
+            this.buyCoinsPanel.Controls.Add(this.paymentTypeCodelbl);
+            this.buyCoinsPanel.Controls.Add(this.paymentTypeLbl);
+            this.buyCoinsPanel.Controls.Add(this.groupBox1);
+            this.buyCoinsPanel.Location = new System.Drawing.Point(523, 18);
+            this.buyCoinsPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buyCoinsPanel.Name = "buyCoinsPanel";
+            this.buyCoinsPanel.Size = new System.Drawing.Size(438, 426);
+            this.buyCoinsPanel.TabIndex = 71;
+            // 
+            // deleteCurrentPaymentBtn
+            // 
+            this.deleteCurrentPaymentBtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.deleteCurrentPaymentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteCurrentPaymentBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteCurrentPaymentBtn.Location = new System.Drawing.Point(6, 372);
+            this.deleteCurrentPaymentBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.deleteCurrentPaymentBtn.Name = "deleteCurrentPaymentBtn";
+            this.deleteCurrentPaymentBtn.Size = new System.Drawing.Size(387, 48);
+            this.deleteCurrentPaymentBtn.TabIndex = 79;
+            this.deleteCurrentPaymentBtn.Text = "Delete current payment";
+            this.deleteCurrentPaymentBtn.UseVisualStyleBackColor = false;
+            this.deleteCurrentPaymentBtn.Click += new System.EventHandler(this.deleteCurrentPaymentBtn_Click);
+            // 
+            // currentpaymentlbl
+            // 
+            this.currentpaymentlbl.AutoSize = true;
+            this.currentpaymentlbl.BackColor = System.Drawing.SystemColors.Window;
+            this.currentpaymentlbl.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currentpaymentlbl.ForeColor = System.Drawing.Color.Black;
+            this.currentpaymentlbl.Location = new System.Drawing.Point(8, 58);
+            this.currentpaymentlbl.Name = "currentpaymentlbl";
+            this.currentpaymentlbl.Size = new System.Drawing.Size(16, 23);
+            this.currentpaymentlbl.TabIndex = 78;
+            this.currentpaymentlbl.Text = " ";
+            // 
+            // yourcurrentpaymentLbl
+            // 
+            this.yourcurrentpaymentLbl.AutoSize = true;
+            this.yourcurrentpaymentLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.yourcurrentpaymentLbl.ForeColor = System.Drawing.Color.Black;
+            this.yourcurrentpaymentLbl.Location = new System.Drawing.Point(4, 2);
+            this.yourcurrentpaymentLbl.Name = "yourcurrentpaymentLbl";
+            this.yourcurrentpaymentLbl.Size = new System.Drawing.Size(356, 39);
+            this.yourcurrentpaymentLbl.TabIndex = 77;
+            this.yourcurrentpaymentLbl.Text = "Your current payment";
+            this.yourcurrentpaymentLbl.Click += new System.EventHandler(this.yourcurrentpaymentLbl_Click);
+            // 
+            // updateExistingPaymentBtn
+            // 
+            this.updateExistingPaymentBtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.updateExistingPaymentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateExistingPaymentBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateExistingPaymentBtn.Location = new System.Drawing.Point(4, 316);
+            this.updateExistingPaymentBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.updateExistingPaymentBtn.Name = "updateExistingPaymentBtn";
+            this.updateExistingPaymentBtn.Size = new System.Drawing.Size(387, 48);
+            this.updateExistingPaymentBtn.TabIndex = 76;
+            this.updateExistingPaymentBtn.Text = "Save or Update payment";
+            this.updateExistingPaymentBtn.UseVisualStyleBackColor = false;
+            this.updateExistingPaymentBtn.Click += new System.EventHandler(this.updateExistingPaymentBtn_Click);
+            // 
+            // paymentTypeCodeTxtBox
+            // 
+            this.paymentTypeCodeTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.paymentTypeCodeTxtBox.Location = new System.Drawing.Point(6, 258);
+            this.paymentTypeCodeTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.paymentTypeCodeTxtBox.Name = "paymentTypeCodeTxtBox";
+            this.paymentTypeCodeTxtBox.Size = new System.Drawing.Size(379, 47);
+            this.paymentTypeCodeTxtBox.TabIndex = 75;
+            // 
+            // paymentTypeCodelbl
+            // 
+            this.paymentTypeCodelbl.AutoSize = true;
+            this.paymentTypeCodelbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paymentTypeCodelbl.ForeColor = System.Drawing.Color.Black;
+            this.paymentTypeCodelbl.Location = new System.Drawing.Point(3, 219);
+            this.paymentTypeCodelbl.Name = "paymentTypeCodelbl";
+            this.paymentTypeCodelbl.Size = new System.Drawing.Size(264, 30);
+            this.paymentTypeCodelbl.TabIndex = 73;
+            this.paymentTypeCodelbl.Text = "Payment Type Code ";
+            // 
+            // paymentTypeLbl
+            // 
+            this.paymentTypeLbl.AutoSize = true;
+            this.paymentTypeLbl.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paymentTypeLbl.ForeColor = System.Drawing.Color.Black;
+            this.paymentTypeLbl.Location = new System.Drawing.Point(3, 115);
+            this.paymentTypeLbl.Name = "paymentTypeLbl";
+            this.paymentTypeLbl.Size = new System.Drawing.Size(182, 30);
+            this.paymentTypeLbl.TabIndex = 72;
+            this.paymentTypeLbl.Text = "Payment Type";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.creditCardRadioBtn);
+            this.groupBox1.Controls.Add(this.paypalRadioBtn);
+            this.groupBox1.Controls.Add(this.banktransferRadioBtn);
+            this.groupBox1.Location = new System.Drawing.Point(8, 148);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(400, 54);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            // 
+            // creditCardRadioBtn
+            // 
+            this.creditCardRadioBtn.AutoSize = true;
+            this.creditCardRadioBtn.Location = new System.Drawing.Point(269, 18);
+            this.creditCardRadioBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.creditCardRadioBtn.Name = "creditCardRadioBtn";
+            this.creditCardRadioBtn.Size = new System.Drawing.Size(108, 24);
+            this.creditCardRadioBtn.TabIndex = 2;
+            this.creditCardRadioBtn.TabStop = true;
+            this.creditCardRadioBtn.Text = "credit card";
+            this.creditCardRadioBtn.UseVisualStyleBackColor = true;
+            // 
+            // paypalRadioBtn
+            // 
+            this.paypalRadioBtn.AutoSize = true;
+            this.paypalRadioBtn.Location = new System.Drawing.Point(158, 18);
+            this.paypalRadioBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.paypalRadioBtn.Name = "paypalRadioBtn";
+            this.paypalRadioBtn.Size = new System.Drawing.Size(80, 24);
+            this.paypalRadioBtn.TabIndex = 1;
+            this.paypalRadioBtn.TabStop = true;
+            this.paypalRadioBtn.Text = "paypal";
+            this.paypalRadioBtn.UseVisualStyleBackColor = true;
+            // 
+            // banktransferRadioBtn
+            // 
+            this.banktransferRadioBtn.AutoSize = true;
+            this.banktransferRadioBtn.Location = new System.Drawing.Point(4, 18);
+            this.banktransferRadioBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.banktransferRadioBtn.Name = "banktransferRadioBtn";
+            this.banktransferRadioBtn.Size = new System.Drawing.Size(128, 24);
+            this.banktransferRadioBtn.TabIndex = 0;
+            this.banktransferRadioBtn.TabStop = true;
+            this.banktransferRadioBtn.Text = "bank transfer";
+            this.banktransferRadioBtn.UseVisualStyleBackColor = true;
+            // 
+            // zipLbl
+            // 
+            this.zipLbl.AutoSize = true;
+            this.zipLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.zipLbl.ForeColor = System.Drawing.Color.Black;
+            this.zipLbl.Location = new System.Drawing.Point(33, 424);
+            this.zipLbl.Name = "zipLbl";
+            this.zipLbl.Size = new System.Drawing.Size(100, 39);
+            this.zipLbl.TabIndex = 69;
+            this.zipLbl.Text = "Zip Id";
+            // 
+            // zipTxtBox
+            // 
+            this.zipTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.zipTxtBox.Location = new System.Drawing.Point(318, 424);
+            this.zipTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.zipTxtBox.Name = "zipTxtBox";
+            this.zipTxtBox.Size = new System.Drawing.Size(187, 47);
+            this.zipTxtBox.TabIndex = 68;
+            // 
+            // cataloguePanel
+            // 
+            this.cataloguePanel.Controls.Add(this.sortByPriceBTn);
+            this.cataloguePanel.Controls.Add(this.sortByNameBtn);
+            this.cataloguePanel.Controls.Add(this.sortByEndDateBtn);
+            this.cataloguePanel.Controls.Add(this.sortByStartDate);
+            this.cataloguePanel.Controls.Add(this.catalogueGridView);
+            this.cataloguePanel.Location = new System.Drawing.Point(346, 107);
+            this.cataloguePanel.Name = "cataloguePanel";
+            this.cataloguePanel.Size = new System.Drawing.Size(1253, 725);
+            this.cataloguePanel.TabIndex = 80;
+            this.cataloguePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.cataloguePanel_Paint);
+            // 
+            // sortByStartDate
+            // 
+            this.sortByStartDate.BackColor = System.Drawing.Color.DimGray;
+            this.sortByStartDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sortByStartDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sortByStartDate.Location = new System.Drawing.Point(60, 4);
+            this.sortByStartDate.Name = "sortByStartDate";
+            this.sortByStartDate.Size = new System.Drawing.Size(262, 48);
+            this.sortByStartDate.TabIndex = 1;
+            this.sortByStartDate.Text = "Sort by start date ↑ ";
+            this.sortByStartDate.UseVisualStyleBackColor = false;
+            this.sortByStartDate.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // catalogueGridView
+            // 
+            this.catalogueGridView.AllowUserToAddRows = false;
+            this.catalogueGridView.AllowUserToDeleteRows = false;
+            this.catalogueGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.catalogueGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.catalogueGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.catalogueGridView.Location = new System.Drawing.Point(60, 58);
+            this.catalogueGridView.Name = "catalogueGridView";
+            this.catalogueGridView.ReadOnly = true;
+            this.catalogueGridView.RowTemplate.Height = 28;
+            this.catalogueGridView.Size = new System.Drawing.Size(1122, 605);
+            this.catalogueGridView.TabIndex = 0;
+            // 
+            // sortByEndDateBtn
+            // 
+            this.sortByEndDateBtn.BackColor = System.Drawing.Color.DimGray;
+            this.sortByEndDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sortByEndDateBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sortByEndDateBtn.Location = new System.Drawing.Point(350, 4);
+            this.sortByEndDateBtn.Name = "sortByEndDateBtn";
+            this.sortByEndDateBtn.Size = new System.Drawing.Size(262, 48);
+            this.sortByEndDateBtn.TabIndex = 2;
+            this.sortByEndDateBtn.Text = "Sort by end date ↑ ";
+            this.sortByEndDateBtn.UseVisualStyleBackColor = false;
+            this.sortByEndDateBtn.Click += new System.EventHandler(this.sortByEndDateBtn_Click);
+            // 
+            // sortByNameBtn
+            // 
+            this.sortByNameBtn.BackColor = System.Drawing.Color.DimGray;
+            this.sortByNameBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sortByNameBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sortByNameBtn.Location = new System.Drawing.Point(645, 4);
+            this.sortByNameBtn.Name = "sortByNameBtn";
+            this.sortByNameBtn.Size = new System.Drawing.Size(262, 48);
+            this.sortByNameBtn.TabIndex = 3;
+            this.sortByNameBtn.Text = "Sort by name ↑";
+            this.sortByNameBtn.UseVisualStyleBackColor = false;
+            this.sortByNameBtn.Click += new System.EventHandler(this.sortByNameBtn_Click);
+            // 
+            // sortByPriceBTn
+            // 
+            this.sortByPriceBTn.BackColor = System.Drawing.Color.DimGray;
+            this.sortByPriceBTn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sortByPriceBTn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sortByPriceBTn.Location = new System.Drawing.Point(934, 4);
+            this.sortByPriceBTn.Name = "sortByPriceBTn";
+            this.sortByPriceBTn.Size = new System.Drawing.Size(262, 48);
+            this.sortByPriceBTn.TabIndex = 4;
+            this.sortByPriceBTn.Text = "Sort by price ↑";
+            this.sortByPriceBTn.UseVisualStyleBackColor = false;
+            this.sortByPriceBTn.Click += new System.EventHandler(this.sortByPriceBTn_Click);
+            // 
             // AuctionClient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1403, 675);
+            this.ClientSize = new System.Drawing.Size(1578, 844);
+            this.Controls.Add(this.cataloguePanel);
             this.Controls.Add(this.myAccountPanel);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.leftMenuPanel);
-            this.Controls.Add(this.BiddingPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AuctionClient";
             this.Text = "AuctionClient";
-            this.Load += new System.EventHandler(this.AuctionClient_Load);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             this.leftMenuPanel.ResumeLayout(false);
             this.myAccountPanel.ResumeLayout(false);
             this.myAccountPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.zipsGrid)).EndInit();
+            this.BiddingPanel.ResumeLayout(false);
+            this.BiddingPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.buyCoinsPanel.ResumeLayout(false);
             this.buyCoinsPanel.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.BiddingPanel.ResumeLayout(false);
-            this.BiddingPanel.PerformLayout();
+            this.cataloguePanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.catalogueGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -934,5 +1048,11 @@
         private System.Windows.Forms.Label userCoinsLbl;
         private System.Windows.Forms.TextBox currentCoinsTxtBox;
         private System.Windows.Forms.DataGridView zipsGrid;
+        private System.Windows.Forms.Panel cataloguePanel;
+        private System.Windows.Forms.DataGridView catalogueGridView;
+        private System.Windows.Forms.Button sortByStartDate;
+        private System.Windows.Forms.Button sortByEndDateBtn;
+        private System.Windows.Forms.Button sortByNameBtn;
+        private System.Windows.Forms.Button sortByPriceBTn;
     }
 }

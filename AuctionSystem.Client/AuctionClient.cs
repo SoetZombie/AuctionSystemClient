@@ -22,9 +22,14 @@ namespace AuctionSystem.Client
         private BidService.IBidService bidService;
         private ProductService.IProductService productService;
         private ZipServiceReference.IZipService zipService;
+        private IList<ProductService.ProductDto> allProducts;
+        private int sort, sort2, sort3, sort4;
+
+
 
         public static string username;
         public static string password;
+
 
         public AuctionClient()
         {
@@ -33,23 +38,56 @@ namespace AuctionSystem.Client
             this.userClient = new UserService.UserServiceClient();
             this.zipService = new ZipServiceReference.ZipServiceClient();
             paymentClient = new PaymentServiceReference.PaymentServiceClient();
+            allProducts = productService.GetAllProducts().ToList();
             InitializeComponent();
-            myAccountPanel.Hide();
+            HideAllpanels();
+            CheckUserAdmin();
 
         }
-        protected override void WndProc(ref Message m)
+        public void InitializeCatalogueGridView()
         {
-            switch (m.Msg)
-            {
-                case 0x84:
-                    base.WndProc(ref m);
-                    if ((int)m.Result == 0x1)
-                        m.Result = (IntPtr)0x2;
-                    return;
-            }
+            catalogueGridView.DataSource = allProducts;
+            catalogueGridView.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            catalogueGridView.Columns["Bids"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            catalogueGridView.Columns["Bids"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            catalogueGridView.Columns["Id"].DisplayIndex = 0;
+            catalogueGridView.Columns["Name"].DisplayIndex = 1;
+            catalogueGridView.Columns["Description"].DisplayIndex = 2;
+            catalogueGridView.Columns["isAvailable"].DisplayIndex = 3;
+            catalogueGridView.Columns["Price"].DisplayIndex = 4;
+            catalogueGridView.Columns["StartDate"].DisplayIndex = 5;
+            catalogueGridView.Columns["EndDate"].DisplayIndex = 6;
+            catalogueGridView.Columns["Bids"].DisplayIndex = 7;
 
-            base.WndProc(ref m);
         }
+        public void CheckUserAdmin()
+        {
+            settingsBtn.Hide();
+
+            if (currentUser.IsAdmin == true)
+            {
+                settingsBtn.Show();
+            }
+        }
+        public void HideAllpanels()
+        {
+            cataloguePanel.Hide();
+            myAccountPanel.Hide();
+            
+        }
+        //protected override void WndProc(ref Message m)
+        //{
+        //    switch (m.Msg)
+        //    {
+        //        case 0x84:
+        //            base.WndProc(ref m);
+        //            if ((int)m.Result == 0x1)
+        //                m.Result = (IntPtr)0x2;
+        //            return;
+        //    }
+
+        //    base.WndProc(ref m);
+        //}
         public void GetUserObject()
         {
             currentUser = userClient.GetUserByUsername(username);
@@ -63,11 +101,8 @@ namespace AuctionSystem.Client
             GetUserObject();
             loggedasUsernameLbl.Text = username;
         }
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void button2_Click_1(object sender, EventArgs e)
+      
+        private void exitBtnClick(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -85,17 +120,30 @@ namespace AuctionSystem.Client
                 Maximized = true;
             }
         }
-        private void myaccountbtn_Click(object sender, EventArgs e)
+        private void catalogueBtn_Click(object sender, EventArgs e)
         {
-            SetUserData();
+            selectionPanel.Height = catalogueBtn.Height;
+            selectionPanel.Top = catalogueBtn.Top;
+            HideAllpanels();
+            cataloguePanel.Show();
+            InitializeCatalogueGridView();
+            cataloguePanel.BringToFront();
 
-            myAccountPanel.Show();
+
 
         }
-        private void SetUserData()
+        private void myaccountbtn_Click(object sender, EventArgs e)
         {
             selectionPanel.Height = myaccountbtn.Height;
             selectionPanel.Top = myaccountbtn.Top;
+            SetUserData();
+            HideAllpanels();
+            myAccountPanel.Show();
+            
+        }
+        private void SetUserData()
+        {
+           
             myAccountPanel.BringToFront();
             usernameTxtBox.Text = currentUser.Username;
             passwordTxtBox.Text = currentUser.Password;
@@ -131,11 +179,6 @@ namespace AuctionSystem.Client
             selectionPanel.Top = biddingBtn.Top;
         }
 
-        private void catalogueBtn_Click(object sender, EventArgs e)
-        {
-            selectionPanel.Height = catalogueBtn.Height;
-            selectionPanel.Top = catalogueBtn.Top;
-        }
 
         private void settingsBtn_Click(object sender, EventArgs e)
         {
@@ -150,29 +193,7 @@ namespace AuctionSystem.Client
             l.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void userDataUserControll1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void userDataUserControll11_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AuctionClient_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void myAccountPanel_Paint(object sender, PaintEventArgs e)
-        {
-        }
+ 
 
         private void saveNewPaymentBtn_Click(object sender, EventArgs e)
         {
@@ -247,10 +268,6 @@ namespace AuctionSystem.Client
             ResultTextBox.Text = sb.ToString();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void updateExistingPaymentBtn_Click(object sender, EventArgs e)
         {
@@ -368,6 +385,123 @@ namespace AuctionSystem.Client
                 paymentClient.DeletePayment(int.Parse(currentUser.PaymentId));
                 GetUserObject();
                 SetUserData();
+            }
+        }
+
+        private void cataloguePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void sortbyclick(object sender, EventArgs e)
+        {
+            if (sort == 0)
+            {
+                allProducts.OrderBy(o => o.StartDate).ToList();
+                InitializeCatalogueGridView();
+                sort = 1;
+            }
+            if (sort == 1)
+            {
+                allProducts.OrderBy(o => o.EndDate).ToList();
+                InitializeCatalogueGridView();
+                sort = 0;
+            }
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            if (sort ==1){
+
+                allProducts = allProducts.OrderBy(x => x.StartDate).ToList();
+                catalogueGridView.DataSource = allProducts;
+                catalogueGridView.Refresh();
+                sort = 0;
+                sortByStartDate.Text = "Sort by start date ↑ ";
+
+
+            }
+            else
+            {
+
+                allProducts = allProducts.OrderByDescending(x => x.StartDate).ToList();
+                catalogueGridView.DataSource = allProducts;
+                catalogueGridView.Refresh();
+                sort = 1;
+                sortByStartDate.Text = "Sort by start date ↓ ";
+            }
+          
+        }
+
+        private void sortByEndDateBtn_Click(object sender, EventArgs e)
+        {
+            if (sort2 == 1)
+            {
+
+                allProducts = allProducts.OrderBy(x => x.EndDate).ToList();
+                catalogueGridView.DataSource = allProducts;
+                catalogueGridView.Refresh();
+                sort2 = 0;
+                sortByEndDateBtn.Text = "Sort by end date ↑ ";
+
+
+            }
+            else
+            {
+
+                allProducts = allProducts.OrderByDescending(x => x.EndDate).ToList();
+                catalogueGridView.DataSource = allProducts;
+                catalogueGridView.Refresh();
+                sort2 = 1;
+                sortByEndDateBtn.Text = "Sort by end date ↓ ";
+            }
+        }
+
+        private void sortByNameBtn_Click(object sender, EventArgs e)
+        {
+            if (sort3 == 1)
+            {
+
+                allProducts = allProducts.OrderBy(x => x.Name).ToList();
+                catalogueGridView.DataSource = allProducts;
+                catalogueGridView.Refresh();
+                sort3 = 0;
+                sortByNameBtn.Text = "Sort by name ↑ ";
+
+
+            }
+            else
+            {
+
+                allProducts = allProducts.OrderByDescending(x => x.Name).ToList();
+                catalogueGridView.DataSource = allProducts;
+                catalogueGridView.Refresh();
+                sort3 = 1;
+                sortByNameBtn.Text = "Sort by name ↓ ";
+            }
+        }
+
+        private void sortByPriceBTn_Click(object sender, EventArgs e)
+        {
+            if (sort4 == 1)
+            {
+
+                allProducts = allProducts.OrderBy(x => x.Price).ToList();
+                catalogueGridView.DataSource = allProducts;
+                catalogueGridView.Refresh();
+                sort4 = 0;
+                sortByPriceBTn.Text = "Sort by price ↑ ";
+
+
+            }
+            else
+            {
+
+                allProducts = allProducts.OrderByDescending(x => x.Price).ToList();
+                catalogueGridView.DataSource = allProducts;
+                catalogueGridView.Refresh();
+                sort4 = 1;
+                sortByPriceBTn.Text = "Sort by price ↓ ";
             }
         }
     }

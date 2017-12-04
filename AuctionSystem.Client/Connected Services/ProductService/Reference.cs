@@ -395,6 +395,9 @@ namespace AuctionSystem.Client.ProductService {
         private string PhoneField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RememberTokenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string UsernameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -591,6 +594,19 @@ namespace AuctionSystem.Client.ProductService {
                 if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
                     this.PhoneField = value;
                     this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RememberToken {
+            get {
+                return this.RememberTokenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RememberTokenField, value) != true)) {
+                    this.RememberTokenField = value;
+                    this.RaisePropertyChanged("RememberToken");
                 }
             }
         }
@@ -860,9 +876,6 @@ namespace AuctionSystem.Client.ProductService {
         private AuctionSystem.Client.ProductService.PaymentType TypeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.ProductService.User UserField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int UserIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -910,19 +923,6 @@ namespace AuctionSystem.Client.ProductService {
                 if ((this.TypeField.Equals(value) != true)) {
                     this.TypeField = value;
                     this.RaisePropertyChanged("Type");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.ProductService.User User {
-            get {
-                return this.UserField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UserField, value) != true)) {
-                    this.UserField = value;
-                    this.RaisePropertyChanged("User");
                 }
             }
         }
@@ -977,7 +977,7 @@ namespace AuctionSystem.Client.ProductService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.ProductService.Bid[] BidsField;
+        private string BidsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string DescriptionField;
@@ -1014,7 +1014,7 @@ namespace AuctionSystem.Client.ProductService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.ProductService.Bid[] Bids {
+        public string Bids {
             get {
                 return this.BidsField;
             }
@@ -1191,6 +1191,12 @@ namespace AuctionSystem.Client.ProductService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetProductUsers", ReplyAction="http://tempuri.org/IProductService/GetProductUsersResponse")]
         System.Threading.Tasks.Task<AuctionSystem.Client.ProductService.User[]> GetProductUsersAsync(AuctionSystem.Client.ProductService.Product product);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetAllProducts", ReplyAction="http://tempuri.org/IProductService/GetAllProductsResponse")]
+        AuctionSystem.Client.ProductService.ProductDto[] GetAllProducts();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetAllProducts", ReplyAction="http://tempuri.org/IProductService/GetAllProductsResponse")]
+        System.Threading.Tasks.Task<AuctionSystem.Client.ProductService.ProductDto[]> GetAllProductsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1282,6 +1288,14 @@ namespace AuctionSystem.Client.ProductService {
         
         public System.Threading.Tasks.Task<AuctionSystem.Client.ProductService.User[]> GetProductUsersAsync(AuctionSystem.Client.ProductService.Product product) {
             return base.Channel.GetProductUsersAsync(product);
+        }
+        
+        public AuctionSystem.Client.ProductService.ProductDto[] GetAllProducts() {
+            return base.Channel.GetAllProducts();
+        }
+        
+        public System.Threading.Tasks.Task<AuctionSystem.Client.ProductService.ProductDto[]> GetAllProductsAsync() {
+            return base.Channel.GetAllProductsAsync();
         }
     }
 }
