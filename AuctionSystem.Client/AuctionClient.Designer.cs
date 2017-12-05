@@ -43,6 +43,25 @@
             this.myaccountbtn = new System.Windows.Forms.Button();
             this.catalogueBtn = new System.Windows.Forms.Button();
             this.biddingBtn = new System.Windows.Forms.Button();
+            this.cataloguePanel = new System.Windows.Forms.Panel();
+            this.sortByPriceBTn = new System.Windows.Forms.Button();
+            this.sortByNameBtn = new System.Windows.Forms.Button();
+            this.sortByEndDateBtn = new System.Windows.Forms.Button();
+            this.sortByStartDate = new System.Windows.Forms.Button();
+            this.catalogueGridView = new System.Windows.Forms.DataGridView();
+            this.productPanel = new System.Windows.Forms.Panel();
+            this.saveNewProductBtn = new System.Windows.Forms.Button();
+            this.createItemLbl = new System.Windows.Forms.Label();
+            this.itemPriceTxtBox = new System.Windows.Forms.TextBox();
+            this.itemPriceLbl = new System.Windows.Forms.Label();
+            this.itemEndDateTxtBox = new System.Windows.Forms.TextBox();
+            this.itemEndDateLbl = new System.Windows.Forms.Label();
+            this.itemStartDateTxtBox = new System.Windows.Forms.TextBox();
+            this.itemStartDateLbl = new System.Windows.Forms.Label();
+            this.itemDescriptonTxtBox = new System.Windows.Forms.TextBox();
+            this.itemDestcriptionLbl = new System.Windows.Forms.Label();
+            this.itemNameTxtBox = new System.Windows.Forms.TextBox();
+            this.itemNameLbl = new System.Windows.Forms.Label();
             this.usernameTxtBox = new System.Windows.Forms.TextBox();
             this.usernameLbl = new System.Windows.Forms.Label();
             this.passwordLbl = new System.Windows.Forms.Label();
@@ -57,26 +76,8 @@
             this.emailTxtBox = new System.Windows.Forms.TextBox();
             this.passwordTxtBox = new System.Windows.Forms.TextBox();
             this.addressTxtbox = new System.Windows.Forms.TextBox();
-            this.myAccountPanel = new System.Windows.Forms.Panel();
-            this.zipsGrid = new System.Windows.Forms.DataGridView();
-            this.userCoinsLbl = new System.Windows.Forms.Label();
-            this.currentCoinsTxtBox = new System.Windows.Forms.TextBox();
-            this.BiddingPanel = new System.Windows.Forms.Panel();
-            this.SearchProductTextBox = new System.Windows.Forms.TextBox();
-            this.GetProductBids = new System.Windows.Forms.Button();
-            this.ResultTextBox = new System.Windows.Forms.TextBox();
-            this.ProductTextBox = new System.Windows.Forms.TextBox();
-            this.ProductLbl = new System.Windows.Forms.Label();
-            this.CoinsTextBox = new System.Windows.Forms.TextBox();
-            this.CoinsLbl = new System.Windows.Forms.Label();
-            this.MakeBidBtn = new System.Windows.Forms.Button();
-            this.GetBidBtn = new System.Windows.Forms.Button();
-            this.updateYourInfoBtn = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.buycoinsLbl = new System.Windows.Forms.Label();
-            this.amountLbl = new System.Windows.Forms.Label();
-            this.buyCoinsButton = new System.Windows.Forms.Button();
-            this.amountTxtBox = new System.Windows.Forms.TextBox();
+            this.zipTxtBox = new System.Windows.Forms.TextBox();
+            this.zipLbl = new System.Windows.Forms.Label();
             this.buyCoinsPanel = new System.Windows.Forms.Panel();
             this.deleteCurrentPaymentBtn = new System.Windows.Forms.Button();
             this.currentpaymentlbl = new System.Windows.Forms.Label();
@@ -89,24 +90,44 @@
             this.creditCardRadioBtn = new System.Windows.Forms.RadioButton();
             this.paypalRadioBtn = new System.Windows.Forms.RadioButton();
             this.banktransferRadioBtn = new System.Windows.Forms.RadioButton();
-            this.zipLbl = new System.Windows.Forms.Label();
-            this.zipTxtBox = new System.Windows.Forms.TextBox();
-            this.cataloguePanel = new System.Windows.Forms.Panel();
-            this.sortByStartDate = new System.Windows.Forms.Button();
-            this.catalogueGridView = new System.Windows.Forms.DataGridView();
-            this.sortByEndDateBtn = new System.Windows.Forms.Button();
-            this.sortByNameBtn = new System.Windows.Forms.Button();
-            this.sortByPriceBTn = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.buycoinsLbl = new System.Windows.Forms.Label();
+            this.amountLbl = new System.Windows.Forms.Label();
+            this.buyCoinsButton = new System.Windows.Forms.Button();
+            this.amountTxtBox = new System.Windows.Forms.TextBox();
+            this.updateYourInfoBtn = new System.Windows.Forms.Button();
+            this.BiddingPanel = new System.Windows.Forms.Panel();
+            this.SearchProductTextBox = new System.Windows.Forms.TextBox();
+            this.GetProductBids = new System.Windows.Forms.Button();
+            this.ResultTextBox = new System.Windows.Forms.TextBox();
+            this.ProductTextBox = new System.Windows.Forms.TextBox();
+            this.ProductLbl = new System.Windows.Forms.Label();
+            this.CoinsTextBox = new System.Windows.Forms.TextBox();
+            this.CoinsLbl = new System.Windows.Forms.Label();
+            this.MakeBidBtn = new System.Windows.Forms.Button();
+            this.GetBidBtn = new System.Windows.Forms.Button();
+            this.currentCoinsTxtBox = new System.Windows.Forms.TextBox();
+            this.userCoinsLbl = new System.Windows.Forms.Label();
+            this.zipsGrid = new System.Windows.Forms.DataGridView();
+            this.myAccountPanel = new System.Windows.Forms.Panel();
+            this.updateExistingProductBtn = new System.Windows.Forms.Button();
+            this.searchForProductBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.isAvaiableLbl = new System.Windows.Forms.Label();
+            this.isAvaliableChckBox = new System.Windows.Forms.CheckBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.topPanel.SuspendLayout();
             this.leftMenuPanel.SuspendLayout();
-            this.myAccountPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.zipsGrid)).BeginInit();
-            this.BiddingPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.buyCoinsPanel.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.cataloguePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.catalogueGridView)).BeginInit();
+            this.productPanel.SuspendLayout();
+            this.buyCoinsPanel.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.BiddingPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zipsGrid)).BeginInit();
+            this.myAccountPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
@@ -323,6 +344,223 @@
             this.biddingBtn.UseVisualStyleBackColor = true;
             this.biddingBtn.Click += new System.EventHandler(this.biddingBtn_Click);
             // 
+            // cataloguePanel
+            // 
+            this.cataloguePanel.Controls.Add(this.sortByPriceBTn);
+            this.cataloguePanel.Controls.Add(this.sortByNameBtn);
+            this.cataloguePanel.Controls.Add(this.sortByEndDateBtn);
+            this.cataloguePanel.Controls.Add(this.sortByStartDate);
+            this.cataloguePanel.Controls.Add(this.catalogueGridView);
+            this.cataloguePanel.Location = new System.Drawing.Point(346, 119);
+            this.cataloguePanel.Name = "cataloguePanel";
+            this.cataloguePanel.Size = new System.Drawing.Size(1253, 725);
+            this.cataloguePanel.TabIndex = 80;
+            this.cataloguePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.cataloguePanel_Paint);
+            // 
+            // sortByPriceBTn
+            // 
+            this.sortByPriceBTn.BackColor = System.Drawing.Color.DimGray;
+            this.sortByPriceBTn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sortByPriceBTn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sortByPriceBTn.Location = new System.Drawing.Point(934, 4);
+            this.sortByPriceBTn.Name = "sortByPriceBTn";
+            this.sortByPriceBTn.Size = new System.Drawing.Size(262, 48);
+            this.sortByPriceBTn.TabIndex = 4;
+            this.sortByPriceBTn.Text = "Sort by price ↑";
+            this.sortByPriceBTn.UseVisualStyleBackColor = false;
+            this.sortByPriceBTn.Click += new System.EventHandler(this.sortByPriceBTn_Click);
+            // 
+            // sortByNameBtn
+            // 
+            this.sortByNameBtn.BackColor = System.Drawing.Color.DimGray;
+            this.sortByNameBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sortByNameBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sortByNameBtn.Location = new System.Drawing.Point(645, 4);
+            this.sortByNameBtn.Name = "sortByNameBtn";
+            this.sortByNameBtn.Size = new System.Drawing.Size(262, 48);
+            this.sortByNameBtn.TabIndex = 3;
+            this.sortByNameBtn.Text = "Sort by name ↑";
+            this.sortByNameBtn.UseVisualStyleBackColor = false;
+            this.sortByNameBtn.Click += new System.EventHandler(this.sortByNameBtn_Click);
+            // 
+            // sortByEndDateBtn
+            // 
+            this.sortByEndDateBtn.BackColor = System.Drawing.Color.DimGray;
+            this.sortByEndDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sortByEndDateBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sortByEndDateBtn.Location = new System.Drawing.Point(350, 4);
+            this.sortByEndDateBtn.Name = "sortByEndDateBtn";
+            this.sortByEndDateBtn.Size = new System.Drawing.Size(262, 48);
+            this.sortByEndDateBtn.TabIndex = 2;
+            this.sortByEndDateBtn.Text = "Sort by end date ↑ ";
+            this.sortByEndDateBtn.UseVisualStyleBackColor = false;
+            this.sortByEndDateBtn.Click += new System.EventHandler(this.sortByEndDateBtn_Click);
+            // 
+            // sortByStartDate
+            // 
+            this.sortByStartDate.BackColor = System.Drawing.Color.DimGray;
+            this.sortByStartDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sortByStartDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sortByStartDate.Location = new System.Drawing.Point(60, 4);
+            this.sortByStartDate.Name = "sortByStartDate";
+            this.sortByStartDate.Size = new System.Drawing.Size(262, 48);
+            this.sortByStartDate.TabIndex = 1;
+            this.sortByStartDate.Text = "Sort by start date ↑ ";
+            this.sortByStartDate.UseVisualStyleBackColor = false;
+            this.sortByStartDate.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // catalogueGridView
+            // 
+            this.catalogueGridView.AllowUserToAddRows = false;
+            this.catalogueGridView.AllowUserToDeleteRows = false;
+            this.catalogueGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.catalogueGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.catalogueGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.catalogueGridView.Location = new System.Drawing.Point(60, 58);
+            this.catalogueGridView.Name = "catalogueGridView";
+            this.catalogueGridView.ReadOnly = true;
+            this.catalogueGridView.RowTemplate.Height = 28;
+            this.catalogueGridView.Size = new System.Drawing.Size(1122, 605);
+            this.catalogueGridView.TabIndex = 0;
+            // 
+            // productPanel
+            // 
+            this.productPanel.Controls.Add(this.numericUpDown1);
+            this.productPanel.Controls.Add(this.isAvaliableChckBox);
+            this.productPanel.Controls.Add(this.isAvaiableLbl);
+            this.productPanel.Controls.Add(this.label1);
+            this.productPanel.Controls.Add(this.searchForProductBtn);
+            this.productPanel.Controls.Add(this.updateExistingProductBtn);
+            this.productPanel.Controls.Add(this.saveNewProductBtn);
+            this.productPanel.Controls.Add(this.createItemLbl);
+            this.productPanel.Controls.Add(this.itemPriceTxtBox);
+            this.productPanel.Controls.Add(this.itemPriceLbl);
+            this.productPanel.Controls.Add(this.itemEndDateTxtBox);
+            this.productPanel.Controls.Add(this.itemEndDateLbl);
+            this.productPanel.Controls.Add(this.itemStartDateTxtBox);
+            this.productPanel.Controls.Add(this.itemStartDateLbl);
+            this.productPanel.Controls.Add(this.itemDescriptonTxtBox);
+            this.productPanel.Controls.Add(this.itemDestcriptionLbl);
+            this.productPanel.Controls.Add(this.itemNameTxtBox);
+            this.productPanel.Controls.Add(this.itemNameLbl);
+            this.productPanel.Location = new System.Drawing.Point(346, 119);
+            this.productPanel.Name = "productPanel";
+            this.productPanel.Size = new System.Drawing.Size(1206, 705);
+            this.productPanel.TabIndex = 5;
+            // 
+            // saveNewProductBtn
+            // 
+            this.saveNewProductBtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.saveNewProductBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveNewProductBtn.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveNewProductBtn.Location = new System.Drawing.Point(248, 470);
+            this.saveNewProductBtn.Name = "saveNewProductBtn";
+            this.saveNewProductBtn.Size = new System.Drawing.Size(207, 62);
+            this.saveNewProductBtn.TabIndex = 11;
+            this.saveNewProductBtn.Text = "Save ";
+            this.saveNewProductBtn.UseVisualStyleBackColor = false;
+            this.saveNewProductBtn.Click += new System.EventHandler(this.saveNewProductBtn_Click);
+            // 
+            // createItemLbl
+            // 
+            this.createItemLbl.AutoSize = true;
+            this.createItemLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.createItemLbl.Location = new System.Drawing.Point(39, 25);
+            this.createItemLbl.Name = "createItemLbl";
+            this.createItemLbl.Size = new System.Drawing.Size(339, 39);
+            this.createItemLbl.TabIndex = 10;
+            this.createItemLbl.Text = "Create new product";
+            // 
+            // itemPriceTxtBox
+            // 
+            this.itemPriceTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.itemPriceTxtBox.Location = new System.Drawing.Point(248, 332);
+            this.itemPriceTxtBox.Name = "itemPriceTxtBox";
+            this.itemPriceTxtBox.Size = new System.Drawing.Size(207, 47);
+            this.itemPriceTxtBox.TabIndex = 9;
+            // 
+            // itemPriceLbl
+            // 
+            this.itemPriceLbl.AutoSize = true;
+            this.itemPriceLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.itemPriceLbl.Location = new System.Drawing.Point(43, 340);
+            this.itemPriceLbl.Name = "itemPriceLbl";
+            this.itemPriceLbl.Size = new System.Drawing.Size(95, 39);
+            this.itemPriceLbl.TabIndex = 8;
+            this.itemPriceLbl.Text = "Price";
+            // 
+            // itemEndDateTxtBox
+            // 
+            this.itemEndDateTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.itemEndDateTxtBox.Location = new System.Drawing.Point(248, 275);
+            this.itemEndDateTxtBox.Name = "itemEndDateTxtBox";
+            this.itemEndDateTxtBox.Size = new System.Drawing.Size(207, 47);
+            this.itemEndDateTxtBox.TabIndex = 7;
+            // 
+            // itemEndDateLbl
+            // 
+            this.itemEndDateLbl.AutoSize = true;
+            this.itemEndDateLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.itemEndDateLbl.Location = new System.Drawing.Point(39, 283);
+            this.itemEndDateLbl.Name = "itemEndDateLbl";
+            this.itemEndDateLbl.Size = new System.Drawing.Size(160, 39);
+            this.itemEndDateLbl.TabIndex = 6;
+            this.itemEndDateLbl.Text = "End date";
+            // 
+            // itemStartDateTxtBox
+            // 
+            this.itemStartDateTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.itemStartDateTxtBox.Location = new System.Drawing.Point(248, 221);
+            this.itemStartDateTxtBox.Name = "itemStartDateTxtBox";
+            this.itemStartDateTxtBox.Size = new System.Drawing.Size(207, 47);
+            this.itemStartDateTxtBox.TabIndex = 5;
+            // 
+            // itemStartDateLbl
+            // 
+            this.itemStartDateLbl.AutoSize = true;
+            this.itemStartDateLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.itemStartDateLbl.Location = new System.Drawing.Point(39, 229);
+            this.itemStartDateLbl.Name = "itemStartDateLbl";
+            this.itemStartDateLbl.Size = new System.Drawing.Size(169, 39);
+            this.itemStartDateLbl.TabIndex = 4;
+            this.itemStartDateLbl.Text = "Start date";
+            // 
+            // itemDescriptonTxtBox
+            // 
+            this.itemDescriptonTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.itemDescriptonTxtBox.Location = new System.Drawing.Point(248, 161);
+            this.itemDescriptonTxtBox.Name = "itemDescriptonTxtBox";
+            this.itemDescriptonTxtBox.Size = new System.Drawing.Size(207, 47);
+            this.itemDescriptonTxtBox.TabIndex = 3;
+            // 
+            // itemDestcriptionLbl
+            // 
+            this.itemDestcriptionLbl.AutoSize = true;
+            this.itemDestcriptionLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.itemDestcriptionLbl.Location = new System.Drawing.Point(36, 169);
+            this.itemDestcriptionLbl.Name = "itemDestcriptionLbl";
+            this.itemDestcriptionLbl.Size = new System.Drawing.Size(192, 39);
+            this.itemDestcriptionLbl.TabIndex = 2;
+            this.itemDestcriptionLbl.Text = "Description";
+            // 
+            // itemNameTxtBox
+            // 
+            this.itemNameTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.itemNameTxtBox.Location = new System.Drawing.Point(248, 104);
+            this.itemNameTxtBox.Name = "itemNameTxtBox";
+            this.itemNameTxtBox.Size = new System.Drawing.Size(207, 47);
+            this.itemNameTxtBox.TabIndex = 1;
+            // 
+            // itemNameLbl
+            // 
+            this.itemNameLbl.AutoSize = true;
+            this.itemNameLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.itemNameLbl.Location = new System.Drawing.Point(39, 112);
+            this.itemNameLbl.Name = "itemNameLbl";
+            this.itemNameLbl.Size = new System.Drawing.Size(114, 39);
+            this.itemNameLbl.TabIndex = 0;
+            this.itemNameLbl.Text = "Name";
+            // 
             // usernameTxtBox
             // 
             this.usernameTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
@@ -465,245 +703,25 @@
             this.addressTxtbox.Size = new System.Drawing.Size(187, 47);
             this.addressTxtbox.TabIndex = 67;
             // 
-            // myAccountPanel
+            // zipTxtBox
             // 
-            this.myAccountPanel.Controls.Add(this.zipsGrid);
-            this.myAccountPanel.Controls.Add(this.userCoinsLbl);
-            this.myAccountPanel.Controls.Add(this.currentCoinsTxtBox);
-            this.myAccountPanel.Controls.Add(this.BiddingPanel);
-            this.myAccountPanel.Controls.Add(this.updateYourInfoBtn);
-            this.myAccountPanel.Controls.Add(this.panel1);
-            this.myAccountPanel.Controls.Add(this.buyCoinsPanel);
-            this.myAccountPanel.Controls.Add(this.zipLbl);
-            this.myAccountPanel.Controls.Add(this.zipTxtBox);
-            this.myAccountPanel.Controls.Add(this.addressTxtbox);
-            this.myAccountPanel.Controls.Add(this.passwordTxtBox);
-            this.myAccountPanel.Controls.Add(this.emailTxtBox);
-            this.myAccountPanel.Controls.Add(this.phoneNumberTxtBox);
-            this.myAccountPanel.Controls.Add(this.birthdateTxtBox);
-            this.myAccountPanel.Controls.Add(this.nameTxtBox);
-            this.myAccountPanel.Controls.Add(this.addressLbl);
-            this.myAccountPanel.Controls.Add(this.emailLbl);
-            this.myAccountPanel.Controls.Add(this.phoneLbl);
-            this.myAccountPanel.Controls.Add(this.birthdateLbl);
-            this.myAccountPanel.Controls.Add(this.nameLbl);
-            this.myAccountPanel.Controls.Add(this.passwordLbl);
-            this.myAccountPanel.Controls.Add(this.usernameLbl);
-            this.myAccountPanel.Controls.Add(this.usernameTxtBox);
-            this.myAccountPanel.Location = new System.Drawing.Point(330, 108);
-            this.myAccountPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.myAccountPanel.Name = "myAccountPanel";
-            this.myAccountPanel.Size = new System.Drawing.Size(1207, 732);
-            this.myAccountPanel.TabIndex = 7;
+            this.zipTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.zipTxtBox.Location = new System.Drawing.Point(318, 424);
+            this.zipTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.zipTxtBox.Name = "zipTxtBox";
+            this.zipTxtBox.Size = new System.Drawing.Size(187, 47);
+            this.zipTxtBox.TabIndex = 68;
             // 
-            // zipsGrid
+            // zipLbl
             // 
-            this.zipsGrid.AllowUserToAddRows = false;
-            this.zipsGrid.AllowUserToDeleteRows = false;
-            this.zipsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.zipsGrid.Location = new System.Drawing.Point(16, 538);
-            this.zipsGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.zipsGrid.Name = "zipsGrid";
-            this.zipsGrid.ReadOnly = true;
-            this.zipsGrid.RowTemplate.Height = 28;
-            this.zipsGrid.Size = new System.Drawing.Size(497, 136);
-            this.zipsGrid.TabIndex = 79;
-            // 
-            // userCoinsLbl
-            // 
-            this.userCoinsLbl.AutoSize = true;
-            this.userCoinsLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.userCoinsLbl.ForeColor = System.Drawing.Color.Black;
-            this.userCoinsLbl.Location = new System.Drawing.Point(33, 480);
-            this.userCoinsLbl.Name = "userCoinsLbl";
-            this.userCoinsLbl.Size = new System.Drawing.Size(103, 39);
-            this.userCoinsLbl.TabIndex = 78;
-            this.userCoinsLbl.Text = "Coins";
-            // 
-            // currentCoinsTxtBox
-            // 
-            this.currentCoinsTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.currentCoinsTxtBox.Location = new System.Drawing.Point(318, 480);
-            this.currentCoinsTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.currentCoinsTxtBox.Name = "currentCoinsTxtBox";
-            this.currentCoinsTxtBox.Size = new System.Drawing.Size(187, 47);
-            this.currentCoinsTxtBox.TabIndex = 77;
-            // 
-            // BiddingPanel
-            // 
-            this.BiddingPanel.Controls.Add(this.SearchProductTextBox);
-            this.BiddingPanel.Controls.Add(this.GetProductBids);
-            this.BiddingPanel.Controls.Add(this.ResultTextBox);
-            this.BiddingPanel.Controls.Add(this.ProductTextBox);
-            this.BiddingPanel.Controls.Add(this.ProductLbl);
-            this.BiddingPanel.Controls.Add(this.CoinsTextBox);
-            this.BiddingPanel.Controls.Add(this.CoinsLbl);
-            this.BiddingPanel.Controls.Add(this.MakeBidBtn);
-            this.BiddingPanel.Controls.Add(this.GetBidBtn);
-            this.BiddingPanel.Location = new System.Drawing.Point(1107, 38);
-            this.BiddingPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BiddingPanel.Name = "BiddingPanel";
-            this.BiddingPanel.Size = new System.Drawing.Size(852, 648);
-            this.BiddingPanel.TabIndex = 72;
-            // 
-            // SearchProductTextBox
-            // 
-            this.SearchProductTextBox.Location = new System.Drawing.Point(290, 30);
-            this.SearchProductTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SearchProductTextBox.Name = "SearchProductTextBox";
-            this.SearchProductTextBox.Size = new System.Drawing.Size(123, 26);
-            this.SearchProductTextBox.TabIndex = 9;
-            // 
-            // GetProductBids
-            // 
-            this.GetProductBids.Location = new System.Drawing.Point(46, 29);
-            this.GetProductBids.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.GetProductBids.Name = "GetProductBids";
-            this.GetProductBids.Size = new System.Drawing.Size(227, 35);
-            this.GetProductBids.TabIndex = 8;
-            this.GetProductBids.Text = "Get all bids for product name\r\n";
-            this.GetProductBids.UseVisualStyleBackColor = true;
-            this.GetProductBids.Click += new System.EventHandler(this.GetProductBids_Click);
-            // 
-            // ResultTextBox
-            // 
-            this.ResultTextBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ResultTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ResultTextBox.Location = new System.Drawing.Point(46, 79);
-            this.ResultTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ResultTextBox.Multiline = true;
-            this.ResultTextBox.Name = "ResultTextBox";
-            this.ResultTextBox.ReadOnly = true;
-            this.ResultTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.ResultTextBox.Size = new System.Drawing.Size(810, 366);
-            this.ResultTextBox.TabIndex = 7;
-            // 
-            // ProductTextBox
-            // 
-            this.ProductTextBox.Location = new System.Drawing.Point(186, 544);
-            this.ProductTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ProductTextBox.Name = "ProductTextBox";
-            this.ProductTextBox.Size = new System.Drawing.Size(112, 26);
-            this.ProductTextBox.TabIndex = 6;
-            // 
-            // ProductLbl
-            // 
-            this.ProductLbl.AutoSize = true;
-            this.ProductLbl.Location = new System.Drawing.Point(54, 544);
-            this.ProductLbl.Name = "ProductLbl";
-            this.ProductLbl.Size = new System.Drawing.Size(108, 20);
-            this.ProductLbl.TabIndex = 5;
-            this.ProductLbl.Text = "Product name";
-            // 
-            // CoinsTextBox
-            // 
-            this.CoinsTextBox.Location = new System.Drawing.Point(186, 488);
-            this.CoinsTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CoinsTextBox.Name = "CoinsTextBox";
-            this.CoinsTextBox.Size = new System.Drawing.Size(112, 26);
-            this.CoinsTextBox.TabIndex = 4;
-            // 
-            // CoinsLbl
-            // 
-            this.CoinsLbl.AutoSize = true;
-            this.CoinsLbl.Location = new System.Drawing.Point(54, 488);
-            this.CoinsLbl.Name = "CoinsLbl";
-            this.CoinsLbl.Size = new System.Drawing.Size(49, 20);
-            this.CoinsLbl.TabIndex = 3;
-            this.CoinsLbl.Text = "Coins";
-            // 
-            // MakeBidBtn
-            // 
-            this.MakeBidBtn.Location = new System.Drawing.Point(206, 589);
-            this.MakeBidBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MakeBidBtn.Name = "MakeBidBtn";
-            this.MakeBidBtn.Size = new System.Drawing.Size(92, 41);
-            this.MakeBidBtn.TabIndex = 2;
-            this.MakeBidBtn.Text = "Make bid";
-            this.MakeBidBtn.UseVisualStyleBackColor = true;
-            this.MakeBidBtn.Click += new System.EventHandler(this.MakeBidBtn_Click);
-            // 
-            // GetBidBtn
-            // 
-            this.GetBidBtn.Location = new System.Drawing.Point(748, 30);
-            this.GetBidBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.GetBidBtn.Name = "GetBidBtn";
-            this.GetBidBtn.Size = new System.Drawing.Size(108, 41);
-            this.GetBidBtn.TabIndex = 0;
-            this.GetBidBtn.Text = "Get my bids";
-            this.GetBidBtn.UseVisualStyleBackColor = true;
-            this.GetBidBtn.Click += new System.EventHandler(this.GetBidBtn_Click);
-            // 
-            // updateYourInfoBtn
-            // 
-            this.updateYourInfoBtn.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.updateYourInfoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateYourInfoBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateYourInfoBtn.Location = new System.Drawing.Point(274, 681);
-            this.updateYourInfoBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.updateYourInfoBtn.Name = "updateYourInfoBtn";
-            this.updateYourInfoBtn.Size = new System.Drawing.Size(230, 48);
-            this.updateYourInfoBtn.TabIndex = 76;
-            this.updateYourInfoBtn.Text = "Update your info";
-            this.updateYourInfoBtn.UseVisualStyleBackColor = false;
-            this.updateYourInfoBtn.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.buycoinsLbl);
-            this.panel1.Controls.Add(this.amountLbl);
-            this.panel1.Controls.Add(this.buyCoinsButton);
-            this.panel1.Controls.Add(this.amountTxtBox);
-            this.panel1.Location = new System.Drawing.Point(531, 480);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(430, 194);
-            this.panel1.TabIndex = 73;
-            // 
-            // buycoinsLbl
-            // 
-            this.buycoinsLbl.AutoSize = true;
-            this.buycoinsLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.buycoinsLbl.ForeColor = System.Drawing.Color.Black;
-            this.buycoinsLbl.Location = new System.Drawing.Point(123, 15);
-            this.buycoinsLbl.Name = "buycoinsLbl";
-            this.buycoinsLbl.Size = new System.Drawing.Size(166, 39);
-            this.buycoinsLbl.TabIndex = 75;
-            this.buycoinsLbl.Text = "Buy Coins";
-            // 
-            // amountLbl
-            // 
-            this.amountLbl.AutoSize = true;
-            this.amountLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.amountLbl.ForeColor = System.Drawing.Color.Black;
-            this.amountLbl.Location = new System.Drawing.Point(3, 71);
-            this.amountLbl.Name = "amountLbl";
-            this.amountLbl.Size = new System.Drawing.Size(140, 39);
-            this.amountLbl.TabIndex = 74;
-            this.amountLbl.Text = "Amount";
-            // 
-            // buyCoinsButton
-            // 
-            this.buyCoinsButton.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.buyCoinsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buyCoinsButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buyCoinsButton.Location = new System.Drawing.Point(163, 135);
-            this.buyCoinsButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buyCoinsButton.Name = "buyCoinsButton";
-            this.buyCoinsButton.Size = new System.Drawing.Size(140, 48);
-            this.buyCoinsButton.TabIndex = 70;
-            this.buyCoinsButton.Text = "Buy Coins";
-            this.buyCoinsButton.UseVisualStyleBackColor = false;
-            this.buyCoinsButton.Click += new System.EventHandler(this.buyCoinsButton_Click);
-            // 
-            // amountTxtBox
-            // 
-            this.amountTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.amountTxtBox.Location = new System.Drawing.Point(163, 71);
-            this.amountTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.amountTxtBox.Name = "amountTxtBox";
-            this.amountTxtBox.Size = new System.Drawing.Size(187, 47);
-            this.amountTxtBox.TabIndex = 72;
+            this.zipLbl.AutoSize = true;
+            this.zipLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.zipLbl.ForeColor = System.Drawing.Color.Black;
+            this.zipLbl.Location = new System.Drawing.Point(33, 424);
+            this.zipLbl.Name = "zipLbl";
+            this.zipLbl.Size = new System.Drawing.Size(100, 39);
+            this.zipLbl.TabIndex = 69;
+            this.zipLbl.Text = "Zip Id";
             // 
             // buyCoinsPanel
             // 
@@ -853,114 +871,322 @@
             this.banktransferRadioBtn.Text = "bank transfer";
             this.banktransferRadioBtn.UseVisualStyleBackColor = true;
             // 
-            // zipLbl
+            // panel1
             // 
-            this.zipLbl.AutoSize = true;
-            this.zipLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.zipLbl.ForeColor = System.Drawing.Color.Black;
-            this.zipLbl.Location = new System.Drawing.Point(33, 424);
-            this.zipLbl.Name = "zipLbl";
-            this.zipLbl.Size = new System.Drawing.Size(100, 39);
-            this.zipLbl.TabIndex = 69;
-            this.zipLbl.Text = "Zip Id";
+            this.panel1.Controls.Add(this.buycoinsLbl);
+            this.panel1.Controls.Add(this.amountLbl);
+            this.panel1.Controls.Add(this.buyCoinsButton);
+            this.panel1.Controls.Add(this.amountTxtBox);
+            this.panel1.Location = new System.Drawing.Point(531, 480);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(430, 194);
+            this.panel1.TabIndex = 73;
             // 
-            // zipTxtBox
+            // buycoinsLbl
             // 
-            this.zipTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.zipTxtBox.Location = new System.Drawing.Point(318, 424);
-            this.zipTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.zipTxtBox.Name = "zipTxtBox";
-            this.zipTxtBox.Size = new System.Drawing.Size(187, 47);
-            this.zipTxtBox.TabIndex = 68;
+            this.buycoinsLbl.AutoSize = true;
+            this.buycoinsLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.buycoinsLbl.ForeColor = System.Drawing.Color.Black;
+            this.buycoinsLbl.Location = new System.Drawing.Point(123, 15);
+            this.buycoinsLbl.Name = "buycoinsLbl";
+            this.buycoinsLbl.Size = new System.Drawing.Size(166, 39);
+            this.buycoinsLbl.TabIndex = 75;
+            this.buycoinsLbl.Text = "Buy Coins";
             // 
-            // cataloguePanel
+            // amountLbl
             // 
-            this.cataloguePanel.Controls.Add(this.sortByPriceBTn);
-            this.cataloguePanel.Controls.Add(this.sortByNameBtn);
-            this.cataloguePanel.Controls.Add(this.sortByEndDateBtn);
-            this.cataloguePanel.Controls.Add(this.sortByStartDate);
-            this.cataloguePanel.Controls.Add(this.catalogueGridView);
-            this.cataloguePanel.Location = new System.Drawing.Point(346, 107);
-            this.cataloguePanel.Name = "cataloguePanel";
-            this.cataloguePanel.Size = new System.Drawing.Size(1253, 725);
-            this.cataloguePanel.TabIndex = 80;
-            this.cataloguePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.cataloguePanel_Paint);
+            this.amountLbl.AutoSize = true;
+            this.amountLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.amountLbl.ForeColor = System.Drawing.Color.Black;
+            this.amountLbl.Location = new System.Drawing.Point(3, 71);
+            this.amountLbl.Name = "amountLbl";
+            this.amountLbl.Size = new System.Drawing.Size(140, 39);
+            this.amountLbl.TabIndex = 74;
+            this.amountLbl.Text = "Amount";
             // 
-            // sortByStartDate
+            // buyCoinsButton
             // 
-            this.sortByStartDate.BackColor = System.Drawing.Color.DimGray;
-            this.sortByStartDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sortByStartDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sortByStartDate.Location = new System.Drawing.Point(60, 4);
-            this.sortByStartDate.Name = "sortByStartDate";
-            this.sortByStartDate.Size = new System.Drawing.Size(262, 48);
-            this.sortByStartDate.TabIndex = 1;
-            this.sortByStartDate.Text = "Sort by start date ↑ ";
-            this.sortByStartDate.UseVisualStyleBackColor = false;
-            this.sortByStartDate.Click += new System.EventHandler(this.button1_Click_2);
+            this.buyCoinsButton.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buyCoinsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buyCoinsButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buyCoinsButton.Location = new System.Drawing.Point(163, 135);
+            this.buyCoinsButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buyCoinsButton.Name = "buyCoinsButton";
+            this.buyCoinsButton.Size = new System.Drawing.Size(140, 48);
+            this.buyCoinsButton.TabIndex = 70;
+            this.buyCoinsButton.Text = "Buy Coins";
+            this.buyCoinsButton.UseVisualStyleBackColor = false;
+            this.buyCoinsButton.Click += new System.EventHandler(this.buyCoinsButton_Click);
             // 
-            // catalogueGridView
+            // amountTxtBox
             // 
-            this.catalogueGridView.AllowUserToAddRows = false;
-            this.catalogueGridView.AllowUserToDeleteRows = false;
-            this.catalogueGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.catalogueGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.catalogueGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.catalogueGridView.Location = new System.Drawing.Point(60, 58);
-            this.catalogueGridView.Name = "catalogueGridView";
-            this.catalogueGridView.ReadOnly = true;
-            this.catalogueGridView.RowTemplate.Height = 28;
-            this.catalogueGridView.Size = new System.Drawing.Size(1122, 605);
-            this.catalogueGridView.TabIndex = 0;
+            this.amountTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.amountTxtBox.Location = new System.Drawing.Point(163, 71);
+            this.amountTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.amountTxtBox.Name = "amountTxtBox";
+            this.amountTxtBox.Size = new System.Drawing.Size(187, 47);
+            this.amountTxtBox.TabIndex = 72;
             // 
-            // sortByEndDateBtn
+            // updateYourInfoBtn
             // 
-            this.sortByEndDateBtn.BackColor = System.Drawing.Color.DimGray;
-            this.sortByEndDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sortByEndDateBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sortByEndDateBtn.Location = new System.Drawing.Point(350, 4);
-            this.sortByEndDateBtn.Name = "sortByEndDateBtn";
-            this.sortByEndDateBtn.Size = new System.Drawing.Size(262, 48);
-            this.sortByEndDateBtn.TabIndex = 2;
-            this.sortByEndDateBtn.Text = "Sort by end date ↑ ";
-            this.sortByEndDateBtn.UseVisualStyleBackColor = false;
-            this.sortByEndDateBtn.Click += new System.EventHandler(this.sortByEndDateBtn_Click);
+            this.updateYourInfoBtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.updateYourInfoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateYourInfoBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateYourInfoBtn.Location = new System.Drawing.Point(274, 681);
+            this.updateYourInfoBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.updateYourInfoBtn.Name = "updateYourInfoBtn";
+            this.updateYourInfoBtn.Size = new System.Drawing.Size(230, 48);
+            this.updateYourInfoBtn.TabIndex = 76;
+            this.updateYourInfoBtn.Text = "Update your info";
+            this.updateYourInfoBtn.UseVisualStyleBackColor = false;
+            this.updateYourInfoBtn.Click += new System.EventHandler(this.updateUserBtnClick);
             // 
-            // sortByNameBtn
+            // BiddingPanel
             // 
-            this.sortByNameBtn.BackColor = System.Drawing.Color.DimGray;
-            this.sortByNameBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sortByNameBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sortByNameBtn.Location = new System.Drawing.Point(645, 4);
-            this.sortByNameBtn.Name = "sortByNameBtn";
-            this.sortByNameBtn.Size = new System.Drawing.Size(262, 48);
-            this.sortByNameBtn.TabIndex = 3;
-            this.sortByNameBtn.Text = "Sort by name ↑";
-            this.sortByNameBtn.UseVisualStyleBackColor = false;
-            this.sortByNameBtn.Click += new System.EventHandler(this.sortByNameBtn_Click);
+            this.BiddingPanel.Controls.Add(this.SearchProductTextBox);
+            this.BiddingPanel.Controls.Add(this.GetProductBids);
+            this.BiddingPanel.Controls.Add(this.ResultTextBox);
+            this.BiddingPanel.Controls.Add(this.ProductTextBox);
+            this.BiddingPanel.Controls.Add(this.ProductLbl);
+            this.BiddingPanel.Controls.Add(this.CoinsTextBox);
+            this.BiddingPanel.Controls.Add(this.CoinsLbl);
+            this.BiddingPanel.Controls.Add(this.MakeBidBtn);
+            this.BiddingPanel.Controls.Add(this.GetBidBtn);
+            this.BiddingPanel.Location = new System.Drawing.Point(1107, 38);
+            this.BiddingPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BiddingPanel.Name = "BiddingPanel";
+            this.BiddingPanel.Size = new System.Drawing.Size(852, 648);
+            this.BiddingPanel.TabIndex = 72;
             // 
-            // sortByPriceBTn
+            // SearchProductTextBox
             // 
-            this.sortByPriceBTn.BackColor = System.Drawing.Color.DimGray;
-            this.sortByPriceBTn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sortByPriceBTn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sortByPriceBTn.Location = new System.Drawing.Point(934, 4);
-            this.sortByPriceBTn.Name = "sortByPriceBTn";
-            this.sortByPriceBTn.Size = new System.Drawing.Size(262, 48);
-            this.sortByPriceBTn.TabIndex = 4;
-            this.sortByPriceBTn.Text = "Sort by price ↑";
-            this.sortByPriceBTn.UseVisualStyleBackColor = false;
-            this.sortByPriceBTn.Click += new System.EventHandler(this.sortByPriceBTn_Click);
+            this.SearchProductTextBox.Location = new System.Drawing.Point(290, 30);
+            this.SearchProductTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SearchProductTextBox.Name = "SearchProductTextBox";
+            this.SearchProductTextBox.Size = new System.Drawing.Size(123, 26);
+            this.SearchProductTextBox.TabIndex = 9;
+            // 
+            // GetProductBids
+            // 
+            this.GetProductBids.Location = new System.Drawing.Point(46, 29);
+            this.GetProductBids.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.GetProductBids.Name = "GetProductBids";
+            this.GetProductBids.Size = new System.Drawing.Size(227, 35);
+            this.GetProductBids.TabIndex = 8;
+            this.GetProductBids.Text = "Get all bids for product name\r\n";
+            this.GetProductBids.UseVisualStyleBackColor = true;
+            this.GetProductBids.Click += new System.EventHandler(this.GetProductBids_Click);
+            // 
+            // ResultTextBox
+            // 
+            this.ResultTextBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ResultTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ResultTextBox.Location = new System.Drawing.Point(46, 79);
+            this.ResultTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ResultTextBox.Multiline = true;
+            this.ResultTextBox.Name = "ResultTextBox";
+            this.ResultTextBox.ReadOnly = true;
+            this.ResultTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.ResultTextBox.Size = new System.Drawing.Size(810, 366);
+            this.ResultTextBox.TabIndex = 7;
+            // 
+            // ProductTextBox
+            // 
+            this.ProductTextBox.Location = new System.Drawing.Point(186, 544);
+            this.ProductTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ProductTextBox.Name = "ProductTextBox";
+            this.ProductTextBox.Size = new System.Drawing.Size(112, 26);
+            this.ProductTextBox.TabIndex = 6;
+            // 
+            // ProductLbl
+            // 
+            this.ProductLbl.AutoSize = true;
+            this.ProductLbl.Location = new System.Drawing.Point(54, 544);
+            this.ProductLbl.Name = "ProductLbl";
+            this.ProductLbl.Size = new System.Drawing.Size(108, 20);
+            this.ProductLbl.TabIndex = 5;
+            this.ProductLbl.Text = "Product name";
+            // 
+            // CoinsTextBox
+            // 
+            this.CoinsTextBox.Location = new System.Drawing.Point(186, 488);
+            this.CoinsTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CoinsTextBox.Name = "CoinsTextBox";
+            this.CoinsTextBox.Size = new System.Drawing.Size(112, 26);
+            this.CoinsTextBox.TabIndex = 4;
+            // 
+            // CoinsLbl
+            // 
+            this.CoinsLbl.AutoSize = true;
+            this.CoinsLbl.Location = new System.Drawing.Point(54, 488);
+            this.CoinsLbl.Name = "CoinsLbl";
+            this.CoinsLbl.Size = new System.Drawing.Size(49, 20);
+            this.CoinsLbl.TabIndex = 3;
+            this.CoinsLbl.Text = "Coins";
+            // 
+            // MakeBidBtn
+            // 
+            this.MakeBidBtn.Location = new System.Drawing.Point(206, 589);
+            this.MakeBidBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MakeBidBtn.Name = "MakeBidBtn";
+            this.MakeBidBtn.Size = new System.Drawing.Size(92, 41);
+            this.MakeBidBtn.TabIndex = 2;
+            this.MakeBidBtn.Text = "Make bid";
+            this.MakeBidBtn.UseVisualStyleBackColor = true;
+            this.MakeBidBtn.Click += new System.EventHandler(this.MakeBidBtn_Click);
+            // 
+            // GetBidBtn
+            // 
+            this.GetBidBtn.Location = new System.Drawing.Point(748, 30);
+            this.GetBidBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.GetBidBtn.Name = "GetBidBtn";
+            this.GetBidBtn.Size = new System.Drawing.Size(108, 41);
+            this.GetBidBtn.TabIndex = 0;
+            this.GetBidBtn.Text = "Get my bids";
+            this.GetBidBtn.UseVisualStyleBackColor = true;
+            this.GetBidBtn.Click += new System.EventHandler(this.GetBidBtn_Click);
+            // 
+            // currentCoinsTxtBox
+            // 
+            this.currentCoinsTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.currentCoinsTxtBox.Location = new System.Drawing.Point(318, 480);
+            this.currentCoinsTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.currentCoinsTxtBox.Name = "currentCoinsTxtBox";
+            this.currentCoinsTxtBox.Size = new System.Drawing.Size(187, 47);
+            this.currentCoinsTxtBox.TabIndex = 77;
+            // 
+            // userCoinsLbl
+            // 
+            this.userCoinsLbl.AutoSize = true;
+            this.userCoinsLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.userCoinsLbl.ForeColor = System.Drawing.Color.Black;
+            this.userCoinsLbl.Location = new System.Drawing.Point(33, 480);
+            this.userCoinsLbl.Name = "userCoinsLbl";
+            this.userCoinsLbl.Size = new System.Drawing.Size(103, 39);
+            this.userCoinsLbl.TabIndex = 78;
+            this.userCoinsLbl.Text = "Coins";
+            // 
+            // zipsGrid
+            // 
+            this.zipsGrid.AllowUserToAddRows = false;
+            this.zipsGrid.AllowUserToDeleteRows = false;
+            this.zipsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.zipsGrid.Location = new System.Drawing.Point(16, 538);
+            this.zipsGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.zipsGrid.Name = "zipsGrid";
+            this.zipsGrid.ReadOnly = true;
+            this.zipsGrid.RowTemplate.Height = 28;
+            this.zipsGrid.Size = new System.Drawing.Size(497, 136);
+            this.zipsGrid.TabIndex = 79;
+            // 
+            // myAccountPanel
+            // 
+            this.myAccountPanel.Controls.Add(this.zipsGrid);
+            this.myAccountPanel.Controls.Add(this.userCoinsLbl);
+            this.myAccountPanel.Controls.Add(this.currentCoinsTxtBox);
+            this.myAccountPanel.Controls.Add(this.BiddingPanel);
+            this.myAccountPanel.Controls.Add(this.updateYourInfoBtn);
+            this.myAccountPanel.Controls.Add(this.panel1);
+            this.myAccountPanel.Controls.Add(this.buyCoinsPanel);
+            this.myAccountPanel.Controls.Add(this.zipLbl);
+            this.myAccountPanel.Controls.Add(this.zipTxtBox);
+            this.myAccountPanel.Controls.Add(this.addressTxtbox);
+            this.myAccountPanel.Controls.Add(this.passwordTxtBox);
+            this.myAccountPanel.Controls.Add(this.emailTxtBox);
+            this.myAccountPanel.Controls.Add(this.phoneNumberTxtBox);
+            this.myAccountPanel.Controls.Add(this.birthdateTxtBox);
+            this.myAccountPanel.Controls.Add(this.nameTxtBox);
+            this.myAccountPanel.Controls.Add(this.addressLbl);
+            this.myAccountPanel.Controls.Add(this.emailLbl);
+            this.myAccountPanel.Controls.Add(this.phoneLbl);
+            this.myAccountPanel.Controls.Add(this.birthdateLbl);
+            this.myAccountPanel.Controls.Add(this.nameLbl);
+            this.myAccountPanel.Controls.Add(this.passwordLbl);
+            this.myAccountPanel.Controls.Add(this.usernameLbl);
+            this.myAccountPanel.Controls.Add(this.usernameTxtBox);
+            this.myAccountPanel.Location = new System.Drawing.Point(359, 109);
+            this.myAccountPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.myAccountPanel.Name = "myAccountPanel";
+            this.myAccountPanel.Size = new System.Drawing.Size(1207, 732);
+            this.myAccountPanel.TabIndex = 7;
+            // 
+            // updateExistingProductBtn
+            // 
+            this.updateExistingProductBtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.updateExistingProductBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateExistingProductBtn.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateExistingProductBtn.Location = new System.Drawing.Point(484, 468);
+            this.updateExistingProductBtn.Name = "updateExistingProductBtn";
+            this.updateExistingProductBtn.Size = new System.Drawing.Size(319, 62);
+            this.updateExistingProductBtn.TabIndex = 12;
+            this.updateExistingProductBtn.Text = "Update existing product";
+            this.updateExistingProductBtn.UseVisualStyleBackColor = false;
+            this.updateExistingProductBtn.Click += new System.EventHandler(this.updateExistingProductBtn_Click);
+            // 
+            // searchForProductBtn
+            // 
+            this.searchForProductBtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.searchForProductBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchForProductBtn.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchForProductBtn.Location = new System.Drawing.Point(798, 103);
+            this.searchForProductBtn.Name = "searchForProductBtn";
+            this.searchForProductBtn.Size = new System.Drawing.Size(176, 47);
+            this.searchForProductBtn.TabIndex = 14;
+            this.searchForProductBtn.Text = "Search";
+            this.searchForProductBtn.UseVisualStyleBackColor = false;
+            this.searchForProductBtn.Click += new System.EventHandler(this.searchForProductBtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.label1.Location = new System.Drawing.Point(486, 104);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 39);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Id";
+            // 
+            // isAvaiableLbl
+            // 
+            this.isAvaiableLbl.AutoSize = true;
+            this.isAvaiableLbl.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.isAvaiableLbl.Location = new System.Drawing.Point(43, 395);
+            this.isAvaiableLbl.Name = "isAvaiableLbl";
+            this.isAvaiableLbl.Size = new System.Drawing.Size(188, 39);
+            this.isAvaiableLbl.TabIndex = 16;
+            this.isAvaiableLbl.Text = "Is Avaiable";
+            // 
+            // isAvaliableChckBox
+            // 
+            this.isAvaliableChckBox.AutoEllipsis = true;
+            this.isAvaliableChckBox.AutoSize = true;
+            this.isAvaliableChckBox.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.isAvaliableChckBox.Location = new System.Drawing.Point(248, 407);
+            this.isAvaliableChckBox.Name = "isAvaliableChckBox";
+            this.isAvaliableChckBox.Size = new System.Drawing.Size(22, 21);
+            this.isAvaliableChckBox.TabIndex = 17;
+            this.isAvaliableChckBox.UseMnemonic = false;
+            this.isAvaliableChckBox.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Century Gothic", 16F);
+            this.numericUpDown1.Location = new System.Drawing.Point(627, 102);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 47);
+            this.numericUpDown1.TabIndex = 18;
             // 
             // AuctionClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1578, 844);
+            this.Controls.Add(this.productPanel);
             this.Controls.Add(this.cataloguePanel);
-            this.Controls.Add(this.myAccountPanel);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.leftMenuPanel);
+            this.Controls.Add(this.myAccountPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AuctionClient";
@@ -968,19 +1194,22 @@
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             this.leftMenuPanel.ResumeLayout(false);
-            this.myAccountPanel.ResumeLayout(false);
-            this.myAccountPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.zipsGrid)).EndInit();
-            this.BiddingPanel.ResumeLayout(false);
-            this.BiddingPanel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.cataloguePanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.catalogueGridView)).EndInit();
+            this.productPanel.ResumeLayout(false);
+            this.productPanel.PerformLayout();
             this.buyCoinsPanel.ResumeLayout(false);
             this.buyCoinsPanel.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.cataloguePanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.catalogueGridView)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.BiddingPanel.ResumeLayout(false);
+            this.BiddingPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zipsGrid)).EndInit();
+            this.myAccountPanel.ResumeLayout(false);
+            this.myAccountPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1000,6 +1229,15 @@
         private System.Windows.Forms.Button logoutBtn;
         private System.Windows.Forms.Label loggedasUsernameLbl;
         private System.Windows.Forms.Label loggedAsLbl;
+        private System.Windows.Forms.Panel cataloguePanel;
+        private System.Windows.Forms.DataGridView catalogueGridView;
+        private System.Windows.Forms.Button sortByStartDate;
+        private System.Windows.Forms.Button sortByEndDateBtn;
+        private System.Windows.Forms.Button sortByNameBtn;
+        private System.Windows.Forms.Button sortByPriceBTn;
+        private System.Windows.Forms.Panel productPanel;
+        private System.Windows.Forms.TextBox itemNameTxtBox;
+        private System.Windows.Forms.Label itemNameLbl;
         private System.Windows.Forms.TextBox usernameTxtBox;
         private System.Windows.Forms.Label usernameLbl;
         private System.Windows.Forms.Label passwordLbl;
@@ -1014,45 +1252,55 @@
         private System.Windows.Forms.TextBox emailTxtBox;
         private System.Windows.Forms.TextBox passwordTxtBox;
         private System.Windows.Forms.TextBox addressTxtbox;
-        private System.Windows.Forms.Panel myAccountPanel;
-        private System.Windows.Forms.Label zipLbl;
         private System.Windows.Forms.TextBox zipTxtBox;
+        private System.Windows.Forms.Label zipLbl;
         private System.Windows.Forms.Panel buyCoinsPanel;
+        private System.Windows.Forms.Button deleteCurrentPaymentBtn;
+        private System.Windows.Forms.Label currentpaymentlbl;
+        private System.Windows.Forms.Label yourcurrentpaymentLbl;
+        private System.Windows.Forms.Button updateExistingPaymentBtn;
+        private System.Windows.Forms.TextBox paymentTypeCodeTxtBox;
         private System.Windows.Forms.Label paymentTypeCodelbl;
         private System.Windows.Forms.Label paymentTypeLbl;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton creditCardRadioBtn;
+        private System.Windows.Forms.RadioButton paypalRadioBtn;
+        private System.Windows.Forms.RadioButton banktransferRadioBtn;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label buycoinsLbl;
+        private System.Windows.Forms.Label amountLbl;
         private System.Windows.Forms.Button buyCoinsButton;
+        private System.Windows.Forms.TextBox amountTxtBox;
+        private System.Windows.Forms.Button updateYourInfoBtn;
         private System.Windows.Forms.Panel BiddingPanel;
+        private System.Windows.Forms.TextBox SearchProductTextBox;
+        private System.Windows.Forms.Button GetProductBids;
+        private System.Windows.Forms.TextBox ResultTextBox;
         private System.Windows.Forms.TextBox ProductTextBox;
         private System.Windows.Forms.Label ProductLbl;
         private System.Windows.Forms.TextBox CoinsTextBox;
         private System.Windows.Forms.Label CoinsLbl;
         private System.Windows.Forms.Button MakeBidBtn;
         private System.Windows.Forms.Button GetBidBtn;
-        private System.Windows.Forms.TextBox ResultTextBox;
-        private System.Windows.Forms.TextBox SearchProductTextBox;
-        private System.Windows.Forms.Button GetProductBids;
-        private System.Windows.Forms.TextBox paymentTypeCodeTxtBox;
-        private System.Windows.Forms.RadioButton creditCardRadioBtn;
-        private System.Windows.Forms.RadioButton paypalRadioBtn;
-        private System.Windows.Forms.RadioButton banktransferRadioBtn;
-        private System.Windows.Forms.Button updateExistingPaymentBtn;
-        private System.Windows.Forms.Label yourcurrentpaymentLbl;
-        private System.Windows.Forms.Label currentpaymentlbl;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label buycoinsLbl;
-        private System.Windows.Forms.Label amountLbl;
-        private System.Windows.Forms.TextBox amountTxtBox;
-        private System.Windows.Forms.Button updateYourInfoBtn;
-        private System.Windows.Forms.Button deleteCurrentPaymentBtn;
-        private System.Windows.Forms.Label userCoinsLbl;
         private System.Windows.Forms.TextBox currentCoinsTxtBox;
+        private System.Windows.Forms.Label userCoinsLbl;
         private System.Windows.Forms.DataGridView zipsGrid;
-        private System.Windows.Forms.Panel cataloguePanel;
-        private System.Windows.Forms.DataGridView catalogueGridView;
-        private System.Windows.Forms.Button sortByStartDate;
-        private System.Windows.Forms.Button sortByEndDateBtn;
-        private System.Windows.Forms.Button sortByNameBtn;
-        private System.Windows.Forms.Button sortByPriceBTn;
+        private System.Windows.Forms.Panel myAccountPanel;
+        private System.Windows.Forms.TextBox itemPriceTxtBox;
+        private System.Windows.Forms.Label itemPriceLbl;
+        private System.Windows.Forms.TextBox itemEndDateTxtBox;
+        private System.Windows.Forms.Label itemEndDateLbl;
+        private System.Windows.Forms.TextBox itemStartDateTxtBox;
+        private System.Windows.Forms.Label itemStartDateLbl;
+        private System.Windows.Forms.TextBox itemDescriptonTxtBox;
+        private System.Windows.Forms.Label itemDestcriptionLbl;
+        private System.Windows.Forms.Label createItemLbl;
+        private System.Windows.Forms.Button saveNewProductBtn;
+        private System.Windows.Forms.CheckBox isAvaliableChckBox;
+        private System.Windows.Forms.Label isAvaiableLbl;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button searchForProductBtn;
+        private System.Windows.Forms.Button updateExistingProductBtn;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }

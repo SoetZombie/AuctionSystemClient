@@ -72,7 +72,7 @@
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1403, 82);
+            this.topPanel.Size = new System.Drawing.Size(1578, 102);
             this.topPanel.TabIndex = 10;
             // 
             // maximizeBtn
@@ -83,10 +83,10 @@
             this.maximizeBtn.FlatAppearance.BorderSize = 0;
             this.maximizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maximizeBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.maximizeBtn.Location = new System.Drawing.Point(1335, 0);
+            this.maximizeBtn.Location = new System.Drawing.Point(1502, 0);
             this.maximizeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.maximizeBtn.Name = "maximizeBtn";
-            this.maximizeBtn.Size = new System.Drawing.Size(31, 28);
+            this.maximizeBtn.Size = new System.Drawing.Size(35, 35);
             this.maximizeBtn.TabIndex = 7;
             this.maximizeBtn.UseVisualStyleBackColor = true;
             // 
@@ -98,10 +98,10 @@
             this.exitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.exitBtn.FlatAppearance.BorderSize = 0;
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtn.Location = new System.Drawing.Point(1372, 0);
+            this.exitBtn.Location = new System.Drawing.Point(1544, 0);
             this.exitBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(31, 28);
+            this.exitBtn.Size = new System.Drawing.Size(35, 35);
             this.exitBtn.TabIndex = 6;
             this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
@@ -117,7 +117,7 @@
             this.ebidBtn.Location = new System.Drawing.Point(0, 0);
             this.ebidBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ebidBtn.Name = "ebidBtn";
-            this.ebidBtn.Size = new System.Drawing.Size(293, 82);
+            this.ebidBtn.Size = new System.Drawing.Size(330, 102);
             this.ebidBtn.TabIndex = 4;
             this.ebidBtn.Text = "E-Bid";
             this.ebidBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -128,9 +128,9 @@
             this.registrationLabel.AutoSize = true;
             this.registrationLabel.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.registrationLabel.ForeColor = System.Drawing.Color.White;
-            this.registrationLabel.Location = new System.Drawing.Point(518, 33);
+            this.registrationLabel.Location = new System.Drawing.Point(583, 41);
             this.registrationLabel.Name = "registrationLabel";
-            this.registrationLabel.Size = new System.Drawing.Size(360, 49);
+            this.registrationLabel.Size = new System.Drawing.Size(422, 58);
             this.registrationLabel.TabIndex = 16;
             this.registrationLabel.Text = "Register new user";
             // 
@@ -139,9 +139,9 @@
             this.loginLbl.AutoSize = true;
             this.loginLbl.Font = new System.Drawing.Font("Century Gothic", 34F);
             this.loginLbl.ForeColor = System.Drawing.Color.White;
-            this.loginLbl.Location = new System.Drawing.Point(271, -29);
+            this.loginLbl.Location = new System.Drawing.Point(305, -36);
             this.loginLbl.Name = "loginLbl";
-            this.loginLbl.Size = new System.Drawing.Size(177, 70);
+            this.loginLbl.Size = new System.Drawing.Size(214, 83);
             this.loginLbl.TabIndex = 9;
             this.loginLbl.Text = "Login";
             // 
@@ -153,10 +153,10 @@
             this.registerBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.registerBtn.Image = global::AuctionSystem.Client.Properties.Resources.login;
             this.registerBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.registerBtn.Location = new System.Drawing.Point(644, 564);
+            this.registerBtn.Location = new System.Drawing.Point(724, 705);
             this.registerBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.registerBtn.Name = "registerBtn";
-            this.registerBtn.Size = new System.Drawing.Size(260, 56);
+            this.registerBtn.Size = new System.Drawing.Size(292, 70);
             this.registerBtn.TabIndex = 15;
             this.registerBtn.Text = "Register";
             this.registerBtn.UseVisualStyleBackColor = true;
@@ -165,19 +165,19 @@
             // phoneTxtBox
             // 
             this.phoneTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.phoneTxtBox.Location = new System.Drawing.Point(644, 242);
+            this.phoneTxtBox.Location = new System.Drawing.Point(724, 302);
             this.phoneTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.phoneTxtBox.Name = "phoneTxtBox";
-            this.phoneTxtBox.Size = new System.Drawing.Size(234, 40);
+            this.phoneTxtBox.Size = new System.Drawing.Size(263, 47);
             this.phoneTxtBox.TabIndex = 14;
             // 
             // usernameTxtBox
             // 
             this.usernameTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.usernameTxtBox.Location = new System.Drawing.Point(644, 103);
+            this.usernameTxtBox.Location = new System.Drawing.Point(724, 129);
             this.usernameTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.usernameTxtBox.Name = "usernameTxtBox";
-            this.usernameTxtBox.Size = new System.Drawing.Size(234, 40);
+            this.usernameTxtBox.Size = new System.Drawing.Size(263, 47);
             this.usernameTxtBox.TabIndex = 13;
             // 
             // passwordLbl
@@ -185,9 +185,9 @@
             this.passwordLbl.AutoSize = true;
             this.passwordLbl.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.passwordLbl.ForeColor = System.Drawing.Color.White;
-            this.passwordLbl.Location = new System.Drawing.Point(305, 326);
+            this.passwordLbl.Location = new System.Drawing.Point(343, 408);
             this.passwordLbl.Name = "passwordLbl";
-            this.passwordLbl.Size = new System.Drawing.Size(204, 49);
+            this.passwordLbl.Size = new System.Drawing.Size(240, 58);
             this.passwordLbl.TabIndex = 12;
             this.passwordLbl.Text = "Password";
             // 
@@ -196,9 +196,9 @@
             this.usernameLbl.AutoSize = true;
             this.usernameLbl.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.usernameLbl.ForeColor = System.Drawing.Color.White;
-            this.usernameLbl.Location = new System.Drawing.Point(305, 94);
+            this.usernameLbl.Location = new System.Drawing.Point(343, 118);
             this.usernameLbl.Name = "usernameLbl";
-            this.usernameLbl.Size = new System.Drawing.Size(219, 49);
+            this.usernameLbl.Size = new System.Drawing.Size(257, 58);
             this.usernameLbl.TabIndex = 11;
             this.usernameLbl.Text = "Username";
             // 
@@ -207,9 +207,9 @@
             this.nameLbl.AutoSize = true;
             this.nameLbl.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.nameLbl.ForeColor = System.Drawing.Color.White;
-            this.nameLbl.Location = new System.Drawing.Point(305, 140);
+            this.nameLbl.Location = new System.Drawing.Point(343, 175);
             this.nameLbl.Name = "nameLbl";
-            this.nameLbl.Size = new System.Drawing.Size(216, 49);
+            this.nameLbl.Size = new System.Drawing.Size(257, 58);
             this.nameLbl.TabIndex = 17;
             this.nameLbl.Text = "Full Name";
             // 
@@ -218,9 +218,9 @@
             this.birthdateLbl.AutoSize = true;
             this.birthdateLbl.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.birthdateLbl.ForeColor = System.Drawing.Color.White;
-            this.birthdateLbl.Location = new System.Drawing.Point(305, 186);
+            this.birthdateLbl.Location = new System.Drawing.Point(343, 232);
             this.birthdateLbl.Name = "birthdateLbl";
-            this.birthdateLbl.Size = new System.Drawing.Size(266, 49);
+            this.birthdateLbl.Size = new System.Drawing.Size(312, 58);
             this.birthdateLbl.TabIndex = 18;
             this.birthdateLbl.Text = "Date of birth";
             // 
@@ -229,9 +229,9 @@
             this.phoneLbl.AutoSize = true;
             this.phoneLbl.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.phoneLbl.ForeColor = System.Drawing.Color.White;
-            this.phoneLbl.Location = new System.Drawing.Point(305, 233);
+            this.phoneLbl.Location = new System.Drawing.Point(343, 291);
             this.phoneLbl.Name = "phoneLbl";
-            this.phoneLbl.Size = new System.Drawing.Size(315, 49);
+            this.phoneLbl.Size = new System.Drawing.Size(374, 58);
             this.phoneLbl.TabIndex = 19;
             this.phoneLbl.Text = "Phone Number";
             // 
@@ -240,9 +240,9 @@
             this.emailLbl.AutoSize = true;
             this.emailLbl.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.emailLbl.ForeColor = System.Drawing.Color.White;
-            this.emailLbl.Location = new System.Drawing.Point(305, 279);
+            this.emailLbl.Location = new System.Drawing.Point(343, 349);
             this.emailLbl.Name = "emailLbl";
-            this.emailLbl.Size = new System.Drawing.Size(127, 49);
+            this.emailLbl.Size = new System.Drawing.Size(149, 58);
             this.emailLbl.TabIndex = 20;
             this.emailLbl.Text = "Email";
             // 
@@ -251,46 +251,46 @@
             this.genderLbl.AutoSize = true;
             this.genderLbl.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.genderLbl.ForeColor = System.Drawing.Color.White;
-            this.genderLbl.Location = new System.Drawing.Point(306, 488);
+            this.genderLbl.Location = new System.Drawing.Point(344, 610);
             this.genderLbl.Name = "genderLbl";
-            this.genderLbl.Size = new System.Drawing.Size(172, 49);
+            this.genderLbl.Size = new System.Drawing.Size(205, 58);
             this.genderLbl.TabIndex = 21;
             this.genderLbl.Text = "Gender";
             // 
             // nameTxtBox
             // 
             this.nameTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.nameTxtBox.Location = new System.Drawing.Point(644, 150);
+            this.nameTxtBox.Location = new System.Drawing.Point(724, 188);
             this.nameTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nameTxtBox.Name = "nameTxtBox";
-            this.nameTxtBox.Size = new System.Drawing.Size(234, 40);
+            this.nameTxtBox.Size = new System.Drawing.Size(263, 47);
             this.nameTxtBox.TabIndex = 22;
             // 
             // birthdateTxtBox
             // 
             this.birthdateTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.birthdateTxtBox.Location = new System.Drawing.Point(644, 196);
+            this.birthdateTxtBox.Location = new System.Drawing.Point(724, 245);
             this.birthdateTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.birthdateTxtBox.Name = "birthdateTxtBox";
-            this.birthdateTxtBox.Size = new System.Drawing.Size(234, 40);
+            this.birthdateTxtBox.Size = new System.Drawing.Size(263, 47);
             this.birthdateTxtBox.TabIndex = 23;
             // 
             // emailTxtBox
             // 
             this.emailTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.emailTxtBox.Location = new System.Drawing.Point(644, 289);
+            this.emailTxtBox.Location = new System.Drawing.Point(724, 361);
             this.emailTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailTxtBox.Name = "emailTxtBox";
-            this.emailTxtBox.Size = new System.Drawing.Size(234, 40);
+            this.emailTxtBox.Size = new System.Drawing.Size(263, 47);
             this.emailTxtBox.TabIndex = 24;
             // 
             // passwordTxtBox
             // 
             this.passwordTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.passwordTxtBox.Location = new System.Drawing.Point(644, 335);
+            this.passwordTxtBox.Location = new System.Drawing.Point(724, 419);
             this.passwordTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.passwordTxtBox.Name = "passwordTxtBox";
-            this.passwordTxtBox.Size = new System.Drawing.Size(234, 40);
+            this.passwordTxtBox.Size = new System.Drawing.Size(263, 47);
             this.passwordTxtBox.TabIndex = 25;
             this.passwordTxtBox.UseSystemPasswordChar = true;
             // 
@@ -299,28 +299,30 @@
             this.addressLbl.AutoSize = true;
             this.addressLbl.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.addressLbl.ForeColor = System.Drawing.Color.White;
-            this.addressLbl.Location = new System.Drawing.Point(305, 373);
+            this.addressLbl.Location = new System.Drawing.Point(343, 466);
             this.addressLbl.Name = "addressLbl";
-            this.addressLbl.Size = new System.Drawing.Size(173, 49);
+            this.addressLbl.Size = new System.Drawing.Size(209, 58);
             this.addressLbl.TabIndex = 26;
             this.addressLbl.Text = "Address";
             // 
             // addressTxtBox
             // 
             this.addressTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.addressTxtBox.Location = new System.Drawing.Point(644, 382);
+            this.addressTxtBox.Location = new System.Drawing.Point(724, 478);
             this.addressTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addressTxtBox.Name = "addressTxtBox";
-            this.addressTxtBox.Size = new System.Drawing.Size(234, 40);
+            this.addressTxtBox.Size = new System.Drawing.Size(263, 47);
             this.addressTxtBox.TabIndex = 27;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.maleRadio);
             this.groupBox1.Controls.Add(this.femaleRadio);
-            this.groupBox1.Location = new System.Drawing.Point(644, 488);
+            this.groupBox1.Location = new System.Drawing.Point(724, 610);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(234, 53);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(263, 66);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             // 
@@ -328,9 +330,10 @@
             // 
             this.maleRadio.AutoSize = true;
             this.maleRadio.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.maleRadio.Location = new System.Drawing.Point(137, 16);
+            this.maleRadio.Location = new System.Drawing.Point(154, 20);
+            this.maleRadio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.maleRadio.Name = "maleRadio";
-            this.maleRadio.Size = new System.Drawing.Size(82, 27);
+            this.maleRadio.Size = new System.Drawing.Size(100, 34);
             this.maleRadio.TabIndex = 1;
             this.maleRadio.TabStop = true;
             this.maleRadio.Text = "male";
@@ -340,9 +343,10 @@
             // 
             this.femaleRadio.AutoSize = true;
             this.femaleRadio.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.femaleRadio.Location = new System.Drawing.Point(7, 16);
+            this.femaleRadio.Location = new System.Drawing.Point(8, 20);
+            this.femaleRadio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.femaleRadio.Name = "femaleRadio";
-            this.femaleRadio.Size = new System.Drawing.Size(101, 27);
+            this.femaleRadio.Size = new System.Drawing.Size(124, 34);
             this.femaleRadio.TabIndex = 0;
             this.femaleRadio.TabStop = true;
             this.femaleRadio.Text = "female";
@@ -351,10 +355,10 @@
             // zipIdTxtBox
             // 
             this.zipIdTxtBox.Font = new System.Drawing.Font("Century Gothic", 16F);
-            this.zipIdTxtBox.Location = new System.Drawing.Point(645, 431);
+            this.zipIdTxtBox.Location = new System.Drawing.Point(726, 539);
             this.zipIdTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.zipIdTxtBox.Name = "zipIdTxtBox";
-            this.zipIdTxtBox.Size = new System.Drawing.Size(234, 40);
+            this.zipIdTxtBox.Size = new System.Drawing.Size(263, 47);
             this.zipIdTxtBox.TabIndex = 30;
             // 
             // zipIdLbl
@@ -362,9 +366,9 @@
             this.zipIdLbl.AutoSize = true;
             this.zipIdLbl.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.zipIdLbl.ForeColor = System.Drawing.Color.White;
-            this.zipIdLbl.Location = new System.Drawing.Point(306, 422);
+            this.zipIdLbl.Location = new System.Drawing.Point(344, 528);
             this.zipIdLbl.Name = "zipIdLbl";
-            this.zipIdLbl.Size = new System.Drawing.Size(126, 49);
+            this.zipIdLbl.Size = new System.Drawing.Size(147, 58);
             this.zipIdLbl.TabIndex = 29;
             this.zipIdLbl.Text = "Zip Id";
             // 
@@ -373,21 +377,22 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(884, 103);
+            this.dataGridView1.Location = new System.Drawing.Point(994, 129);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(507, 179);
+            this.dataGridView1.Size = new System.Drawing.Size(570, 224);
             this.dataGridView1.TabIndex = 31;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // RegistrationForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(1403, 675);
+            this.ClientSize = new System.Drawing.Size(1578, 844);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.zipIdTxtBox);
             this.Controls.Add(this.zipIdLbl);

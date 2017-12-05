@@ -24,6 +24,7 @@ namespace AuctionSystem.Client
         private ZipServiceReference.IZipService zipService;
         private IList<ProductService.ProductDto> allProducts;
         private int sort, sort2, sort3, sort4;
+        private ProductService.ProductDto productToUpdate;
 
 
 
@@ -41,9 +42,9 @@ namespace AuctionSystem.Client
             allProducts = productService.GetAllProducts().ToList();
             InitializeComponent();
             HideAllpanels();
-            CheckUserAdmin();
 
         }
+        #region userRelated
         public void InitializeCatalogueGridView()
         {
             catalogueGridView.DataSource = allProducts;
@@ -69,11 +70,103 @@ namespace AuctionSystem.Client
                 settingsBtn.Show();
             }
         }
+        public void GetUserObject()
+        {
+            currentUser = userClient.GetUserByUsername(username);
+            currentUser.Password = password;
+        }
+
+        private void buyCoinsButton_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                int coins;
+                if (!Int32.TryParse(amountTxtBox.Text, out coins))
+                {
+                    throw new ArgumentException("put only numbers please");
+                }
+                if (coins <= 0)
+                {
+                    throw new ArgumentException("coins cannot be negative or zero");
+                }
+
+                currentUser.Coins += coins;
+
+                if (userClient.UpdateUser(currentUser))
+                {
+
+                    GetUserObject();
+                    SetUserData();
+                }
+            }
+            catch (Exception ex)
+            {
+                CreateExceptionDialog(ex.Message);
+            }
+        }
+
+        private void updateUserBtnClick(object sender, EventArgs e)
+        {
+
+            try
+            {
+                currentUser.Username = usernameTxtBox.Text;
+                currentUser.Name = nameTxtBox.Text;
+                currentUser.DateOfBirth = DateTime.Parse(birthdateTxtBox.Text);
+                currentUser.Phone = phoneNumberTxtBox.Text;
+                currentUser.Email = emailTxtBox.Text;
+                currentUser.Address = addressTxtbox.Text;
+                currentUser.ZipId = int.Parse(zipTxtBox.Text);
+                currentUser.Password = passwordTxtBox.Text;
+
+
+                if (userClient.UpdateUser(currentUser))
+                {
+
+                    GetUserObject();
+                }
+            }
+            catch (Exception ex)
+            {
+                CreateExceptionDialog(ex.Message);
+
+            }
+        }
+        public void setUsernameAndPw(string usernamelog, string passwordlog)
+        {
+            username = usernamelog;
+            password = passwordlog;
+            GetUserObject();
+            loggedasUsernameLbl.Text = username;
+            CheckUserAdmin();
+
+        }
+        private void SetUserData()
+        {
+
+            myAccountPanel.BringToFront();
+            usernameTxtBox.Text = currentUser.Username;
+            passwordTxtBox.Text = currentUser.Password;
+            nameTxtBox.Text = currentUser.Name;
+            birthdateTxtBox.Text = currentUser.DateOfBirth.ToString();
+            emailTxtBox.Text = currentUser.Email;
+            addressTxtbox.Text = currentUser.Address;
+            phoneNumberTxtBox.Text = currentUser.Phone;
+            zipTxtBox.Text = currentUser.ZipId.ToString();
+            currentCoinsTxtBox.Text = currentUser.Coins.ToString();
+            currentpaymentlbl.Text = currentUser.Payments;
+            zipsGrid.DataSource = zipService.GetAllZips();
+
+        }
+        #endregion
         public void HideAllpanels()
         {
             cataloguePanel.Hide();
             myAccountPanel.Hide();
-            
+            productPanel.Hide();
+
+
         }
         //protected override void WndProc(ref Message m)
         //{
@@ -88,20 +181,7 @@ namespace AuctionSystem.Client
 
         //    base.WndProc(ref m);
         //}
-        public void GetUserObject()
-        {
-            currentUser = userClient.GetUserByUsername(username);
-            currentUser.Password = password;
-        }
 
-        public void setUsernameAndPw(string usernamelog, string passwordlog)
-        {
-            username = usernamelog;
-            password = passwordlog;
-            GetUserObject();
-            loggedasUsernameLbl.Text = username;
-        }
-      
         private void exitBtnClick(object sender, EventArgs e)
         {
             this.Close();
@@ -124,10 +204,10 @@ namespace AuctionSystem.Client
         {
             selectionPanel.Height = catalogueBtn.Height;
             selectionPanel.Top = catalogueBtn.Top;
-            HideAllpanels();
-            cataloguePanel.Show();
             InitializeCatalogueGridView();
+            HideAllpanels();
             cataloguePanel.BringToFront();
+            cataloguePanel.Show();
 
 
 
@@ -139,24 +219,24 @@ namespace AuctionSystem.Client
             SetUserData();
             HideAllpanels();
             myAccountPanel.Show();
-            
-        }
-        private void SetUserData()
-        {
-           
             myAccountPanel.BringToFront();
-            usernameTxtBox.Text = currentUser.Username;
-            passwordTxtBox.Text = currentUser.Password;
-            nameTxtBox.Text = currentUser.Name;
-            birthdateTxtBox.Text = currentUser.DateOfBirth.ToString();
-            emailTxtBox.Text = currentUser.Email;
-            addressTxtbox.Text = currentUser.Address;
-            phoneNumberTxtBox.Text = currentUser.Phone;
-            zipTxtBox.Text = currentUser.ZipId.ToString();
-            currentCoinsTxtBox.Text = currentUser.Coins.ToString();
-            currentpaymentlbl.Text = currentUser.Payments;
-            zipsGrid.DataSource = zipService.GetAllZips();
 
+        }
+        private void settingsBtn_Click(object sender, EventArgs e)
+        {
+            if (currentUser.IsAdmin == true)
+            {
+                selectionPanel.Height = settingsBtn.Height;
+                selectionPanel.Top = settingsBtn.Top;
+                HideAllpanels();
+                productPanel.Show();
+                productPanel.BringToFront();
+
+            }
+            else
+            {
+                CreateExceptionDialog("You are not allowed to enter this area!");
+            }
         }
 
         private void newsBtn_Click(object sender, EventArgs e)
@@ -180,11 +260,6 @@ namespace AuctionSystem.Client
         }
 
 
-        private void settingsBtn_Click(object sender, EventArgs e)
-        {
-            selectionPanel.Height = settingsBtn.Height;
-            selectionPanel.Top = settingsBtn.Top;
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -193,7 +268,7 @@ namespace AuctionSystem.Client
             l.Show();
         }
 
- 
+
 
         private void saveNewPaymentBtn_Click(object sender, EventArgs e)
         {
@@ -300,70 +375,6 @@ namespace AuctionSystem.Client
             }
         }
 
-        private void buyCoinsButton_Click(object sender, EventArgs e)
-        {
-          
-            try
-            {
-                int coins;
-                if (!Int32.TryParse(amountTxtBox.Text, out coins))
-                {
-                    throw new ArgumentException("put only numbers please");
-                }
-                if (coins <= 0)
-                {
-                    throw new ArgumentException("coins cannot be negative or zero");
-                }
-
-                currentUser.Coins += coins;
-
-                if (userClient.UpdateUser(currentUser))
-                {
-
-                    GetUserObject();
-                    SetUserData();
-                }
-
-            }
-            catch (Exception ex)
-            {
-
-                CreateExceptionDialog(ex.Message);
-
-            }
-
-            //  }
-
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-            currentUser.Username = usernameTxtBox.Text;
-            currentUser.Name = nameTxtBox.Text;
-            currentUser.DateOfBirth = DateTime.Parse(birthdateTxtBox.Text);
-            currentUser.Phone = phoneNumberTxtBox.Text;
-            currentUser.Email = emailTxtBox.Text;
-            currentUser.Address = addressTxtbox.Text;
-            currentUser.ZipId = int.Parse(zipTxtBox.Text);
-            currentUser.Password = passwordTxtBox.Text;
-            try
-            {
-
-
-                if (userClient.UpdateUser(currentUser))
-                {
-
-                    GetUserObject();
-                }
-            }
-            catch (Exception ex)
-            {
-                CreateExceptionDialog(ex.Message);
-
-            }
-        }
 
         private void CreateExceptionDialog(string errorMsg)
         {
@@ -411,7 +422,8 @@ namespace AuctionSystem.Client
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            if (sort ==1){
+            if (sort == 1)
+            {
 
                 allProducts = allProducts.OrderBy(x => x.StartDate).ToList();
                 catalogueGridView.DataSource = allProducts;
@@ -430,8 +442,94 @@ namespace AuctionSystem.Client
                 sort = 1;
                 sortByStartDate.Text = "Sort by start date ↓ ";
             }
-          
+
         }
+
+        private void ClearProductData()
+        {
+            itemNameTxtBox.Clear();
+            itemDescriptonTxtBox.Clear();
+            itemStartDateTxtBox.Clear();
+            itemEndDateTxtBox.Clear();
+            itemPriceTxtBox.Clear();
+        }
+        private void saveNewProductBtn_Click(object sender, EventArgs e)
+        {
+            productService.CreateProduct(CreateNewProductObject());
+            CreateExceptionDialog("Created");
+            ClearProductData();
+
+
+        }
+        private ProductService.Product CreateNewProductObject()
+        {
+            try
+            {
+                return new ProductService.Product
+                {
+                    Name = itemNameTxtBox.Text,
+                    Description = itemDescriptonTxtBox.Text,
+                    StartDate = DateTime.Parse(itemStartDateTxtBox.Text),
+                    EndDate = DateTime.Parse(itemEndDateTxtBox.Text),
+                    Price = int.Parse(itemPriceTxtBox.Text),
+                    IsAvailable = true
+
+
+                };
+                
+
+            }
+            catch (Exception ex)
+            {
+                CreateExceptionDialog(ex.Message);
+                return null;
+            }
+        }
+
+        private void searchForProductBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                productToUpdate = productService.GetProductById((int)numericUpDown1.Value);
+                SetProductData();
+            }
+            catch (Exception ex)
+            {
+
+                CreateExceptionDialog(ex.Message);
+            }
+
+
+        }
+        private void SetProductData()
+        {
+            itemNameTxtBox.Text = productToUpdate.Name;
+            itemDescriptonTxtBox.Text = productToUpdate.Description;
+            itemStartDateTxtBox.Text = productToUpdate.StartDate.ToString();
+            itemEndDateTxtBox.Text = productToUpdate.EndDate.ToString();
+            itemPriceTxtBox.Text = productToUpdate.Price.ToString();
+            if (productToUpdate.IsAvailable)
+            {
+                isAvaliableChckBox.Checked = true;
+            }
+
+
+        }
+
+        private void updateExistingProductBtn_Click(object sender, EventArgs e)
+        {
+          
+            productToUpdate.Name = itemNameTxtBox.Text;
+            productToUpdate.Description = itemDescriptonTxtBox.Text;
+            productToUpdate.StartDate = DateTime.Parse(itemStartDateTxtBox.Text);
+            productToUpdate.EndDate = DateTime.Parse(itemEndDateTxtBox.Text);
+            productToUpdate.Price = Decimal.Parse(itemPriceTxtBox.Text);
+            productService.UpdateProduct(productToUpdate);
+            productToUpdate.IsAvailable = isAvaliableChckBox.Checked;
+            CreateExceptionDialog("Updated");
+            ClearProductData();
+        }
+
 
         private void sortByEndDateBtn_Click(object sender, EventArgs e)
         {

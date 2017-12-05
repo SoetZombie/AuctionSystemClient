@@ -1151,10 +1151,10 @@ namespace AuctionSystem.Client.ProductService {
         System.Threading.Tasks.Task CreateProductAsync(AuctionSystem.Client.ProductService.Product product);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/UpdateProduct", ReplyAction="http://tempuri.org/IProductService/UpdateProductResponse")]
-        bool UpdateProduct(AuctionSystem.Client.ProductService.Product product);
+        bool UpdateProduct(AuctionSystem.Client.ProductService.ProductDto productDto);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/UpdateProduct", ReplyAction="http://tempuri.org/IProductService/UpdateProductResponse")]
-        System.Threading.Tasks.Task<bool> UpdateProductAsync(AuctionSystem.Client.ProductService.Product product);
+        System.Threading.Tasks.Task<bool> UpdateProductAsync(AuctionSystem.Client.ProductService.ProductDto productDto);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/DeleteProduct", ReplyAction="http://tempuri.org/IProductService/DeleteProductResponse")]
         bool DeleteProduct(AuctionSystem.Client.ProductService.Product product);
@@ -1234,12 +1234,12 @@ namespace AuctionSystem.Client.ProductService {
             return base.Channel.CreateProductAsync(product);
         }
         
-        public bool UpdateProduct(AuctionSystem.Client.ProductService.Product product) {
-            return base.Channel.UpdateProduct(product);
+        public bool UpdateProduct(AuctionSystem.Client.ProductService.ProductDto productDto) {
+            return base.Channel.UpdateProduct(productDto);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdateProductAsync(AuctionSystem.Client.ProductService.Product product) {
-            return base.Channel.UpdateProductAsync(product);
+        public System.Threading.Tasks.Task<bool> UpdateProductAsync(AuctionSystem.Client.ProductService.ProductDto productDto) {
+            return base.Channel.UpdateProductAsync(productDto);
         }
         
         public bool DeleteProduct(AuctionSystem.Client.ProductService.Product product) {
