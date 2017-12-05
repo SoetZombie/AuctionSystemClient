@@ -107,6 +107,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="MakeProductUnavailable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MakeProductUnavailableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MakeProductUnavailableResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetAllProducts">
     <xs:complexType>
       <xs:sequence />

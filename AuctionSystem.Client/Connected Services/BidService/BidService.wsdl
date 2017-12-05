@@ -149,6 +149,52 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_MakeBid_ArgumentExceptionFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_MakeBid_ArgumentNullExceptionFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_IsBidWon_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -173,6 +219,52 @@
     </wsp:ExactlyOne>
   </wsp:Policy>
   <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_IsBidWon_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_IsBidWon_ArgumentExceptionFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_IsBidWon_ArgumentNullExceptionFault_Fault">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -241,6 +333,52 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetBidById_ArgumentExceptionFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetBidById_ArgumentNullExceptionFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetAllBidsByProductName_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -265,6 +403,52 @@
     </wsp:ExactlyOne>
   </wsp:Policy>
   <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetAllBidsByProductName_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetAllBidsByProductName_ArgumentExceptionFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetAllBidsByProductName_ArgumentNullExceptionFault_Fault">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -333,6 +517,52 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetAllBidsByUserId_ArgumentExceptionFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetAllBidsByUserId_ArgumentNullExceptionFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetAllBidsByProductId_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -357,6 +587,52 @@
     </wsp:ExactlyOne>
   </wsp:Policy>
   <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetAllBidsByProductId_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetAllBidsByProductId_ArgumentExceptionFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetAllBidsByProductId_ArgumentNullExceptionFault_Fault">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -425,12 +701,150 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetAllEarnedBids_ArgumentExceptionFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_GetAllEarnedBids_ArgumentNullExceptionFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_SetWinnersForProducts_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_SetWinnersForProducts_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_SetWinnersForProducts_ArgumentExceptionFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSDualHttpBinding_IBidService_SetWinnersForProducts_ArgumentNullExceptionFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
+          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System" />
       <xsd:import schemaLocation="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" />
-      <xsd:import schemaLocation="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" />
       <xsd:import schemaLocation="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.Enums" />
       <xsd:import schemaLocation="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.DTOs" />
     </xsd:schema>
@@ -441,11 +855,23 @@
   <wsdl:message name="IBidService_MakeBid_OutputMessage">
     <wsdl:part name="parameters" element="tns:MakeBidResponse" />
   </wsdl:message>
+  <wsdl:message name="IBidService_MakeBid_ArgumentExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/System" name="detail" element="q1:ArgumentException" />
+  </wsdl:message>
+  <wsdl:message name="IBidService_MakeBid_ArgumentNullExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/System" name="detail" element="q2:ArgumentNullException" />
+  </wsdl:message>
   <wsdl:message name="IBidService_IsBidWon_InputMessage">
     <wsdl:part name="parameters" element="tns:IsBidWon" />
   </wsdl:message>
   <wsdl:message name="IBidService_IsBidWon_OutputMessage">
     <wsdl:part name="parameters" element="tns:IsBidWonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBidService_IsBidWon_ArgumentExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/System" name="detail" element="q3:ArgumentException" />
+  </wsdl:message>
+  <wsdl:message name="IBidService_IsBidWon_ArgumentNullExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/System" name="detail" element="q4:ArgumentNullException" />
   </wsdl:message>
   <wsdl:message name="IBidService_GetBidById_InputMessage">
     <wsdl:part name="parameters" element="tns:GetBidById" />
@@ -453,11 +879,23 @@
   <wsdl:message name="IBidService_GetBidById_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetBidByIdResponse" />
   </wsdl:message>
+  <wsdl:message name="IBidService_GetBidById_ArgumentExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/System" name="detail" element="q5:ArgumentException" />
+  </wsdl:message>
+  <wsdl:message name="IBidService_GetBidById_ArgumentNullExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/System" name="detail" element="q6:ArgumentNullException" />
+  </wsdl:message>
   <wsdl:message name="IBidService_GetAllBidsByProductName_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllBidsByProductName" />
   </wsdl:message>
   <wsdl:message name="IBidService_GetAllBidsByProductName_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllBidsByProductNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBidService_GetAllBidsByProductName_ArgumentExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/System" name="detail" element="q7:ArgumentException" />
+  </wsdl:message>
+  <wsdl:message name="IBidService_GetAllBidsByProductName_ArgumentNullExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/System" name="detail" element="q8:ArgumentNullException" />
   </wsdl:message>
   <wsdl:message name="IBidService_GetAllBidsByUserId_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllBidsByUserId" />
@@ -465,11 +903,23 @@
   <wsdl:message name="IBidService_GetAllBidsByUserId_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllBidsByUserIdResponse" />
   </wsdl:message>
+  <wsdl:message name="IBidService_GetAllBidsByUserId_ArgumentExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/System" name="detail" element="q9:ArgumentException" />
+  </wsdl:message>
+  <wsdl:message name="IBidService_GetAllBidsByUserId_ArgumentNullExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/System" name="detail" element="q10:ArgumentNullException" />
+  </wsdl:message>
   <wsdl:message name="IBidService_GetAllBidsByProductId_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllBidsByProductId" />
   </wsdl:message>
   <wsdl:message name="IBidService_GetAllBidsByProductId_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllBidsByProductIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBidService_GetAllBidsByProductId_ArgumentExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/System" name="detail" element="q11:ArgumentException" />
+  </wsdl:message>
+  <wsdl:message name="IBidService_GetAllBidsByProductId_ArgumentNullExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/System" name="detail" element="q12:ArgumentNullException" />
   </wsdl:message>
   <wsdl:message name="IBidService_GetAllEarnedBids_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllEarnedBids" />
@@ -477,34 +927,72 @@
   <wsdl:message name="IBidService_GetAllEarnedBids_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllEarnedBidsResponse" />
   </wsdl:message>
+  <wsdl:message name="IBidService_GetAllEarnedBids_ArgumentExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/System" name="detail" element="q13:ArgumentException" />
+  </wsdl:message>
+  <wsdl:message name="IBidService_GetAllEarnedBids_ArgumentNullExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/System" name="detail" element="q14:ArgumentNullException" />
+  </wsdl:message>
+  <wsdl:message name="IBidService_SetWinnersForProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetWinnersForProducts" />
+  </wsdl:message>
+  <wsdl:message name="IBidService_SetWinnersForProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetWinnersForProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBidService_SetWinnersForProducts_ArgumentExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/System" name="detail" element="q15:ArgumentException" />
+  </wsdl:message>
+  <wsdl:message name="IBidService_SetWinnersForProducts_ArgumentNullExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/System" name="detail" element="q16:ArgumentNullException" />
+  </wsdl:message>
   <wsdl:portType name="IBidService">
     <wsdl:operation name="MakeBid">
       <wsdl:input wsaw:Action="http://tempuri.org/IBidService/MakeBid" message="tns:IBidService_MakeBid_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IBidService/MakeBidResponse" message="tns:IBidService_MakeBid_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBidService/MakeBidArgumentExceptionFault" name="ArgumentExceptionFault" message="tns:IBidService_MakeBid_ArgumentExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBidService/MakeBidArgumentNullExceptionFault" name="ArgumentNullExceptionFault" message="tns:IBidService_MakeBid_ArgumentNullExceptionFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="IsBidWon">
       <wsdl:input wsaw:Action="http://tempuri.org/IBidService/IsBidWon" message="tns:IBidService_IsBidWon_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IBidService/IsBidWonResponse" message="tns:IBidService_IsBidWon_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBidService/IsBidWonArgumentExceptionFault" name="ArgumentExceptionFault" message="tns:IBidService_IsBidWon_ArgumentExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBidService/IsBidWonArgumentNullExceptionFault" name="ArgumentNullExceptionFault" message="tns:IBidService_IsBidWon_ArgumentNullExceptionFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetBidById">
       <wsdl:input wsaw:Action="http://tempuri.org/IBidService/GetBidById" message="tns:IBidService_GetBidById_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IBidService/GetBidByIdResponse" message="tns:IBidService_GetBidById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBidService/GetBidByIdArgumentExceptionFault" name="ArgumentExceptionFault" message="tns:IBidService_GetBidById_ArgumentExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBidService/GetBidByIdArgumentNullExceptionFault" name="ArgumentNullExceptionFault" message="tns:IBidService_GetBidById_ArgumentNullExceptionFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAllBidsByProductName">
       <wsdl:input wsaw:Action="http://tempuri.org/IBidService/GetAllBidsByProductName" message="tns:IBidService_GetAllBidsByProductName_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IBidService/GetAllBidsByProductNameResponse" message="tns:IBidService_GetAllBidsByProductName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBidService/GetAllBidsByProductNameArgumentExceptionFault" name="ArgumentExceptionFault" message="tns:IBidService_GetAllBidsByProductName_ArgumentExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBidService/GetAllBidsByProductNameArgumentNullExceptionFault" name="ArgumentNullExceptionFault" message="tns:IBidService_GetAllBidsByProductName_ArgumentNullExceptionFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAllBidsByUserId">
       <wsdl:input wsaw:Action="http://tempuri.org/IBidService/GetAllBidsByUserId" message="tns:IBidService_GetAllBidsByUserId_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IBidService/GetAllBidsByUserIdResponse" message="tns:IBidService_GetAllBidsByUserId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBidService/GetAllBidsByUserIdArgumentExceptionFault" name="ArgumentExceptionFault" message="tns:IBidService_GetAllBidsByUserId_ArgumentExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBidService/GetAllBidsByUserIdArgumentNullExceptionFault" name="ArgumentNullExceptionFault" message="tns:IBidService_GetAllBidsByUserId_ArgumentNullExceptionFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAllBidsByProductId">
       <wsdl:input wsaw:Action="http://tempuri.org/IBidService/GetAllBidsByProductId" message="tns:IBidService_GetAllBidsByProductId_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IBidService/GetAllBidsByProductIdResponse" message="tns:IBidService_GetAllBidsByProductId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBidService/GetAllBidsByProductIdArgumentExceptionFault" name="ArgumentExceptionFault" message="tns:IBidService_GetAllBidsByProductId_ArgumentExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBidService/GetAllBidsByProductIdArgumentNullExceptionFault" name="ArgumentNullExceptionFault" message="tns:IBidService_GetAllBidsByProductId_ArgumentNullExceptionFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAllEarnedBids">
       <wsdl:input wsaw:Action="http://tempuri.org/IBidService/GetAllEarnedBids" message="tns:IBidService_GetAllEarnedBids_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IBidService/GetAllEarnedBidsResponse" message="tns:IBidService_GetAllEarnedBids_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBidService/GetAllEarnedBidsArgumentExceptionFault" name="ArgumentExceptionFault" message="tns:IBidService_GetAllEarnedBids_ArgumentExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBidService/GetAllEarnedBidsArgumentNullExceptionFault" name="ArgumentNullExceptionFault" message="tns:IBidService_GetAllEarnedBids_ArgumentNullExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetWinnersForProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBidService/SetWinnersForProducts" message="tns:IBidService_SetWinnersForProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBidService/SetWinnersForProductsResponse" message="tns:IBidService_SetWinnersForProducts_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBidService/SetWinnersForProductsArgumentExceptionFault" name="ArgumentExceptionFault" message="tns:IBidService_SetWinnersForProducts_ArgumentExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBidService/SetWinnersForProductsArgumentNullExceptionFault" name="ArgumentNullExceptionFault" message="tns:IBidService_SetWinnersForProducts_ArgumentNullExceptionFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WSDualHttpBinding_IBidService" type="tns:IBidService">
@@ -520,6 +1008,14 @@
         <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_MakeBid_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="ArgumentExceptionFault">
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_MakeBid_ArgumentExceptionFault_Fault" />
+        <soap12:fault use="literal" name="ArgumentExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ArgumentNullExceptionFault">
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_MakeBid_ArgumentNullExceptionFault_Fault" />
+        <soap12:fault use="literal" name="ArgumentNullExceptionFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="IsBidWon">
       <soap12:operation soapAction="http://tempuri.org/IBidService/IsBidWon" style="document" />
@@ -531,6 +1027,14 @@
         <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_IsBidWon_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="ArgumentExceptionFault">
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_IsBidWon_ArgumentExceptionFault_Fault" />
+        <soap12:fault use="literal" name="ArgumentExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ArgumentNullExceptionFault">
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_IsBidWon_ArgumentNullExceptionFault_Fault" />
+        <soap12:fault use="literal" name="ArgumentNullExceptionFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetBidById">
       <soap12:operation soapAction="http://tempuri.org/IBidService/GetBidById" style="document" />
@@ -542,6 +1046,14 @@
         <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetBidById_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="ArgumentExceptionFault">
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetBidById_ArgumentExceptionFault_Fault" />
+        <soap12:fault use="literal" name="ArgumentExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ArgumentNullExceptionFault">
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetBidById_ArgumentNullExceptionFault_Fault" />
+        <soap12:fault use="literal" name="ArgumentNullExceptionFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetAllBidsByProductName">
       <soap12:operation soapAction="http://tempuri.org/IBidService/GetAllBidsByProductName" style="document" />
@@ -553,6 +1065,14 @@
         <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetAllBidsByProductName_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="ArgumentExceptionFault">
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetAllBidsByProductName_ArgumentExceptionFault_Fault" />
+        <soap12:fault use="literal" name="ArgumentExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ArgumentNullExceptionFault">
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetAllBidsByProductName_ArgumentNullExceptionFault_Fault" />
+        <soap12:fault use="literal" name="ArgumentNullExceptionFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetAllBidsByUserId">
       <soap12:operation soapAction="http://tempuri.org/IBidService/GetAllBidsByUserId" style="document" />
@@ -564,6 +1084,14 @@
         <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetAllBidsByUserId_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="ArgumentExceptionFault">
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetAllBidsByUserId_ArgumentExceptionFault_Fault" />
+        <soap12:fault use="literal" name="ArgumentExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ArgumentNullExceptionFault">
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetAllBidsByUserId_ArgumentNullExceptionFault_Fault" />
+        <soap12:fault use="literal" name="ArgumentNullExceptionFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetAllBidsByProductId">
       <soap12:operation soapAction="http://tempuri.org/IBidService/GetAllBidsByProductId" style="document" />
@@ -575,6 +1103,14 @@
         <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetAllBidsByProductId_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="ArgumentExceptionFault">
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetAllBidsByProductId_ArgumentExceptionFault_Fault" />
+        <soap12:fault use="literal" name="ArgumentExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ArgumentNullExceptionFault">
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetAllBidsByProductId_ArgumentNullExceptionFault_Fault" />
+        <soap12:fault use="literal" name="ArgumentNullExceptionFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetAllEarnedBids">
       <soap12:operation soapAction="http://tempuri.org/IBidService/GetAllEarnedBids" style="document" />
@@ -586,6 +1122,33 @@
         <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetAllEarnedBids_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="ArgumentExceptionFault">
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetAllEarnedBids_ArgumentExceptionFault_Fault" />
+        <soap12:fault use="literal" name="ArgumentExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ArgumentNullExceptionFault">
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_GetAllEarnedBids_ArgumentNullExceptionFault_Fault" />
+        <soap12:fault use="literal" name="ArgumentNullExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetWinnersForProducts">
+      <soap12:operation soapAction="http://tempuri.org/IBidService/SetWinnersForProducts" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_SetWinnersForProducts_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_SetWinnersForProducts_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ArgumentExceptionFault">
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_SetWinnersForProducts_ArgumentExceptionFault_Fault" />
+        <soap12:fault use="literal" name="ArgumentExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ArgumentNullExceptionFault">
+        <wsp:PolicyReference URI="#WSDualHttpBinding_IBidService_SetWinnersForProducts_ArgumentNullExceptionFault_Fault" />
+        <soap12:fault use="literal" name="ArgumentNullExceptionFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="BidService">

@@ -1192,6 +1192,12 @@ namespace AuctionSystem.Client.ProductService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetProductUsers", ReplyAction="http://tempuri.org/IProductService/GetProductUsersResponse")]
         System.Threading.Tasks.Task<AuctionSystem.Client.ProductService.User[]> GetProductUsersAsync(AuctionSystem.Client.ProductService.Product product);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/MakeProductUnavailable", ReplyAction="http://tempuri.org/IProductService/MakeProductUnavailableResponse")]
+        bool MakeProductUnavailable(int productId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/MakeProductUnavailable", ReplyAction="http://tempuri.org/IProductService/MakeProductUnavailableResponse")]
+        System.Threading.Tasks.Task<bool> MakeProductUnavailableAsync(int productId);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetAllProducts", ReplyAction="http://tempuri.org/IProductService/GetAllProductsResponse")]
         AuctionSystem.Client.ProductService.ProductDto[] GetAllProducts();
         
@@ -1288,6 +1294,14 @@ namespace AuctionSystem.Client.ProductService {
         
         public System.Threading.Tasks.Task<AuctionSystem.Client.ProductService.User[]> GetProductUsersAsync(AuctionSystem.Client.ProductService.Product product) {
             return base.Channel.GetProductUsersAsync(product);
+        }
+        
+        public bool MakeProductUnavailable(int productId) {
+            return base.Channel.MakeProductUnavailable(productId);
+        }
+        
+        public System.Threading.Tasks.Task<bool> MakeProductUnavailableAsync(int productId) {
+            return base.Channel.MakeProductUnavailableAsync(productId);
         }
         
         public AuctionSystem.Client.ProductService.ProductDto[] GetAllProducts() {

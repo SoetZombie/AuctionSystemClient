@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.DTOs" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.DTOs" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:9992/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.Enums" />
-  <xs:import schemaLocation="http://localhost:9992/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" />
   <xs:complexType name="PaymentDto">
     <xs:sequence>
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="PaymentTypeCode" nillable="true" type="xs:string" />
       <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.Enums" minOccurs="0" name="Type" type="q1:PaymentType" />
-      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="User" nillable="true" type="q2:User" />
       <xs:element minOccurs="0" name="UserId" type="xs:int" />
     </xs:sequence>
   </xs:complexType>

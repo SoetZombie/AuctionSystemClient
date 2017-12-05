@@ -1278,7 +1278,7 @@ namespace AuctionSystem.Client.UserService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.UserService.BidDto[] BidsField;
+        private string BidsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string DescriptionField;
@@ -1315,7 +1315,7 @@ namespace AuctionSystem.Client.UserService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.UserService.BidDto[] Bids {
+        public string Bids {
             get {
                 return this.BidsField;
             }
@@ -1460,16 +1460,16 @@ namespace AuctionSystem.Client.UserService {
         private bool IsWonField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.UserService.ProductDto ProductField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int ProductIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AuctionSystem.Client.UserService.UserDto UserField;
+        private string ProductNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int UserIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsernameField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1521,19 +1521,6 @@ namespace AuctionSystem.Client.UserService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.UserService.ProductDto Product {
-            get {
-                return this.ProductField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ProductField, value) != true)) {
-                    this.ProductField = value;
-                    this.RaisePropertyChanged("Product");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public int ProductId {
             get {
                 return this.ProductIdField;
@@ -1547,14 +1534,14 @@ namespace AuctionSystem.Client.UserService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AuctionSystem.Client.UserService.UserDto User {
+        public string ProductName {
             get {
-                return this.UserField;
+                return this.ProductNameField;
             }
             set {
-                if ((object.ReferenceEquals(this.UserField, value) != true)) {
-                    this.UserField = value;
-                    this.RaisePropertyChanged("User");
+                if ((object.ReferenceEquals(this.ProductNameField, value) != true)) {
+                    this.ProductNameField = value;
+                    this.RaisePropertyChanged("ProductName");
                 }
             }
         }
@@ -1568,6 +1555,19 @@ namespace AuctionSystem.Client.UserService {
                 if ((this.UserIdField.Equals(value) != true)) {
                     this.UserIdField = value;
                     this.RaisePropertyChanged("UserId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Username {
+            get {
+                return this.UsernameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsernameField, value) != true)) {
+                    this.UsernameField = value;
+                    this.RaisePropertyChanged("Username");
                 }
             }
         }
@@ -1746,6 +1746,24 @@ namespace AuctionSystem.Client.UserService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserByUsername", ReplyAction="http://tempuri.org/IUserService/GetUserByUsernameResponse")]
         System.Threading.Tasks.Task<AuctionSystem.Client.UserService.UserDto> GetUserByUsernameAsync(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/IsCookieValid", ReplyAction="http://tempuri.org/IUserService/IsCookieValidResponse")]
+        bool IsCookieValid(string cookieId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/IsCookieValid", ReplyAction="http://tempuri.org/IUserService/IsCookieValidResponse")]
+        System.Threading.Tasks.Task<bool> IsCookieValidAsync(string cookieId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/AddCookie", ReplyAction="http://tempuri.org/IUserService/AddCookieResponse")]
+        string AddCookie(int userId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/AddCookie", ReplyAction="http://tempuri.org/IUserService/AddCookieResponse")]
+        System.Threading.Tasks.Task<string> AddCookieAsync(int userId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserByCookie", ReplyAction="http://tempuri.org/IUserService/GetUserByCookieResponse")]
+        AuctionSystem.Client.UserService.UserDto GetUserByCookie(string cookieId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserByCookie", ReplyAction="http://tempuri.org/IUserService/GetUserByCookieResponse")]
+        System.Threading.Tasks.Task<AuctionSystem.Client.UserService.UserDto> GetUserByCookieAsync(string cookieId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1861,6 +1879,30 @@ namespace AuctionSystem.Client.UserService {
         
         public System.Threading.Tasks.Task<AuctionSystem.Client.UserService.UserDto> GetUserByUsernameAsync(string username) {
             return base.Channel.GetUserByUsernameAsync(username);
+        }
+        
+        public bool IsCookieValid(string cookieId) {
+            return base.Channel.IsCookieValid(cookieId);
+        }
+        
+        public System.Threading.Tasks.Task<bool> IsCookieValidAsync(string cookieId) {
+            return base.Channel.IsCookieValidAsync(cookieId);
+        }
+        
+        public string AddCookie(int userId) {
+            return base.Channel.AddCookie(userId);
+        }
+        
+        public System.Threading.Tasks.Task<string> AddCookieAsync(int userId) {
+            return base.Channel.AddCookieAsync(userId);
+        }
+        
+        public AuctionSystem.Client.UserService.UserDto GetUserByCookie(string cookieId) {
+            return base.Channel.GetUserByCookie(cookieId);
+        }
+        
+        public System.Threading.Tasks.Task<AuctionSystem.Client.UserService.UserDto> GetUserByCookieAsync(string cookieId) {
+            return base.Channel.GetUserByCookieAsync(cookieId);
         }
     }
 }
