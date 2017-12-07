@@ -47,7 +47,9 @@ namespace AuctionSystem.Client
         #region userRelated
         public void InitializeCatalogueGridView()
         {
+            
             catalogueGridView.DataSource = allProducts;
+            catalogueGridView.Columns["RowVersion"].Visible = false;
             catalogueGridView.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             catalogueGridView.Columns["Bids"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             catalogueGridView.Columns["Bids"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
@@ -59,6 +61,7 @@ namespace AuctionSystem.Client
             catalogueGridView.Columns["StartDate"].DisplayIndex = 5;
             catalogueGridView.Columns["EndDate"].DisplayIndex = 6;
             catalogueGridView.Columns["Bids"].DisplayIndex = 7;
+
 
         }
         public void CheckUserAdmin()
@@ -139,7 +142,7 @@ namespace AuctionSystem.Client
             password = passwordlog;
             GetUserObject();
             loggedasUsernameLbl.Text = username;
-            CheckUserAdmin();
+           // CheckUserAdmin();
 
         }
         private void SetUserData()
