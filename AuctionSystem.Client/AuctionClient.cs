@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using AutoMapper;
-
-
-
-namespace AuctionSystem.Client
+﻿namespace AuctionSystem.Client
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+    using System.Media;
+    using System.ServiceModel;
+    using System.Windows.Forms;
 
     public partial class AuctionClient : Form
     {
@@ -25,12 +19,19 @@ namespace AuctionSystem.Client
         private IList<ProductService.ProductDto> allProducts;
         private int sort, sort2, sort3, sort4;
         private ProductService.ProductDto productToUpdate;
-
-
+        private int currentProductId;
+        private int days;
+        private int seconds;
+        private int minutes;
+        private int hours;
+        private string dateDiff;
+        private string parsedSeconds;
+        private string parsedMinutes;
+        private string parsedHours;
+        private string parsedDays;
 
         public static string username;
         public static string password;
-
 
         public AuctionClient()
         {
@@ -47,7 +48,7 @@ namespace AuctionSystem.Client
         #region userRelated
         public void InitializeCatalogueGridView()
         {
-            
+
             catalogueGridView.DataSource = allProducts;
             catalogueGridView.Columns["RowVersion"].Visible = false;
             catalogueGridView.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
@@ -105,7 +106,7 @@ namespace AuctionSystem.Client
             }
             catch (Exception ex)
             {
-                CreateExceptionDialog(ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -132,7 +133,7 @@ namespace AuctionSystem.Client
             }
             catch (Exception ex)
             {
-                CreateExceptionDialog(ex.Message);
+                MessageBox.Show(ex.Message);
 
             }
         }
@@ -142,7 +143,7 @@ namespace AuctionSystem.Client
             password = passwordlog;
             GetUserObject();
             loggedasUsernameLbl.Text = username;
-           // CheckUserAdmin();
+            // CheckUserAdmin();
 
         }
         private void SetUserData()
@@ -171,19 +172,20 @@ namespace AuctionSystem.Client
 
 
         }
-        //protected override void WndProc(ref Message m)
-        //{
-        //    switch (m.Msg)
-        //    {
-        //        case 0x84:
-        //            base.WndProc(ref m);
-        //            if ((int)m.Result == 0x1)
-        //                m.Result = (IntPtr)0x2;
-        //            return;
-        //    }
 
-        //    base.WndProc(ref m);
-        //}
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case 0x84:
+                    base.WndProc(ref m);
+                    if ((int)m.Result == 0x1)
+                        m.Result = (IntPtr)0x2;
+                    return;
+            }
+
+            base.WndProc(ref m);
+        }
 
         private void exitBtnClick(object sender, EventArgs e)
         {
@@ -238,7 +240,7 @@ namespace AuctionSystem.Client
             }
             else
             {
-                CreateExceptionDialog("You are not allowed to enter this area!");
+                MessageBox.Show("You are not allowed to enter this area!");
             }
         }
 
@@ -260,6 +262,9 @@ namespace AuctionSystem.Client
         {
             selectionPanel.Height = biddingBtn.Height;
             selectionPanel.Top = biddingBtn.Top;
+            HideAllpanels();
+            BiddingPanel.Show();
+            BiddingPanel.BringToFront();
         }
 
 
@@ -296,54 +301,44 @@ namespace AuctionSystem.Client
 
         private void GetBidBtn_Click(object sender, EventArgs e)
         {
-            var bidDtoArray = this.bidService.GetAllBidsByUserId(4); // take the current logged user id which in our case is 4 because login option is off for now!
+            var bidDtoArray = this.bidService.GetAllBidsByUserId(currentUser.Id);
 
-            var sb = new StringBuilder();
-
-            foreach (var item in bidDtoArray)
-            {
-                sb.AppendLine($"Product: {item.ProductName}");
-                sb.AppendLine($"Username: {item.Username}");
-                sb.AppendLine($"Date of creation: {item.DateOfCreated.ToString()}");
-                sb.AppendLine($"Coins: {item.Coins.ToString()}");
-                sb.AppendLine($"Is won: {item.IsWon.ToString()}");
-                sb.AppendLine("----------------");
-            }
-
-            ResultTextBox.Text = sb.ToString();
+            dataGridView1.DataSource = bidDtoArray;
         }
 
-        // Take a look here !
         private void MakeBidBtn_Click(object sender, EventArgs e)
         {
-            var productName = ProductTextBox.Text;
-            var productId = this.productService.GetProductByName(productName).Id;
+            try
+            {
+                var productName = ProductTextBox.Text;
+                var product = this.productService.GetProductByName(productName);
+                var productId = product.Id;
 
-            // var userId = this.userClient.GetUserByUsername("gosho").Id;
+                var coins = int.Parse(CoinsTextBox.Text);
 
-            var coins = int.Parse(CoinsTextBox.Text);
+                this.bidService.MakeBid(currentUser.Id, productId, coins);
 
-            //this.bidService.MakeBid(userId, productId, coins);
+                MessageBox.Show("Success");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void GetProductBids_Click(object sender, EventArgs e)
         {
-            var productName = SearchProductTextBox.Text;
-            var bidDtoArray = this.bidService.GetAllBidsByProductName(productName);
-
-            var sb = new StringBuilder();
-
-            foreach (var item in bidDtoArray)
+            try
             {
-                sb.AppendLine($"Product: {item.ProductName}");
-                sb.AppendLine($"Username: {item.Username}");
-                sb.AppendLine($"Date of creation: {item.DateOfCreated.ToString()}");
-                sb.AppendLine($"Coins: {item.Coins.ToString()}");
-                sb.AppendLine($"Is won: {item.IsWon.ToString()}");
-                sb.AppendLine("----------------");
-            }
+                var productName = SearchProductTextBox.Text;
+                var bidDtoArray = this.bidService.GetAllBidsByProductName(productName);
 
-            ResultTextBox.Text = sb.ToString();
+                dataGridView1.DataSource = bidDtoArray;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
 
@@ -459,7 +454,7 @@ namespace AuctionSystem.Client
         private void saveNewProductBtn_Click(object sender, EventArgs e)
         {
             productService.CreateProduct(CreateNewProductObject());
-            CreateExceptionDialog("Created");
+            MessageBox.Show("Created");
             ClearProductData();
 
 
@@ -474,17 +469,15 @@ namespace AuctionSystem.Client
                     Description = itemDescriptonTxtBox.Text,
                     StartDate = DateTime.Parse(itemStartDateTxtBox.Text),
                     EndDate = DateTime.Parse(itemEndDateTxtBox.Text),
-                    Price = int.Parse(itemPriceTxtBox.Text),
+                    Price = decimal.Parse(itemPriceTxtBox.Text),
                     IsAvailable = true
-
-
                 };
-                
+
 
             }
             catch (Exception ex)
             {
-                CreateExceptionDialog(ex.Message);
+                MessageBox.Show(ex.Message);
                 return null;
             }
         }
@@ -499,7 +492,7 @@ namespace AuctionSystem.Client
             catch (Exception ex)
             {
 
-                CreateExceptionDialog(ex.Message);
+                MessageBox.Show(ex.Message);
             }
 
 
@@ -521,18 +514,175 @@ namespace AuctionSystem.Client
 
         private void updateExistingProductBtn_Click(object sender, EventArgs e)
         {
-          
-            productToUpdate.Name = itemNameTxtBox.Text;
-            productToUpdate.Description = itemDescriptonTxtBox.Text;
-            productToUpdate.StartDate = DateTime.Parse(itemStartDateTxtBox.Text);
-            productToUpdate.EndDate = DateTime.Parse(itemEndDateTxtBox.Text);
-            productToUpdate.Price = Decimal.Parse(itemPriceTxtBox.Text);
-            productService.UpdateProduct(productToUpdate);
-            productToUpdate.IsAvailable = isAvaliableChckBox.Checked;
-            CreateExceptionDialog("Updated");
-            ClearProductData();
+            try
+            {
+                this.productService = new ProductService.ProductServiceClient();
+                this.productToUpdate.Name = itemNameTxtBox.Text;
+                this.productToUpdate.Description = itemDescriptonTxtBox.Text;
+                this.productToUpdate.StartDate = DateTime.Parse(itemStartDateTxtBox.Text);
+                this.productToUpdate.EndDate = DateTime.Parse(itemEndDateTxtBox.Text);
+                this.productToUpdate.Price = decimal.Parse(itemPriceTxtBox.Text);
+                this.productService.UpdateProduct(productToUpdate);
+                this.productToUpdate.IsAvailable = isAvaliableChckBox.Checked;
+                MessageBox.Show("Updated");
+                ClearProductData();
+            }
+            catch (TimeoutException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (FaultException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (CommunicationException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
+        private void GetProductBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var desiredProduct = productService.GetProductByName(ProductName.Text);
+                this.currentProductId = desiredProduct.Id;
+                var endDate = desiredProduct.EndDate;
+
+                if (endDate < DateTime.UtcNow)
+                {
+                    MessageBox.Show("This product has already expired.");
+                    ProductName.Text = desiredProduct.Name;
+                    TimerTextBox.Text = "00:00:00:00";
+
+                    return;
+                }
+
+                this.dateDiff = (endDate.Subtract(DateTime.UtcNow)).ToString(@"dd\:hh\:mm\:ss").Substring(0, 11); // utcnow datetime !!!!!!!
+
+                ProductName.Text = desiredProduct.Name;
+
+                this.days = int.Parse(dateDiff.Substring(0, 2));
+                this.hours = int.Parse(dateDiff.Substring(3, 2));
+                this.minutes = int.Parse(dateDiff.Substring(6, 2));
+                this.seconds = int.Parse(dateDiff.Substring(9));
+
+                //MessageBox.Show("Bravo");
+                using (SoundPlayer player = new SoundPlayer())
+                {
+                    player.Play();
+                }
+
+                timer1.Enabled = true;
+                timer1.Start();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                timer1.Stop();
+
+                TimerTextBox.Text = "00:00:00:00";
+            }
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            this.seconds--;
+
+            if (this.days == 0
+                && this.hours == 0
+                && this.minutes == 0
+                && this.seconds == 0)
+            {
+                MessageBox.Show("Product has expired!");
+
+                TimerTextBox.Text = $"0{this.days}:0{this.hours}:0{this.minutes}:0{this.seconds}";
+
+                timer1.Stop();
+
+                MessageBox.Show("We have a winner!");
+
+                return;
+            }
+
+            if (this.seconds < 1)
+            {
+                this.minutes--;
+                this.seconds += 59;
+            }
+
+            if (this.days == 0
+                && this.hours != 0
+                && this.minutes != 0)
+            {
+                if (this.minutes < 1)
+                {
+                    this.hours--;
+                    this.minutes += 59;
+                }
+
+                if (this.hours < 1)
+                {
+                    this.days--;
+                    this.hours += 23;
+                }
+            }
+
+            if (this.days == 0
+                && this.hours == 0
+                && this.minutes != 0)
+            {
+                if (this.minutes < 1)
+                {
+                    this.hours--;
+                    this.minutes += 59;
+                }
+            }
+
+            if (this.seconds < 10)
+            {
+                this.parsedSeconds = $"0{this.seconds}";
+            }
+            else
+            {
+                this.parsedSeconds = this.seconds.ToString();
+            }
+
+            if (this.minutes < 10)
+            {
+                this.parsedMinutes = $"0{this.minutes}";
+            }
+            else
+            {
+                this.parsedMinutes = this.minutes.ToString();
+            }
+
+            if (this.hours < 10)
+            {
+                this.parsedHours = $"0{this.hours}";
+            }
+            else
+            {
+                this.parsedHours = this.hours.ToString();
+            }
+
+            if (this.days < 10)
+            {
+                this.parsedDays = $"0{this.days}";
+            }
+            else
+            {
+                this.parsedDays = this.days.ToString();
+            }
+
+            TimerTextBox.Text = $"{this.parsedDays}:{this.parsedHours}:{this.parsedMinutes}:{this.parsedSeconds}";
+        }
 
         private void sortByEndDateBtn_Click(object sender, EventArgs e)
         {

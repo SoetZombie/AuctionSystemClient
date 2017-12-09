@@ -204,6 +204,9 @@ namespace AuctionSystem.Client.BidService {
         private decimal PriceField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] RowVersionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime StartDateField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -316,6 +319,19 @@ namespace AuctionSystem.Client.BidService {
                 if ((this.PriceField.Equals(value) != true)) {
                     this.PriceField = value;
                     this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] RowVersion {
+            get {
+                return this.RowVersionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RowVersionField, value) != true)) {
+                    this.RowVersionField = value;
+                    this.RaisePropertyChanged("RowVersion");
                 }
             }
         }
@@ -1114,6 +1130,7 @@ namespace AuctionSystem.Client.BidService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBidService/MakeBid", ReplyAction="http://tempuri.org/IBidService/MakeBidResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.ArgumentException), Action="http://tempuri.org/IBidService/MakeBidArgumentExceptionFault", Name="ArgumentException", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.ServiceModel.FaultException), Action="http://tempuri.org/IBidService/MakeBidFaultExceptionFault", Name="FaultException", Namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.ArgumentNullException), Action="http://tempuri.org/IBidService/MakeBidArgumentNullExceptionFault", Name="ArgumentNullException", Namespace="http://schemas.datacontract.org/2004/07/System")]
         void MakeBid(int userId, int productId, int coins);
         
@@ -1122,6 +1139,7 @@ namespace AuctionSystem.Client.BidService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBidService/IsBidWon", ReplyAction="http://tempuri.org/IBidService/IsBidWonResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.ArgumentException), Action="http://tempuri.org/IBidService/IsBidWonArgumentExceptionFault", Name="ArgumentException", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.ServiceModel.FaultException), Action="http://tempuri.org/IBidService/IsBidWonFaultExceptionFault", Name="FaultException", Namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.ArgumentNullException), Action="http://tempuri.org/IBidService/IsBidWonArgumentNullExceptionFault", Name="ArgumentNullException", Namespace="http://schemas.datacontract.org/2004/07/System")]
         bool IsBidWon(AuctionSystem.Client.BidService.Bid bid);
         
@@ -1130,6 +1148,7 @@ namespace AuctionSystem.Client.BidService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBidService/GetBidById", ReplyAction="http://tempuri.org/IBidService/GetBidByIdResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.ArgumentException), Action="http://tempuri.org/IBidService/GetBidByIdArgumentExceptionFault", Name="ArgumentException", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.ServiceModel.FaultException), Action="http://tempuri.org/IBidService/GetBidByIdFaultExceptionFault", Name="FaultException", Namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.ArgumentNullException), Action="http://tempuri.org/IBidService/GetBidByIdArgumentNullExceptionFault", Name="ArgumentNullException", Namespace="http://schemas.datacontract.org/2004/07/System")]
         AuctionSystem.Client.BidService.BidDto GetBidById(int bidId);
         
@@ -1138,6 +1157,7 @@ namespace AuctionSystem.Client.BidService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBidService/GetAllBidsByProductName", ReplyAction="http://tempuri.org/IBidService/GetAllBidsByProductNameResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.ArgumentException), Action="http://tempuri.org/IBidService/GetAllBidsByProductNameArgumentExceptionFault", Name="ArgumentException", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.ServiceModel.FaultException), Action="http://tempuri.org/IBidService/GetAllBidsByProductNameFaultExceptionFault", Name="FaultException", Namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.ArgumentNullException), Action="http://tempuri.org/IBidService/GetAllBidsByProductNameArgumentNullExceptionFault", Name="ArgumentNullException", Namespace="http://schemas.datacontract.org/2004/07/System")]
         AuctionSystem.Client.BidService.BidDto[] GetAllBidsByProductName(string name);
         
@@ -1146,6 +1166,7 @@ namespace AuctionSystem.Client.BidService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBidService/GetAllBidsByUserId", ReplyAction="http://tempuri.org/IBidService/GetAllBidsByUserIdResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.ArgumentException), Action="http://tempuri.org/IBidService/GetAllBidsByUserIdArgumentExceptionFault", Name="ArgumentException", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.ServiceModel.FaultException), Action="http://tempuri.org/IBidService/GetAllBidsByUserIdFaultExceptionFault", Name="FaultException", Namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.ArgumentNullException), Action="http://tempuri.org/IBidService/GetAllBidsByUserIdArgumentNullExceptionFault", Name="ArgumentNullException", Namespace="http://schemas.datacontract.org/2004/07/System")]
         AuctionSystem.Client.BidService.BidDto[] GetAllBidsByUserId(int userId);
         
@@ -1154,14 +1175,16 @@ namespace AuctionSystem.Client.BidService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBidService/GetAllBidsByProductId", ReplyAction="http://tempuri.org/IBidService/GetAllBidsByProductIdResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.ArgumentException), Action="http://tempuri.org/IBidService/GetAllBidsByProductIdArgumentExceptionFault", Name="ArgumentException", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.ServiceModel.FaultException), Action="http://tempuri.org/IBidService/GetAllBidsByProductIdFaultExceptionFault", Name="FaultException", Namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.ArgumentNullException), Action="http://tempuri.org/IBidService/GetAllBidsByProductIdArgumentNullExceptionFault", Name="ArgumentNullException", Namespace="http://schemas.datacontract.org/2004/07/System")]
-        AuctionSystem.Client.BidService.Bid[] GetAllBidsByProductId(int productId);
+        AuctionSystem.Client.BidService.BidDto[] GetAllBidsByProductId(int productId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBidService/GetAllBidsByProductId", ReplyAction="http://tempuri.org/IBidService/GetAllBidsByProductIdResponse")]
-        System.Threading.Tasks.Task<AuctionSystem.Client.BidService.Bid[]> GetAllBidsByProductIdAsync(int productId);
+        System.Threading.Tasks.Task<AuctionSystem.Client.BidService.BidDto[]> GetAllBidsByProductIdAsync(int productId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBidService/GetAllEarnedBids", ReplyAction="http://tempuri.org/IBidService/GetAllEarnedBidsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.ArgumentException), Action="http://tempuri.org/IBidService/GetAllEarnedBidsArgumentExceptionFault", Name="ArgumentException", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.ServiceModel.FaultException), Action="http://tempuri.org/IBidService/GetAllEarnedBidsFaultExceptionFault", Name="FaultException", Namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.ArgumentNullException), Action="http://tempuri.org/IBidService/GetAllEarnedBidsArgumentNullExceptionFault", Name="ArgumentNullException", Namespace="http://schemas.datacontract.org/2004/07/System")]
         AuctionSystem.Client.BidService.Bid[] GetAllEarnedBids();
         
@@ -1170,11 +1193,18 @@ namespace AuctionSystem.Client.BidService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBidService/SetWinnersForProducts", ReplyAction="http://tempuri.org/IBidService/SetWinnersForProductsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.ArgumentException), Action="http://tempuri.org/IBidService/SetWinnersForProductsArgumentExceptionFault", Name="ArgumentException", Namespace="http://schemas.datacontract.org/2004/07/System")]
+        [System.ServiceModel.FaultContractAttribute(typeof(System.ServiceModel.FaultException), Action="http://tempuri.org/IBidService/SetWinnersForProductsFaultExceptionFault", Name="FaultException", Namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel")]
         [System.ServiceModel.FaultContractAttribute(typeof(System.ArgumentNullException), Action="http://tempuri.org/IBidService/SetWinnersForProductsArgumentNullExceptionFault", Name="ArgumentNullException", Namespace="http://schemas.datacontract.org/2004/07/System")]
         bool SetWinnersForProducts();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBidService/SetWinnersForProducts", ReplyAction="http://tempuri.org/IBidService/SetWinnersForProductsResponse")]
         System.Threading.Tasks.Task<bool> SetWinnersForProductsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBidService/CheckCoinsValid", ReplyAction="http://tempuri.org/IBidService/CheckCoinsValidResponse")]
+        bool CheckCoinsValid(int productId, double coins);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBidService/CheckCoinsValid", ReplyAction="http://tempuri.org/IBidService/CheckCoinsValidResponse")]
+        System.Threading.Tasks.Task<bool> CheckCoinsValidAsync(int productId, double coins);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1244,11 +1274,11 @@ namespace AuctionSystem.Client.BidService {
             return base.Channel.GetAllBidsByUserIdAsync(userId);
         }
         
-        public AuctionSystem.Client.BidService.Bid[] GetAllBidsByProductId(int productId) {
+        public AuctionSystem.Client.BidService.BidDto[] GetAllBidsByProductId(int productId) {
             return base.Channel.GetAllBidsByProductId(productId);
         }
         
-        public System.Threading.Tasks.Task<AuctionSystem.Client.BidService.Bid[]> GetAllBidsByProductIdAsync(int productId) {
+        public System.Threading.Tasks.Task<AuctionSystem.Client.BidService.BidDto[]> GetAllBidsByProductIdAsync(int productId) {
             return base.Channel.GetAllBidsByProductIdAsync(productId);
         }
         
@@ -1266,6 +1296,14 @@ namespace AuctionSystem.Client.BidService {
         
         public System.Threading.Tasks.Task<bool> SetWinnersForProductsAsync() {
             return base.Channel.SetWinnersForProductsAsync();
+        }
+        
+        public bool CheckCoinsValid(int productId, double coins) {
+            return base.Channel.CheckCoinsValid(productId, coins);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CheckCoinsValidAsync(int productId, double coins) {
+            return base.Channel.CheckCoinsValidAsync(productId, coins);
         }
     }
 }

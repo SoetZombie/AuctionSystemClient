@@ -30,6 +30,7 @@
     <MetadataFile FileName="item4.xsd" MetadataType="Schema" ID="000ae6bf-32c5-408d-acbc-0e24dd42b273" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd4" />
     <MetadataFile FileName="item5.xsd" MetadataType="Schema" ID="401a3e73-7839-4daf-9781-9b5fe0a9bfc9" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd5" />
     <MetadataFile FileName="BidService.wsdl" MetadataType="Wsdl" ID="7661e383-fabd-44d3-9a18-8848b8e1b4cc" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?wsdl" />
+    <MetadataFile FileName="item6.xsd" MetadataType="Schema" ID="5988b559-e603-4bc1-9856-d767f06a8969" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/BidService/?xsd=xsd6" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

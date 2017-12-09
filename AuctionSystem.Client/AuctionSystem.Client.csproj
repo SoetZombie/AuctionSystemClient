@@ -187,15 +187,21 @@
     <None Include="Connected Services\BidService\item5.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\LoginServiceReference\item.xsd">
+    <None Include="Connected Services\BidService\item6.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\LoginServiceReference\item1.xsd">
+    <None Include="Connected Services\LoginServiceReference\item2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\LoginServiceReference\LoginService.wsdl" />
+    <None Include="Connected Services\LoginServiceReference\item21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LoginServiceReference\LoginService1.wsdl" />
     <None Include="Connected Services\PaymentServiceReference\AuctionSystem.Client.PaymentServiceReference.PaymentDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PaymentServiceReference\item.xsd">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\PaymentServiceReference\item1.xsd">
       <SubType>Designer</SubType>
@@ -209,35 +215,32 @@
     <None Include="Connected Services\PaymentServiceReference\item4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\PaymentServiceReference\item5.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\PaymentServiceReference\PaymentService.wsdl" />
+    <None Include="Connected Services\PaymentServiceReference\PaymentService1.wsdl" />
     <None Include="Connected Services\ProductService\AuctionSystem.Client.ProductService.ProductDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ProductService\AuctionSystem.Client.ProductService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ProductService\item.xsd">
+    <None Include="Connected Services\ProductService\item6.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ProductService\item1.xsd">
+    <None Include="Connected Services\ProductService\item61.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ProductService\item2.xsd">
+    <None Include="Connected Services\ProductService\item62.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ProductService\item3.xsd">
+    <None Include="Connected Services\ProductService\item63.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ProductService\item4.xsd">
+    <None Include="Connected Services\ProductService\item64.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ProductService\item5.xsd">
+    <None Include="Connected Services\ProductService\item65.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ProductService\ProductService.wsdl" />
+    <None Include="Connected Services\ProductService\ProductService1.wsdl" />
     <None Include="Connected Services\UserService\AuctionSystem.Client.UserService.BidDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -250,38 +253,38 @@
     <None Include="Connected Services\UserService\AuctionSystem.Client.UserService.UserDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\UserService\item.xsd">
+    <None Include="Connected Services\UserService\item6.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\UserService\item1.xsd">
+    <None Include="Connected Services\UserService\item61.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\UserService\item2.xsd">
+    <None Include="Connected Services\UserService\item62.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\UserService\item3.xsd">
+    <None Include="Connected Services\UserService\item63.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\UserService\item4.xsd">
+    <None Include="Connected Services\UserService\item64.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\UserService\item5.xsd">
+    <None Include="Connected Services\UserService\item65.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\UserService\UserService.wsdl" />
+    <None Include="Connected Services\UserService\UserService1.wsdl" />
     <None Include="Connected Services\ZipServiceReference\AuctionSystem.Client.ZipServiceReference.Zip.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ZipServiceReference\item.xsd">
+    <None Include="Connected Services\ZipServiceReference\item3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ZipServiceReference\item1.xsd">
+    <None Include="Connected Services\ZipServiceReference\item31.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ZipServiceReference\item2.xsd">
+    <None Include="Connected Services\ZipServiceReference\item32.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ZipServiceReference\ZipService.wsdl" />
+    <None Include="Connected Services\ZipServiceReference\ZipService1.wsdl" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -364,9 +367,6 @@
     <WCFMetadataStorage Include="Connected Services\ZipServiceReference\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\PaymentServiceReference\item.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Connected Services\PaymentServiceReference\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -377,9 +377,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\UserService\item.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\UserService\configuration91.svcinfo" />
@@ -394,9 +391,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ZipServiceReference\item.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Connected Services\ZipServiceReference\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -407,9 +401,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\ProductService\item.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\ProductService\configuration91.svcinfo" />
@@ -439,9 +430,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\LoginServiceReference\item.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Connected Services\LoginServiceReference\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -452,6 +440,21 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LoginServiceReference\item1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PaymentServiceReference\item1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ProductService\item1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UserService\item1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ZipServiceReference\item1.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

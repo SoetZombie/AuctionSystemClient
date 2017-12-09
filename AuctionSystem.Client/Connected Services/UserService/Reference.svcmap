@@ -19,17 +19,17 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:9994/Design_Time_Addresses/AuctionSystem.WcfService/UserService/" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/UserService/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="4b415337-381f-4cba-9975-9697b31c087d" SourceId="1" SourceUrl="http://localhost:9994/Design_Time_Addresses/AuctionSystem.WcfService/UserService/?xsd=xsd1" />
-    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="43a61fd6-a28d-4e19-8646-5aee2b25724d" SourceId="1" SourceUrl="http://localhost:9994/Design_Time_Addresses/AuctionSystem.WcfService/UserService/?xsd=xsd0" />
-    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="2a3a4beb-f61f-457a-8949-d3e9b99fc919" SourceId="1" SourceUrl="http://localhost:9994/Design_Time_Addresses/AuctionSystem.WcfService/UserService/?xsd=xsd3" />
-    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="3709ea72-1d96-45fe-92a4-bcbfffcf386e" SourceId="1" SourceUrl="http://localhost:9994/Design_Time_Addresses/AuctionSystem.WcfService/UserService/?xsd=xsd2" />
-    <MetadataFile FileName="item4.xsd" MetadataType="Schema" ID="3d6a278d-c120-4840-93c2-9e4f98e42a2a" SourceId="1" SourceUrl="http://localhost:9994/Design_Time_Addresses/AuctionSystem.WcfService/UserService/?xsd=xsd5" />
-    <MetadataFile FileName="item5.xsd" MetadataType="Schema" ID="a94da667-0399-422d-9d85-4091a59090df" SourceId="1" SourceUrl="http://localhost:9994/Design_Time_Addresses/AuctionSystem.WcfService/UserService/?xsd=xsd4" />
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="46537ad6-c89a-43f3-9912-666f53f2ef3a" SourceId="1" SourceUrl="http://localhost:9994/Design_Time_Addresses/AuctionSystem.WcfService/UserService/?disco" />
-    <MetadataFile FileName="UserService.wsdl" MetadataType="Wsdl" ID="fd0c2db7-3e30-4c96-98f8-8e6d84744057" SourceId="1" SourceUrl="http://localhost:9994/Design_Time_Addresses/AuctionSystem.WcfService/UserService/?wsdl" />
+    <MetadataFile FileName="item6.xsd" MetadataType="Schema" ID="de674f0e-e768-49e3-9d8f-65c5c5e77ac3" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/UserService/?xsd=xsd2" />
+    <MetadataFile FileName="item61.xsd" MetadataType="Schema" ID="0e371d8d-50d7-4a57-b467-3fb96ba0b9ac" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/UserService/?xsd=xsd5" />
+    <MetadataFile FileName="item62.xsd" MetadataType="Schema" ID="d7418159-2199-4543-a370-4d70d302e502" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/UserService/?xsd=xsd4" />
+    <MetadataFile FileName="item63.xsd" MetadataType="Schema" ID="00377c94-f168-40f3-937c-02c2d8e8e2a8" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/UserService/?xsd=xsd3" />
+    <MetadataFile FileName="item64.xsd" MetadataType="Schema" ID="2133f83d-a8c3-4d63-9ed7-25c1a3553cfb" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/UserService/?xsd=xsd0" />
+    <MetadataFile FileName="UserService1.wsdl" MetadataType="Wsdl" ID="2da997af-13b8-4235-96ae-fb2465b76158" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/UserService/?wsdl" />
+    <MetadataFile FileName="item1.disco" MetadataType="Disco" ID="c4fe9751-7607-48aa-a935-ac978666c455" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/UserService/?disco" />
+    <MetadataFile FileName="item65.xsd" MetadataType="Schema" ID="ba767463-4d6f-4ee1-add9-f796b4af605a" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/UserService/?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

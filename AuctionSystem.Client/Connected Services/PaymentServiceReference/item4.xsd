@@ -1,12 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.Enums" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.Enums" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:simpleType name="PaymentType">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="PayPal" />
-      <xs:enumeration value="CreditCard" />
-      <xs:enumeration value="BankTransfer" />
-      <xs:enumeration value="AmazonPayment" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:element name="PaymentType" nillable="true" type="tns:PaymentType" />
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" />
+  <xs:import schemaLocation="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.DTOs" />
+  <xs:element name="AddPayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/AuctionSystem.Models" minOccurs="0" name="payment" nillable="true" type="q1:Payment" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="paymentId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.DTOs" minOccurs="0" name="GetPaymentResult" nillable="true" type="q2:PaymentDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="paymentId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeletePaymentResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/AuctionSystem.Models.DTOs" minOccurs="0" name="payment" nillable="true" type="q3:PaymentDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePaymentResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

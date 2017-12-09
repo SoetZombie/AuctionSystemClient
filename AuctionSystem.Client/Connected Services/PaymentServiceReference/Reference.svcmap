@@ -19,16 +19,16 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:9992/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PaymentService.wsdl" MetadataType="Wsdl" ID="503b0dd1-6cb6-4e8a-a618-3b9f9aa88778" SourceId="1" SourceUrl="http://localhost:9992/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?wsdl" />
-    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="74a25dee-a084-4345-9c3a-ab78ee7298b0" SourceId="1" SourceUrl="http://localhost:9992/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd0" />
-    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="0e85419e-fe8a-4236-b4a8-127cd1c71315" SourceId="1" SourceUrl="http://localhost:9992/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd1" />
-    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="7d7aced8-c958-409c-bdfc-aae782460e72" SourceId="1" SourceUrl="http://localhost:9992/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd2" />
-    <MetadataFile FileName="item4.xsd" MetadataType="Schema" ID="e14503ef-5c2c-4b05-adcd-1e80a8f3f976" SourceId="1" SourceUrl="http://localhost:9992/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd3" />
-    <MetadataFile FileName="item5.xsd" MetadataType="Schema" ID="eda112f5-ce9e-4339-bf7e-18a3f2a1ae8d" SourceId="1" SourceUrl="http://localhost:9992/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd4" />
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="a901d7b5-48fb-44b4-a86a-6534e78d4a6c" SourceId="1" SourceUrl="http://localhost:9992/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?disco" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="b94f5fbe-bf60-45f6-a5c9-ec0f3815f9c3" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd1" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="0833848c-5f9c-4edd-bb15-24b17b735a4d" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd4" />
+    <MetadataFile FileName="item1.disco" MetadataType="Disco" ID="f76503c8-7a7a-4183-a4e1-225f2a007abf" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?disco" />
+    <MetadataFile FileName="PaymentService1.wsdl" MetadataType="Wsdl" ID="ebd2b219-5850-4c98-a16f-bc5cfbf89878" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?wsdl" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="4a73e791-acb5-4a6d-8ccb-bbe13bf442be" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd2" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="976db818-e56b-4ac3-a2e5-58b8bb48ed0e" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd3" />
+    <MetadataFile FileName="item4.xsd" MetadataType="Schema" ID="4d90e45f-9588-478c-944b-9012d07c9b75" SourceId="1" SourceUrl="http://localhost:9991/Design_Time_Addresses/AuctionSystem.WcfService/PaymentService/?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
