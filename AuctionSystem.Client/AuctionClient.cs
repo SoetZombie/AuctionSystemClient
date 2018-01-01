@@ -522,7 +522,13 @@
                 this.productToUpdate.StartDate = DateTime.Parse(itemStartDateTxtBox.Text);
                 this.productToUpdate.EndDate = DateTime.Parse(itemEndDateTxtBox.Text);
                 this.productToUpdate.Price = decimal.Parse(itemPriceTxtBox.Text);
-                this.productService.UpdateProduct(productToUpdate);
+
+                if (!this.productService.UpdateProduct(productToUpdate))
+                {
+                    MessageBox.Show("Someone has already modified this product, please refresh the page.");
+                    return;
+                }
+
                 this.productToUpdate.IsAvailable = isAvaliableChckBox.Checked;
                 MessageBox.Show("Updated");
                 ClearProductData();
