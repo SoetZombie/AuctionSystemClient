@@ -556,7 +556,7 @@
         {
             try
             {
-                var desiredProduct = productService.GetProductByName(ProductName.Text);
+                var desiredProduct = productService.GetProductByName(ProductSearchTextBox.Text);
                 this.currentProductId = desiredProduct.Id;
                 var endDate = desiredProduct.EndDate;
 
@@ -571,7 +571,7 @@
 
                 this.dateDiff = (endDate.Subtract(DateTime.UtcNow)).ToString(@"dd\:hh\:mm\:ss").Substring(0, 11); // utcnow datetime !!!!!!!
 
-                ProductName.Text = desiredProduct.Name;
+               // ProductName.Text = desiredProduct.Name;
 
                 this.days = int.Parse(dateDiff.Substring(0, 2));
                 this.hours = int.Parse(dateDiff.Substring(3, 2));
